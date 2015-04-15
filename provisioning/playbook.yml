@@ -70,6 +70,31 @@
         - Restart Apache
         - Restart Nginx
 
+    # Jetty & Solr
+    - name: Set Jetty to start on boot
+      lineinfile: 'dest=/etc/default/jetty regexp=^NO_START line="NO_START=0"'
+
+    - name: Set Jetty host to localhost
+      lineinfile: 'dest=/etc/default/jetty regexp=^JETTY_HOST line="JETTY_HOST=127.0.0.1"'
+
+    - name: Set Jetty to port 8983
+      lineinfile: 'dest=/etc/default/jetty regexp=^JETTY_PORT line="JETTY_PORT=8983"'
+
+    - name: Set Jetty to use system java
+      lineinfile: 'dest=/etc/default/jetty regexp=JAVA_HOME line="JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64/"'
+      notify: Start Jetty
+
+    - name: Remove CKAN schema file
+      file: path=/etc/solr/conf/schema.xml state=absent
+      when: ckan_installed.changed
+
+    - name: Ensure CKAN uses provided schema file
+      file: path=/etc/solr/conf/schema.xml src=/usr/lib/ckan/default/src/ckan/ckan/config/solr/schema-2.0.xml state=link
+      notify: Restart Jetty
+
+    - name: Set CKAN Solr server address
+      lineinfile: 'dest=/etc/ckan/default/production.ini regexp=solr_url line=solr_url=http://127.0.0.1:8983/solr'
+
     # Postgres
     - name: Ensure CKAN database is created
       postgresql_db: 'name={{ db_name }}'
