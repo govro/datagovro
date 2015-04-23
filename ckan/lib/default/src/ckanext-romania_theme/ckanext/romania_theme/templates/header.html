@@ -3,3 +3,13 @@
 {% block header_account_notlogged %}
   <li>{% link_for _('Log in'), controller='user', action='login' %}</li>
 {% endblock %}
+
+{% block header_site_navigation_tabs %}
+  {{ h.build_nav_main(
+    ('search', _('Datasets')),
+    ('organizations_index', _('Organizations')),
+    ('group_index', _('Groups')),
+    ('about', _('About'))
+  ) }}
+  <li><a href="/contact.html">Contact</a></li>
+{% endblock %}
