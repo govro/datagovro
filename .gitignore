@@ -1,2 +1,8 @@
 .vagrant/
 db_backup_gov_ro/
+ckan/lib/default/bin
+ckan/lib/default/include
+ckan/lib/default/lib
+ckan/lib/default/local
+ckan/lib/default/man
+ckan/lib/default/src/ckan
