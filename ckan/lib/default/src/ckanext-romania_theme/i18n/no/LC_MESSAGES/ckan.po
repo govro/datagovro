@@ -1,0 +1,4843 @@
+# Translations template for ckan.
+# Copyright (C) 2015 ORGANIZATION
+# This file is distributed under the same license as the ckan project.
+# 
+# Translators:
+# geirmund <geirmund@gmail.com>, 2012
+# <internet@davidread.org>, 2011
+# Olav A. Øvrebø <olav.ovrebo@gmail.com>, 2014
+# Open Knowledge Foundation <translations@okfn.org>, 2011
+# relet <thomas.hirsch@gmail.com>, 2012
+# Sean Hammond <sean.hammond@okfn.org>, 2012
+msgid ""
+msgstr ""
+"Project-Id-Version: CKAN\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2015-01-26 11:55+0000\n"
+"PO-Revision-Date: 2015-01-26 12:20+0000\n"
+"Last-Translator: Adrià Mercader <adria.mercader@okfn.org>\n"
+"Language-Team: Norwegian (http://www.transifex.com/projects/p/ckan/language/no/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.6\n"
+"Language: no\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ckan/new_authz.py:178
+#, python-format
+msgid "Authorization function not found: %s"
+msgstr "Autoriseringsfunksjonen ikke funnet: %s"
+
+#: ckan/new_authz.py:190
+msgid "Admin"
+msgstr "Admin"
+
+#: ckan/new_authz.py:194
+msgid "Editor"
+msgstr "Redaktør"
+
+#: ckan/new_authz.py:198
+msgid "Member"
+msgstr "Medlem"
+
+#: ckan/controllers/admin.py:27
+msgid "Need to be system administrator to administer"
+msgstr "Du må være systemadministrator for å forvalte"
+
+#: ckan/controllers/admin.py:43
+msgid "Site Title"
+msgstr "Nettstedets tittel"
+
+#: ckan/controllers/admin.py:44
+msgid "Style"
+msgstr "Stil"
+
+#: ckan/controllers/admin.py:45
+msgid "Site Tag Line"
+msgstr "Nettstedets slagord"
+
+#: ckan/controllers/admin.py:46
+msgid "Site Tag Logo"
+msgstr "Logo"
+
+#: ckan/controllers/admin.py:47 ckan/templates/header.html:102
+#: ckan/templates/group/about.html:3 ckan/templates/group/read_base.html:19
+#: ckan/templates/home/about.html:3 ckan/templates/home/about.html:6
+#: ckan/templates/home/about.html:16 ckan/templates/organization/about.html:3
+#: ckan/templates/organization/read_base.html:19
+#: ckan/templates/user/edit_user_form.html:15
+msgid "About"
+msgstr "Om"
+
+#: ckan/controllers/admin.py:47
+msgid "About page text"
+msgstr "Tekst til om-siden"
+
+#: ckan/controllers/admin.py:48
+msgid "Intro Text"
+msgstr "Introtekst"
+
+#: ckan/controllers/admin.py:48
+msgid "Text on home page"
+msgstr "Tekst på hjemmesiden"
+
+#: ckan/controllers/admin.py:49
+msgid "Custom CSS"
+msgstr "Egendefinert CSS"
+
+#: ckan/controllers/admin.py:49
+msgid "Customisable css inserted into the page header"
+msgstr "Egendefinert CSS som settes inn på hver side"
+
+#: ckan/controllers/admin.py:50
+msgid "Homepage"
+msgstr "Hjemmeside"
+
+#: ckan/controllers/admin.py:131
+#, python-format
+msgid ""
+"Cannot purge package %s as associated revision %s includes non-deleted "
+"packages %s"
+msgstr "Kan ikke tømme pakken %s fordi tilknyttet versjon %s inkluderer ikke-slettede datakilder %s"
+
+#: ckan/controllers/admin.py:153
+#, python-format
+msgid "Problem purging revision %s: %s"
+msgstr "Feil på sletting av versjon %s: %s"
+
+#: ckan/controllers/admin.py:155
+msgid "Purge complete"
+msgstr "Tømming komplett"
+
+#: ckan/controllers/admin.py:157
+msgid "Action not implemented."
+msgstr "Handling ikke implementert."
+
+#: ckan/controllers/api.py:60 ckan/controllers/group.py:151
+#: ckan/controllers/home.py:29 ckan/controllers/package.py:145
+#: ckan/controllers/related.py:86 ckan/controllers/related.py:113
+#: ckan/controllers/revision.py:31 ckan/controllers/tag.py:23
+#: ckan/controllers/user.py:45 ckan/controllers/user.py:72
+#: ckan/controllers/user.py:101 ckan/controllers/user.py:550
+#: ckanext/datapusher/plugin.py:67
+msgid "Not authorized to see this page"
+msgstr "Ikke autorisert til å se denne siden"
+
+#: ckan/controllers/api.py:118 ckan/controllers/api.py:209
+msgid "Access denied"
+msgstr "Ingen tilgang"
+
+#: ckan/controllers/api.py:124 ckan/controllers/api.py:218
+#: ckan/logic/converters.py:119 ckan/logic/converters.py:144
+#: ckan/logic/converters.py:169 ckan/logic/validators.py:141
+#: ckan/logic/validators.py:162 ckan/logic/validators.py:183
+#: ckan/logic/validators.py:192 ckan/logic/validators.py:206
+#: ckan/logic/validators.py:223 ckan/logic/validators.py:236
+#: ckan/logic/validators.py:250 ckan/logic/validators.py:274
+#: ckan/logic/validators.py:283 ckan/logic/validators.py:719
+#: ckan/logic/action/create.py:874
+msgid "Not found"
+msgstr "Ikke funnet"
+
+#: ckan/controllers/api.py:130
+msgid "Bad request"
+msgstr "Feilaktig forespørsel"
+
+#: ckan/controllers/api.py:164
+#, python-format
+msgid "Action name not known: %s"
+msgstr "Handlingsnavn ukjent: %s"
+
+#: ckan/controllers/api.py:185 ckan/controllers/api.py:352
+#: ckan/controllers/api.py:414
+#, python-format
+msgid "JSON Error: %s"
+msgstr "JSON-feil: %s"
+
+#: ckan/controllers/api.py:190
+#, python-format
+msgid "Bad request data: %s"
+msgstr "Feil på dataene i forespørselen: %s"
+
+#: ckan/controllers/api.py:288 ckan/logic/action/get.py:2228
+#, python-format
+msgid "Cannot list entity of this type: %s"
+msgstr "Kan ikke liste enhet av denne typen: %s"
+
+#: ckan/controllers/api.py:318
+#, python-format
+msgid "Cannot read entity of this type: %s"
+msgstr "Kan ikke lese enhet av denne typen: %s"
+
+#: ckan/controllers/api.py:357
+#, python-format
+msgid "Cannot create new entity of this type: %s %s"
+msgstr "Kan ikke opprette ny enhet av denne typen: %s %s"
+
+#: ckan/controllers/api.py:389
+msgid "Unable to add package to search index"
+msgstr "Kan ikke legge datakilde til søkeindeksen"
+
+#: ckan/controllers/api.py:419
+#, python-format
+msgid "Cannot update entity of this type: %s"
+msgstr "Kan ikke oppdatere enhet av denne typen: %s"
+
+#: ckan/controllers/api.py:442
+msgid "Unable to update search index"
+msgstr "Kan ikke oppdatere søkeindeksen"
+
+#: ckan/controllers/api.py:466
+#, python-format
+msgid "Cannot delete entity of this type: %s %s"
+msgstr "Kan ikke slette enhet av denne typen: %s %s"
+
+#: ckan/controllers/api.py:489
+msgid "No revision specified"
+msgstr "Ingen versjon spesifisert"
+
+#: ckan/controllers/api.py:493
+#, python-format
+msgid "There is no revision with id: %s"
+msgstr "Det finnes ingen versjon med id: %s"
+
+#: ckan/controllers/api.py:503
+msgid "Missing search term ('since_id=UUID' or  'since_time=TIMESTAMP')"
+msgstr "Søkestreng mangler ('since_id=UUID' or 'since_time=TIMESTAMP')"
+
+#: ckan/controllers/api.py:513
+#, python-format
+msgid "Could not read parameters: %r"
+msgstr "Kunne ikke lese parametere: %r"
+
+#: ckan/controllers/api.py:574
+#, python-format
+msgid "Bad search option: %s"
+msgstr "Feil i søkebegrep: %s"
+
+#: ckan/controllers/api.py:577
+#, python-format
+msgid "Unknown register: %s"
+msgstr "Ukjent register: %s"
+
+#: ckan/controllers/api.py:586
+#, python-format
+msgid "Malformed qjson value: %r"
+msgstr "Feil utformet qjson-verdi: %r"
+
+#: ckan/controllers/api.py:596
+msgid "Request params must be in form of a json encoded dictionary."
+msgstr "Forespurte parametere må være i formen til en json-kodet ordbok."
+
+#: ckan/controllers/feed.py:223 ckan/controllers/group.py:190
+#: ckan/controllers/group.py:385 ckan/controllers/group.py:484
+#: ckan/controllers/group.py:529 ckan/controllers/group.py:561
+#: ckan/controllers/group.py:572 ckan/controllers/group.py:617
+#: ckan/controllers/group.py:632 ckan/controllers/group.py:679
+#: ckan/controllers/group.py:708 ckan/controllers/group.py:739
+#: ckan/controllers/group.py:795 ckan/controllers/group.py:880
+#: ckan/controllers/package.py:1288 ckan/controllers/package.py:1303
+msgid "Group not found"
+msgstr "Fant ikke gruppen"
+
+#: ckan/controllers/feed.py:234 ckan/controllers/group.py:364
+msgid "Organization not found"
+msgstr ""
+
+#: ckan/controllers/group.py:172
+msgid "Incorrect group type"
+msgstr "Feil gruppetype"
+
+#: ckan/controllers/group.py:192 ckan/controllers/group.py:387
+#: ckan/controllers/group.py:486 ckan/controllers/group.py:527
+#: ckan/controllers/group.py:559 ckan/controllers/group.py:882
+#, python-format
+msgid "Unauthorized to read group %s"
+msgstr "Ikke autorisert til å lese gruppen %s"
+
+#: ckan/controllers/group.py:285 ckan/controllers/home.py:70
+#: ckan/controllers/package.py:241 ckan/lib/helpers.py:681
+#: ckan/templates/header.html:100 ckan/templates/organization/edit_base.html:5
+#: ckan/templates/organization/edit_base.html:8
+#: ckan/templates/organization/index.html:3
+#: ckan/templates/organization/index.html:6
+#: ckan/templates/organization/index.html:18
+#: ckan/templates/organization/read_base.html:3
+#: ckan/templates/organization/read_base.html:6
+#: ckan/templates/package/base.html:14
+msgid "Organizations"
+msgstr "Organisasjoner"
+
+#: ckan/controllers/group.py:286 ckan/controllers/home.py:71
+#: ckan/controllers/package.py:242 ckan/lib/helpers.py:682
+#: ckan/templates/header.html:101 ckan/templates/group/base_form_page.html:6
+#: ckan/templates/group/edit.html:4 ckan/templates/group/edit_base.html:3
+#: ckan/templates/group/edit_base.html:8 ckan/templates/group/index.html:3
+#: ckan/templates/group/index.html:6 ckan/templates/group/index.html:18
+#: ckan/templates/group/members.html:3 ckan/templates/group/read_base.html:3
+#: ckan/templates/group/read_base.html:6
+#: ckan/templates/package/group_list.html:5
+#: ckan/templates/package/read_base.html:25
+#: ckan/templates/revision/diff.html:16 ckan/templates/revision/read.html:84
+msgid "Groups"
+msgstr "Grupper"
+
+#: ckan/controllers/group.py:287 ckan/controllers/home.py:72
+#: ckan/controllers/package.py:243 ckan/lib/helpers.py:683
+#: ckan/logic/__init__.py:108
+#: ckan/templates/package/snippets/package_basic_fields.html:24
+#: ckan/templates/snippets/context/dataset.html:17
+#: ckan/templates/tag/index.html:3 ckan/templates/tag/index.html:6
+#: ckan/templates/tag/index.html:12
+msgid "Tags"
+msgstr "Stikkord (tags)"
+
+#: ckan/controllers/group.py:288 ckan/controllers/home.py:73
+#: ckan/controllers/package.py:244 ckan/lib/helpers.py:684
+msgid "Formats"
+msgstr "Formater"
+
+#: ckan/controllers/group.py:289 ckan/controllers/home.py:74
+#: ckan/controllers/package.py:245 ckan/lib/helpers.py:685
+msgid "Licenses"
+msgstr "Lisenser"
+
+#: ckan/controllers/group.py:429
+msgid "Not authorized to perform bulk update"
+msgstr "Ikke autorisert til å utføre bulk-oppdatering"
+
+#: ckan/controllers/group.py:446
+msgid "Unauthorized to create a group"
+msgstr "Ikke autorisert til å opprette en ny gruppe"
+
+#: ckan/controllers/group.py:495 ckan/controllers/package.py:338
+#: ckan/controllers/package.py:803 ckan/controllers/package.py:1436
+#: ckan/controllers/package.py:1472
+#, python-format
+msgid "User %r not authorized to edit %s"
+msgstr "Bruker %r ikke autorisert til å redigere %s"
+
+#: ckan/controllers/group.py:531 ckan/controllers/group.py:563
+#: ckan/controllers/package.py:967 ckan/controllers/package.py:1014
+#: ckan/controllers/related.py:190 ckan/controllers/user.py:236
+#: ckan/controllers/user.py:339 ckan/controllers/user.py:505
+msgid "Integrity Error"
+msgstr "Integritetsfeil"
+
+#: ckan/controllers/group.py:586
+#, python-format
+msgid "User %r not authorized to edit %s authorizations"
+msgstr "Bruker %r ikke autorisert til å redigere rettighetene til %s"
+
+#: ckan/controllers/group.py:603 ckan/controllers/group.py:615
+#: ckan/controllers/group.py:630 ckan/controllers/group.py:706
+#, python-format
+msgid "Unauthorized to delete group %s"
+msgstr "Ikke autorisert til å slette gruppen %s"
+
+#: ckan/controllers/group.py:609
+msgid "Organization has been deleted."
+msgstr "Organisasjonen er blitt slettet."
+
+#: ckan/controllers/group.py:611
+msgid "Group has been deleted."
+msgstr "Gruppen har blitt slettet."
+
+#: ckan/controllers/group.py:677
+#, python-format
+msgid "Unauthorized to add member to group %s"
+msgstr "Ikke autorisert til å legge medlem til gruppen %s"
+
+#: ckan/controllers/group.py:694
+#, python-format
+msgid "Unauthorized to delete group %s members"
+msgstr "Ikke autorisert til å slette medlemmer fra gruppen %s"
+
+#: ckan/controllers/group.py:700
+msgid "Group member has been deleted."
+msgstr "Gruppemedlem er blitt slettet."
+
+#: ckan/controllers/group.py:722 ckan/controllers/package.py:446
+msgid "Select two revisions before doing the comparison."
+msgstr "Velg to versjoner før du gjør sammenligningen."
+
+#: ckan/controllers/group.py:741
+#, python-format
+msgid "User %r not authorized to edit %r"
+msgstr "Bruker %r ikke autorisert til å redigere %r"
+
+#: ckan/controllers/group.py:748
+msgid "CKAN Group Revision History"
+msgstr "Endringshistorikk for gruppe"
+
+#: ckan/controllers/group.py:751
+msgid "Recent changes to CKAN Group: "
+msgstr "Nylige endringer i gruppen:"
+
+#: ckan/controllers/group.py:772 ckan/controllers/package.py:496
+msgid "Log message: "
+msgstr "Loggmelding:"
+
+#: ckan/controllers/group.py:798
+msgid "Unauthorized to read group {group_id}"
+msgstr "Ikke autorisert til å lese gruppen {group_id}"
+
+#: ckan/controllers/group.py:817 ckan/controllers/package.py:1213
+#: ckan/controllers/user.py:671
+msgid "You are now following {0}"
+msgstr "Du følger nå {0}"
+
+#: ckan/controllers/group.py:836 ckan/controllers/package.py:1232
+#: ckan/controllers/user.py:691
+msgid "You are no longer following {0}"
+msgstr "Du følger ikke lenger {0}"
+
+#: ckan/controllers/group.py:854 ckan/controllers/user.py:536
+#, python-format
+msgid "Unauthorized to view followers %s"
+msgstr "Ikke autorisert til å se følgere %s"
+
+#: ckan/controllers/home.py:37
+msgid "This site is currently off-line. Database is not initialised."
+msgstr "Dette nettstedet er frakoblet. Databasen er ikke startet."
+
+#: ckan/controllers/home.py:100
+msgid ""
+"Please <a href=\"{link}\">update your profile</a> and add your email address"
+" and your full name. {site} uses your email address if you need to reset "
+"your password."
+msgstr "<a href=\"{link}\">Oppdater profilen din</a> og legg til e-postadressen din og ditt fullstendige navn. {site} bruker e-post-adressen din hvis du trenger å endre passordet."
+
+#: ckan/controllers/home.py:103
+#, python-format
+msgid "Please <a href=\"%s\">update your profile</a> and add your email address. "
+msgstr "<a href=\"%s\">Oppdater profilen din</a> og legg til e-postadressen din."
+
+#: ckan/controllers/home.py:105
+#, python-format
+msgid "%s uses your email address if you need to reset your password."
+msgstr "%s bruker e-postadressen din i tilfelle du trenger å tilbakestille passordet ditt."
+
+#: ckan/controllers/home.py:109
+#, python-format
+msgid "Please <a href=\"%s\">update your profile</a> and add your full name."
+msgstr "<a href=\"%s\">Oppdater profilen din</a> og legg til det fullstendige navnet ditt."
+
+#: ckan/controllers/package.py:295
+msgid "Parameter \"{parameter_name}\" is not an integer"
+msgstr "Parameteren \"{parameter_name}\" er ikke et heltall"
+
+#: ckan/controllers/package.py:336 ckan/controllers/package.py:344
+#: ckan/controllers/package.py:397 ckan/controllers/package.py:465
+#: ckan/controllers/package.py:789 ckan/controllers/package.py:848
+#: ckan/controllers/package.py:866 ckan/controllers/package.py:965
+#: ckan/controllers/package.py:1012 ckan/controllers/package.py:1068
+#: ckan/controllers/package.py:1106 ckan/controllers/package.py:1258
+#: ckan/controllers/package.py:1274 ckan/controllers/package.py:1343
+#: ckan/controllers/package.py:1442 ckan/controllers/package.py:1479
+#: ckan/controllers/package.py:1592 ckan/controllers/related.py:111
+#: ckan/controllers/related.py:122
+msgid "Dataset not found"
+msgstr "Datasett ikke funnet"
+
+#: ckan/controllers/package.py:346 ckan/controllers/package.py:399
+#: ckan/controllers/package.py:463 ckan/controllers/package.py:787
+#: ckan/controllers/package.py:846 ckan/controllers/package.py:864
+#: ckan/controllers/package.py:963 ckan/controllers/package.py:1010
+#: ckan/controllers/package.py:1260 ckan/controllers/related.py:124
+#, python-format
+msgid "Unauthorized to read package %s"
+msgstr "Har ikke rettigheten til å lese datakilden %s"
+
+#: ckan/controllers/package.py:385 ckan/controllers/package.py:387
+#: ckan/controllers/package.py:389
+#, python-format
+msgid "Invalid revision format: %r"
+msgstr "Ugyldig versjonsformat: %r"
+
+#: ckan/controllers/package.py:427
+msgid ""
+"Viewing {package_type} datasets in {format} format is not supported "
+"(template file {file} not found)."
+msgstr "Visning av datasett av typen {package_type} i formatet {format} er ikke støttet. (Finner ikke malfil for {file}.)"
+
+#: ckan/controllers/package.py:472
+msgid "CKAN Dataset Revision History"
+msgstr "Endringshistorikk for datasett."
+
+#: ckan/controllers/package.py:475
+msgid "Recent changes to CKAN Dataset: "
+msgstr "Siste endringer i CKAN-datasettet:"
+
+#: ckan/controllers/package.py:532
+msgid "Unauthorized to create a package"
+msgstr "Ikke autorisert til å opprette en datakilde"
+
+#: ckan/controllers/package.py:609 ckanext/datapusher/plugin.py:58
+msgid "Unauthorized to edit this resource"
+msgstr "Ikke autorisert til å redigere denne ressursen"
+
+#: ckan/controllers/package.py:629 ckan/controllers/package.py:1095
+#: ckan/controllers/package.py:1115 ckan/controllers/package.py:1182
+#: ckan/controllers/package.py:1373 ckan/controllers/package.py:1453
+#: ckan/controllers/package.py:1486 ckan/controllers/package.py:1600
+#: ckan/controllers/package.py:1656 ckanext/datapusher/plugin.py:56
+#: ckanext/resourceproxy/controller.py:32
+msgid "Resource not found"
+msgstr "Ressursen ikke funnet"
+
+#: ckan/controllers/package.py:682
+msgid "Unauthorized to update dataset"
+msgstr "Ikke autorisert til å oppdatere datasettet"
+
+#: ckan/controllers/package.py:685 ckan/controllers/package.py:717
+#: ckan/controllers/package.py:745
+msgid "The dataset {id} could not be found."
+msgstr "Fant ikke datasettet {id}."
+
+#: ckan/controllers/package.py:688
+msgid "You must add at least one data resource"
+msgstr "Du må legge til minst en dataressurs"
+
+#: ckan/controllers/package.py:696 ckanext/datapusher/helpers.py:22
+msgid "Error"
+msgstr "Feil"
+
+#: ckan/controllers/package.py:714
+msgid "Unauthorized to create a resource"
+msgstr "Ikke autorisert til å opprette en ressurs"
+
+#: ckan/controllers/package.py:750
+msgid "Unauthorized to create a resource for this package"
+msgstr ""
+
+#: ckan/controllers/package.py:973
+msgid "Unable to add package to search index."
+msgstr "Kan ikke legge datakilden til søkeindeksen."
+
+#: ckan/controllers/package.py:1020
+msgid "Unable to update search index."
+msgstr "Kan ikke oppdatere søkeindeksen."
+
+#: ckan/controllers/package.py:1056 ckan/controllers/package.py:1066
+#: ckan/controllers/package.py:1083
+#, python-format
+msgid "Unauthorized to delete package %s"
+msgstr "Ikke autorisert til å slette datakilde %s"
+
+#: ckan/controllers/package.py:1061
+msgid "Dataset has been deleted."
+msgstr "Datasettet har blitt slettet."
+
+#: ckan/controllers/package.py:1088
+msgid "Resource has been deleted."
+msgstr "Ressursen har blitt slettet."
+
+#: ckan/controllers/package.py:1093
+#, python-format
+msgid "Unauthorized to delete resource %s"
+msgstr "Ikke autorisert til å slette ressursen %s"
+
+#: ckan/controllers/package.py:1108 ckan/controllers/package.py:1276
+#: ckan/controllers/package.py:1345 ckan/controllers/package.py:1444
+#: ckan/controllers/package.py:1481 ckan/controllers/package.py:1594
+#, python-format
+msgid "Unauthorized to read dataset %s"
+msgstr "Ikke autorisert til å lese datasettet %s"
+
+#: ckan/controllers/package.py:1153 ckan/controllers/package.py:1615
+msgid "Resource view not found"
+msgstr ""
+
+#: ckan/controllers/package.py:1184 ckan/controllers/package.py:1375
+#: ckan/controllers/package.py:1455 ckan/controllers/package.py:1488
+#: ckan/controllers/package.py:1602 ckan/controllers/package.py:1658
+#, python-format
+msgid "Unauthorized to read resource %s"
+msgstr "Ingen tillatelse å lese ressursen %s"
+
+#: ckan/controllers/package.py:1193
+msgid "Resource data not found"
+msgstr "Fant ikke ressursdata"
+
+#: ckan/controllers/package.py:1201
+msgid "No download is available"
+msgstr "Materiale til nedlasting ikke tilgjengelig."
+
+#: ckan/controllers/package.py:1523
+msgid "Unauthorized to edit resource"
+msgstr ""
+
+#: ckan/controllers/package.py:1541
+msgid "View not found"
+msgstr ""
+
+#: ckan/controllers/package.py:1543
+#, python-format
+msgid "Unauthorized to view View %s"
+msgstr ""
+
+#: ckan/controllers/package.py:1549
+msgid "View Type Not found"
+msgstr ""
+
+#: ckan/controllers/package.py:1609
+msgid "Bad resource view data"
+msgstr ""
+
+#: ckan/controllers/package.py:1618
+#, python-format
+msgid "Unauthorized to read resource view %s"
+msgstr ""
+
+#: ckan/controllers/package.py:1621
+msgid "Resource view not supplied"
+msgstr ""
+
+#: ckan/controllers/package.py:1650
+msgid "No preview has been defined."
+msgstr "Ingen forhåndsvisning er definert."
+
+#: ckan/controllers/related.py:67
+msgid "Most viewed"
+msgstr "Mest sett"
+
+#: ckan/controllers/related.py:68
+msgid "Most Viewed"
+msgstr "Mest sett"
+
+#: ckan/controllers/related.py:69
+msgid "Least Viewed"
+msgstr "Minst sett"
+
+#: ckan/controllers/related.py:70
+msgid "Newest"
+msgstr "Nyeste"
+
+#: ckan/controllers/related.py:71
+msgid "Oldest"
+msgstr "Eldste"
+
+#: ckan/controllers/related.py:91
+msgid "The requested related item was not found"
+msgstr "Relatert materiale ikke funnet."
+
+#: ckan/controllers/related.py:148 ckan/controllers/related.py:224
+msgid "Related item not found"
+msgstr "Relatert materiale ikke funnet"
+
+#: ckan/controllers/related.py:158 ckan/logic/auth/get.py:10
+#: ckan/logic/auth/get.py:267
+msgid "Not authorized"
+msgstr "Ikke autorisert"
+
+#: ckan/controllers/related.py:163
+msgid "Package not found"
+msgstr "Datakilde ikke funnet"
+
+#: ckan/controllers/related.py:183
+msgid "Related item was successfully created"
+msgstr "Relatert materiale ble opprettet"
+
+#: ckan/controllers/related.py:185
+msgid "Related item was successfully updated"
+msgstr "Relatert materiale ble oppdatert"
+
+#: ckan/controllers/related.py:216
+msgid "Related item has been deleted."
+msgstr "Relatert materiale er slettet."
+
+#: ckan/controllers/related.py:222
+#, python-format
+msgid "Unauthorized to delete related item %s"
+msgstr "Ikke autorisert til å slette relatert materiale %s"
+
+#: ckan/controllers/related.py:232 ckan/templates/package/search.html:52
+msgid "API"
+msgstr "API"
+
+#: ckan/controllers/related.py:233
+msgid "Application"
+msgstr "Applikasjon"
+
+#: ckan/controllers/related.py:234
+msgid "Idea"
+msgstr "Ide"
+
+#: ckan/controllers/related.py:235
+msgid "News Article"
+msgstr "Nyhetsartikkel"
+
+#: ckan/controllers/related.py:236
+msgid "Paper"
+msgstr "Vitenskapelig artikkel"
+
+#: ckan/controllers/related.py:237
+msgid "Post"
+msgstr "Blogginnlegg"
+
+#: ckan/controllers/related.py:238
+msgid "Visualization"
+msgstr "Visualisering"
+
+#: ckan/controllers/revision.py:42
+msgid "CKAN Repository Revision History"
+msgstr "Arkivhistorikk"
+
+#: ckan/controllers/revision.py:44
+msgid "Recent changes to the CKAN repository."
+msgstr "Siste endringer i datakildearkivet."
+
+#: ckan/controllers/revision.py:108
+#, python-format
+msgid "Datasets affected: %s.\n"
+msgstr "Datasett påvirket: %s.\n"
+
+#: ckan/controllers/revision.py:188
+msgid "Revision updated"
+msgstr "Versjon oppdatert"
+
+#: ckan/controllers/tag.py:56
+msgid "Other"
+msgstr "Annet"
+
+#: ckan/controllers/tag.py:70
+msgid "Tag not found"
+msgstr "Stikkord ikke funnet"
+
+#: ckan/controllers/user.py:70 ckan/controllers/user.py:219
+#: ckan/controllers/user.py:234 ckan/controllers/user.py:296
+#: ckan/controllers/user.py:337 ckan/controllers/user.py:482
+#: ckan/controllers/user.py:503 ckan/logic/auth/update.py:198
+msgid "User not found"
+msgstr "Bruker ikke funnet"
+
+#: ckan/controllers/user.py:149
+msgid "Unauthorized to register as a user."
+msgstr "Ikke autorisert til å registrere som bruker."
+
+#: ckan/controllers/user.py:166
+msgid "Unauthorized to create a user"
+msgstr "Ikke autorisert til å opprette en brukerkonto"
+
+#: ckan/controllers/user.py:197
+msgid "Unauthorized to delete user with id \"{user_id}\"."
+msgstr "Har ikke tillatelse til å slette brukeren \"{user_id}\"."
+
+#: ckan/controllers/user.py:211 ckan/controllers/user.py:270
+msgid "No user specified"
+msgstr "Ingen bruker spesifisert"
+
+#: ckan/controllers/user.py:217 ckan/controllers/user.py:294
+#: ckan/controllers/user.py:335 ckan/controllers/user.py:501
+#, python-format
+msgid "Unauthorized to edit user %s"
+msgstr "Ikke autorisert til å redigere brukeren %s"
+
+#: ckan/controllers/user.py:221 ckan/controllers/user.py:332
+msgid "Profile updated"
+msgstr "Profil oppdatert"
+
+#: ckan/controllers/user.py:232
+#, python-format
+msgid "Unauthorized to create user %s"
+msgstr "Ikke autorisert til å opprette bruker %s"
+
+#: ckan/controllers/user.py:238
+msgid "Bad Captcha. Please try again."
+msgstr "Feil i captcha. Prøv igjen."
+
+#: ckan/controllers/user.py:255
+#, python-format
+msgid ""
+"User \"%s\" is now registered but you are still logged in as \"%s\" from "
+"before"
+msgstr "Bruker \"%s\" er nå registrert, men du er fortsatt logget inn som \"%s\" fra før"
+
+#: ckan/controllers/user.py:276
+msgid "Unauthorized to edit a user."
+msgstr "Ikke autorisert til å redigere en bruker."
+
+#: ckan/controllers/user.py:302
+#, python-format
+msgid "User %s not authorized to edit %s"
+msgstr "Bruker %s ikke autorisert til å redigere %s"
+
+#: ckan/controllers/user.py:383
+msgid "Login failed. Bad username or password."
+msgstr "Innlogging mislyktes. Galt brukernavn eller passord."
+
+#: ckan/controllers/user.py:417
+msgid "Unauthorized to request reset password."
+msgstr "Ikke autorisert til å be om tilbakestilling av passord."
+
+#: ckan/controllers/user.py:446
+#, python-format
+msgid "\"%s\" matched several users"
+msgstr "\"%s\" passer med flere brukere"
+
+#: ckan/controllers/user.py:448 ckan/controllers/user.py:450
+#, python-format
+msgid "No such user: %s"
+msgstr "Brukeren finnes ikke: %s"
+
+#: ckan/controllers/user.py:455
+msgid "Please check your inbox for a reset code."
+msgstr "Sjekk innboksen din for en tilbakestillingskode."
+
+#: ckan/controllers/user.py:459
+#, python-format
+msgid "Could not send reset link: %s"
+msgstr "Kunne ikke sende tilbakestillings-lenke: %s"
+
+#: ckan/controllers/user.py:474
+msgid "Unauthorized to reset password."
+msgstr "Ikke autorisert til å tilbakestille passord."
+
+#: ckan/controllers/user.py:486
+msgid "Invalid reset key. Please try again."
+msgstr "Ugyldig tilbakestillingskode. Prøv igjen."
+
+#: ckan/controllers/user.py:498
+msgid "Your password has been reset."
+msgstr "Ditt passord har blitt tilbakestilt."
+
+#: ckan/controllers/user.py:519
+msgid "Your password must be 4 characters or longer."
+msgstr "Passordet må bestå av 4 tegn eller mer."
+
+#: ckan/controllers/user.py:522
+msgid "The passwords you entered do not match."
+msgstr "Passordene du skrev inn stemmer ikke overens."
+
+#: ckan/controllers/user.py:525
+msgid "You must provide a password"
+msgstr "Du må oppgi et passord"
+
+#: ckan/controllers/user.py:589
+msgid "Follow item not found"
+msgstr "Fant ikke materiale"
+
+#: ckan/controllers/user.py:593
+msgid "{0} not found"
+msgstr "{0} ikke funnet"
+
+#: ckan/controllers/user.py:595
+msgid "Unauthorized to read {0} {1}"
+msgstr "Ikke autorisert til å lese {0} {1}"
+
+#: ckan/controllers/user.py:610
+msgid "Everything"
+msgstr "Alt"
+
+#: ckan/controllers/util.py:16 ckan/logic/action/__init__.py:60
+msgid "Missing Value"
+msgstr "Manglende verdi"
+
+#: ckan/controllers/util.py:21
+msgid "Redirecting to external site is not allowed."
+msgstr ""
+
+#: ckan/lib/activity_streams.py:64
+msgid "{actor} added the tag {tag} to the dataset {dataset}"
+msgstr "{actor} la stikkordet {tag} til datasettet {dataset}"
+
+#: ckan/lib/activity_streams.py:67
+msgid "{actor} updated the group {group}"
+msgstr "{actor} oppdaterte gruppen {group}"
+
+#: ckan/lib/activity_streams.py:70
+msgid "{actor} updated the organization {organization}"
+msgstr "{actor} oppdaterte organisasjonen {organization}"
+
+#: ckan/lib/activity_streams.py:73
+msgid "{actor} updated the dataset {dataset}"
+msgstr "{actor} oppdaterte datasettet {dataset}"
+
+#: ckan/lib/activity_streams.py:76
+msgid "{actor} changed the extra {extra} of the dataset {dataset}"
+msgstr "{actor} endret extra {extra} til datasettet {dataset}"
+
+#: ckan/lib/activity_streams.py:79
+msgid "{actor} updated the resource {resource} in the dataset {dataset}"
+msgstr "{actor} oppdaterte ressursen {resource} i datasettet {dataset}"
+
+#: ckan/lib/activity_streams.py:82
+msgid "{actor} updated their profile"
+msgstr "{actor} oppdaterte profilen sin"
+
+#: ckan/lib/activity_streams.py:86
+msgid ""
+"{actor} updated the {related_type} {related_item} of the dataset {dataset}"
+msgstr "{actor} oppdaterte {related_type} {related_item} til datasettet {dataset}"
+
+#: ckan/lib/activity_streams.py:89
+msgid "{actor} updated the {related_type} {related_item}"
+msgstr "{actor} oppdaterte {related_type} {related_item}"
+
+#: ckan/lib/activity_streams.py:92
+msgid "{actor} deleted the group {group}"
+msgstr "{actor} slettet gruppen {group}"
+
+#: ckan/lib/activity_streams.py:95
+msgid "{actor} deleted the organization {organization}"
+msgstr "{actor} slettet organisasjonen {organization}"
+
+#: ckan/lib/activity_streams.py:98
+msgid "{actor} deleted the dataset {dataset}"
+msgstr "{actor} slettet datasettet {dataset}"
+
+#: ckan/lib/activity_streams.py:101
+msgid "{actor} deleted the extra {extra} from the dataset {dataset}"
+msgstr "{actor} slettet extra {extra} fra datasettet {dataset}"
+
+#: ckan/lib/activity_streams.py:104
+msgid "{actor} deleted the resource {resource} from the dataset {dataset}"
+msgstr "{actor} slettet ressursen {resource} fra datasettet {dataset}"
+
+#: ckan/lib/activity_streams.py:108
+msgid "{actor} created the group {group}"
+msgstr "{actor} opprettet gruppen {group}"
+
+#: ckan/lib/activity_streams.py:111
+msgid "{actor} created the organization {organization}"
+msgstr "{actor} opprettet organisasjonen {organization}"
+
+#: ckan/lib/activity_streams.py:114
+msgid "{actor} created the dataset {dataset}"
+msgstr "{actor} opprettet datasettet {dataset}"
+
+#: ckan/lib/activity_streams.py:117
+msgid "{actor} added the extra {extra} to the dataset {dataset}"
+msgstr "{actor} la extra {extra} til datasettet {dataset}"
+
+#: ckan/lib/activity_streams.py:120
+msgid "{actor} added the resource {resource} to the dataset {dataset}"
+msgstr "{actor} la ressursen {resource} til datasettet {dataset}"
+
+#: ckan/lib/activity_streams.py:123
+msgid "{actor} signed up"
+msgstr "{actor} registrert"
+
+#: ckan/lib/activity_streams.py:126
+msgid "{actor} removed the tag {tag} from the dataset {dataset}"
+msgstr "{actor} fjernet stikkordet {tag} fra datasettet {dataset}"
+
+#: ckan/lib/activity_streams.py:129
+msgid "{actor} deleted the related item {related_item}"
+msgstr "{actor} slettet relatert materiale {related_item}"
+
+#: ckan/lib/activity_streams.py:132
+msgid "{actor} started following {dataset}"
+msgstr "{actor} følger nå {dataset}"
+
+#: ckan/lib/activity_streams.py:135
+msgid "{actor} started following {user}"
+msgstr "{actor} følger nå {user}"
+
+#: ckan/lib/activity_streams.py:138
+msgid "{actor} started following {group}"
+msgstr "{actor} følger nå {group}"
+
+#: ckan/lib/activity_streams.py:142
+msgid ""
+"{actor} added the {related_type} {related_item} to the dataset {dataset}"
+msgstr "{actor} la {related_type} {related_item} til datasettet {dataset}"
+
+#: ckan/lib/activity_streams.py:145
+msgid "{actor} added the {related_type} {related_item}"
+msgstr "{actor} la til {related_type} {related_item}"
+
+#: ckan/lib/datapreview.py:268 ckan/templates/group/edit_base.html:16
+#: ckan/templates/organization/edit_base.html:17
+#: ckan/templates/package/resource_read.html:37
+#: ckan/templates/package/resource_views.html:4
+msgid "View"
+msgstr "Se"
+
+#: ckan/lib/email_notifications.py:103
+msgid "1 new activity from {site_title}"
+msgid_plural "{n} new activities from {site_title}"
+msgstr[0] "1 ny aktivitet fra {site_title}"
+msgstr[1] "{n} nye aktiviteter fra {site_title}"
+
+#: ckan/lib/formatters.py:17
+msgid "January"
+msgstr "januar"
+
+#: ckan/lib/formatters.py:21
+msgid "February"
+msgstr "februar"
+
+#: ckan/lib/formatters.py:25
+msgid "March"
+msgstr "mars"
+
+#: ckan/lib/formatters.py:29
+msgid "April"
+msgstr "april"
+
+#: ckan/lib/formatters.py:33
+msgid "May"
+msgstr "mai"
+
+#: ckan/lib/formatters.py:37
+msgid "June"
+msgstr "juni"
+
+#: ckan/lib/formatters.py:41
+msgid "July"
+msgstr "juli"
+
+#: ckan/lib/formatters.py:45
+msgid "August"
+msgstr "august"
+
+#: ckan/lib/formatters.py:49
+msgid "September"
+msgstr "september"
+
+#: ckan/lib/formatters.py:53
+msgid "October"
+msgstr "oktober"
+
+#: ckan/lib/formatters.py:57
+msgid "November"
+msgstr "november"
+
+#: ckan/lib/formatters.py:61
+msgid "December"
+msgstr "desember"
+
+#: ckan/lib/formatters.py:109
+msgid "Just now"
+msgstr "akkurat nå"
+
+#: ckan/lib/formatters.py:111
+msgid "{mins} minute ago"
+msgid_plural "{mins} minutes ago"
+msgstr[0] "{mins} minutt siden"
+msgstr[1] "{mins} minutter siden"
+
+#: ckan/lib/formatters.py:114
+msgid "{hours} hour ago"
+msgid_plural "{hours} hours ago"
+msgstr[0] "{hours} time siden"
+msgstr[1] "{hours} timer siden"
+
+#: ckan/lib/formatters.py:120
+msgid "{days} day ago"
+msgid_plural "{days} days ago"
+msgstr[0] "{days} dag siden"
+msgstr[1] "{days} dager siden"
+
+#: ckan/lib/formatters.py:123
+msgid "{months} month ago"
+msgid_plural "{months} months ago"
+msgstr[0] "{months} måned siden"
+msgstr[1] "{months} måneder siden"
+
+#: ckan/lib/formatters.py:125
+msgid "over {years} year ago"
+msgid_plural "over {years} years ago"
+msgstr[0] "mer enn {years} år siden"
+msgstr[1] "mer enn {years} år siden"
+
+#: ckan/lib/formatters.py:138
+msgid "{month} {day}, {year}, {hour:02}:{min:02}"
+msgstr "{day}. {month} {year}, {hour:02}:{min:02}"
+
+#: ckan/lib/formatters.py:142
+msgid "{month} {day}, {year}"
+msgstr "{month} {day}, {year}"
+
+#: ckan/lib/formatters.py:158
+msgid "{bytes} bytes"
+msgstr "{bytes} bytes"
+
+#: ckan/lib/formatters.py:160
+msgid "{kibibytes} KiB"
+msgstr "{kibibytes} KiB"
+
+#: ckan/lib/formatters.py:162
+msgid "{mebibytes} MiB"
+msgstr "{mebibytes} MiB"
+
+#: ckan/lib/formatters.py:164
+msgid "{gibibytes} GiB"
+msgstr "{gibibytes} GiB"
+
+#: ckan/lib/formatters.py:166
+msgid "{tebibytes} TiB"
+msgstr "{tebibytes} TiB"
+
+#: ckan/lib/formatters.py:178
+msgid "{n}"
+msgstr "{n}"
+
+#: ckan/lib/formatters.py:180
+msgid "{k}k"
+msgstr "{k}k"
+
+#: ckan/lib/formatters.py:182
+msgid "{m}M"
+msgstr "{m}M"
+
+#: ckan/lib/formatters.py:184
+msgid "{g}G"
+msgstr "{g}G"
+
+#: ckan/lib/formatters.py:186
+msgid "{t}T"
+msgstr "{t}T"
+
+#: ckan/lib/formatters.py:188
+msgid "{p}P"
+msgstr "{p}P"
+
+#: ckan/lib/formatters.py:190
+msgid "{e}E"
+msgstr "{e}E"
+
+#: ckan/lib/formatters.py:192
+msgid "{z}Z"
+msgstr "{z}Z"
+
+#: ckan/lib/formatters.py:194
+msgid "{y}Y"
+msgstr "{y}Y"
+
+#: ckan/lib/helpers.py:858
+msgid "Update your avatar at gravatar.com"
+msgstr "Oppdater din avatar på gravatar.com"
+
+#: ckan/lib/helpers.py:1061 ckan/lib/helpers.py:1073
+msgid "Unknown"
+msgstr "Ukjent"
+
+#: ckan/lib/helpers.py:1117
+msgid "Unnamed resource"
+msgstr "Ressurs mangler navn"
+
+#: ckan/lib/helpers.py:1164
+msgid "Created new dataset."
+msgstr "Opprettet nytt datasett."
+
+#: ckan/lib/helpers.py:1166
+msgid "Edited resources."
+msgstr "Redigerte ressurser."
+
+#: ckan/lib/helpers.py:1168
+msgid "Edited settings."
+msgstr "Redigerte innstillinger."
+
+#: ckan/lib/helpers.py:1431
+msgid "{number} view"
+msgid_plural "{number} views"
+msgstr[0] "{number} visning"
+msgstr[1] "{number} visninger"
+
+#: ckan/lib/helpers.py:1433
+msgid "{number} recent view"
+msgid_plural "{number} recent views"
+msgstr[0] "{number} nylig visning"
+msgstr[1] "{number} nylige visninger"
+
+#: ckan/lib/mailer.py:25
+#, python-format
+msgid "Dear %s,"
+msgstr "Kjære %s,"
+
+#: ckan/lib/mailer.py:38
+#, python-format
+msgid "%s <%s>"
+msgstr "%s <%s>"
+
+#: ckan/lib/mailer.py:99
+msgid "No recipient email address available!"
+msgstr "Ingen e-postadresse for mottaker tilgjengelig"
+
+#: ckan/lib/mailer.py:104
+msgid ""
+"You have requested your password on {site_title} to be reset.\n"
+"\n"
+"Please click the following link to confirm this request:\n"
+"\n"
+"   {reset_link}\n"
+msgstr ""
+
+#: ckan/lib/mailer.py:119
+msgid ""
+"You have been invited to {site_title}. A user has already been createdto you with the username {user_name}. You can change it later.\n"
+"\n"
+"To accept this invite, please reset your password at:\n"
+"\n"
+"   {reset_link}\n"
+msgstr ""
+
+#: ckan/lib/mailer.py:145 ckan/templates/user/request_reset.html:3
+#: ckan/templates/user/request_reset.html:13
+msgid "Reset your password"
+msgstr "Tilbakestill ditt passord"
+
+#: ckan/lib/mailer.py:151
+msgid "Invite for {site_title}"
+msgstr "Invitasjon til {site_title}"
+
+#: ckan/lib/navl/dictization_functions.py:11
+#: ckan/lib/navl/dictization_functions.py:13
+#: ckan/lib/navl/dictization_functions.py:15
+#: ckan/lib/navl/dictization_functions.py:17
+#: ckan/lib/navl/dictization_functions.py:19
+#: ckan/lib/navl/dictization_functions.py:21
+#: ckan/lib/navl/dictization_functions.py:23
+#: ckan/lib/navl/dictization_functions.py:25 ckan/lib/navl/validators.py:23
+#: ckan/lib/navl/validators.py:30 ckan/lib/navl/validators.py:50
+#: ckan/logic/validators.py:620 ckan/logic/action/get.py:1847
+msgid "Missing value"
+msgstr "Manglende verdi"
+
+#: ckan/lib/navl/validators.py:64
+#, python-format
+msgid "The input field %(name)s was not expected."
+msgstr "Feltet %(name)s er uventet."
+
+#: ckan/lib/navl/validators.py:116
+msgid "Please enter an integer value"
+msgstr "Oppgi et heltall"
+
+#: ckan/logic/__init__.py:97 ckan/logic/action/__init__.py:58
+#: ckan/templates/package/edit_base.html:21
+#: ckan/templates/package/resources.html:5
+#: ckan/templates/package/snippets/package_context.html:12
+#: ckan/templates/package/snippets/resources.html:20
+#: ckan/templates/snippets/context/dataset.html:13
+#: ckanext/example_theme/v18_snippet_api/templates/ajax_snippets/example_theme_popover.html:15
+msgid "Resources"
+msgstr "Ressurser"
+
+#: ckan/logic/__init__.py:97 ckan/logic/action/__init__.py:58
+msgid "Package resource(s) invalid"
+msgstr "Ugyldige ressurser for datakilde"
+
+#: ckan/logic/__init__.py:104 ckan/logic/__init__.py:106
+#: ckan/logic/action/__init__.py:60 ckan/logic/action/__init__.py:62
+msgid "Extras"
+msgstr "Ekstra"
+
+#: ckan/logic/converters.py:72 ckan/logic/converters.py:87
+#, python-format
+msgid "Tag vocabulary \"%s\" does not exist"
+msgstr "Stikkordtype \"%s\" eksisterer ikke"
+
+#: ckan/logic/converters.py:119 ckan/logic/validators.py:206
+#: ckan/logic/validators.py:223 ckan/logic/validators.py:719
+#: ckan/templates/group/members.html:17
+#: ckan/templates/organization/members.html:17
+#: ckanext/stats/templates/ckanext/stats/index.html:156
+msgid "User"
+msgstr "Bruker"
+
+#: ckan/logic/converters.py:144 ckan/logic/validators.py:141
+#: ckan/logic/validators.py:183 ckan/templates/package/read_base.html:24
+#: ckanext/stats/templates/ckanext/stats/index.html:89
+#: ckanext/stats/templates_legacy/ckanext/stats/index.html:65
+#: ckanext/stats/templates_legacy/ckanext/stats/index.html:74
+msgid "Dataset"
+msgstr "Datasett"
+
+#: ckan/logic/converters.py:169 ckan/logic/validators.py:236
+#: ckanext/stats/templates/ckanext/stats/index.html:113
+#: ckanext/stats/templates_legacy/ckanext/stats/index.html:82
+msgid "Group"
+msgstr "Gruppe"
+
+#: ckan/logic/converters.py:178
+msgid "Could not parse as valid JSON"
+msgstr "Klarte ikke å tolke som gyldig JSON"
+
+#: ckan/logic/validators.py:30 ckan/logic/validators.py:39
+msgid "A organization must be supplied"
+msgstr "En organisasjon må oppgis"
+
+#: ckan/logic/validators.py:43
+msgid "You cannot remove a dataset from an existing organization"
+msgstr "Du kan ikke fjerne et datasett fra en eksisterende organisasjon"
+
+#: ckan/logic/validators.py:48
+msgid "Organization does not exist"
+msgstr "Organisasjonen eksisterer ikke"
+
+#: ckan/logic/validators.py:53
+msgid "You cannot add a dataset to this organization"
+msgstr "Du kan ikke legge et datasett til denne organisasjonen"
+
+#: ckan/logic/validators.py:93
+msgid "Invalid integer"
+msgstr "Ugyldig heltall"
+
+#: ckan/logic/validators.py:98
+msgid "Must be a natural number"
+msgstr "Må være et heltall"
+
+#: ckan/logic/validators.py:104
+msgid "Must be a postive integer"
+msgstr "Må være et positivt heltall"
+
+#: ckan/logic/validators.py:122
+msgid "Date format incorrect"
+msgstr "Feil i datoformat"
+
+#: ckan/logic/validators.py:131
+msgid "No links are allowed in the log_message."
+msgstr "Ingen lenker er tillatt i log_message."
+
+#: ckan/logic/validators.py:151
+msgid "Dataset id already exists"
+msgstr ""
+
+#: ckan/logic/validators.py:192 ckan/logic/validators.py:283
+msgid "Resource"
+msgstr "Ressurs"
+
+#: ckan/logic/validators.py:250 ckan/templates/package/read_base.html:27
+#: ckan/templates/package/related_list.html:4
+#: ckan/templates/snippets/related.html:2
+msgid "Related"
+msgstr "Relatert"
+
+#: ckan/logic/validators.py:260
+msgid "That group name or ID does not exist."
+msgstr "Dette gruppenavnet eller ID eksisterer ikke."
+
+#: ckan/logic/validators.py:274
+msgid "Activity type"
+msgstr "Aktivitetstype"
+
+#: ckan/logic/validators.py:349
+msgid "Names must be strings"
+msgstr "Navn må være tekststrenger"
+
+#: ckan/logic/validators.py:353
+msgid "That name cannot be used"
+msgstr "Navnet kan ikke brukes"
+
+#: ckan/logic/validators.py:356
+#, python-format
+msgid "Must be at least %s characters long"
+msgstr ""
+
+#: ckan/logic/validators.py:358 ckan/logic/validators.py:636
+#, python-format
+msgid "Name must be a maximum of %i characters long"
+msgstr "Navnet må inneholde maksimalt %i tegn"
+
+#: ckan/logic/validators.py:361
+msgid ""
+"Must be purely lowercase alphanumeric (ascii) characters and these symbols: "
+"-_"
+msgstr ""
+
+#: ckan/logic/validators.py:379
+msgid "That URL is already in use."
+msgstr "Denne URL er allerede i bruk."
+
+#: ckan/logic/validators.py:384
+#, python-format
+msgid "Name \"%s\" length is less than minimum %s"
+msgstr "Navnet \"%s\" inneholder mindre enn %s tegn"
+
+#: ckan/logic/validators.py:388
+#, python-format
+msgid "Name \"%s\" length is more than maximum %s"
+msgstr "Navnet \"%s\" inneholder flere enn %s tegn"
+
+#: ckan/logic/validators.py:394
+#, python-format
+msgid "Version must be a maximum of %i characters long"
+msgstr "Versjon må inneholde maksimalt %i tegn"
+
+#: ckan/logic/validators.py:412
+#, python-format
+msgid "Duplicate key \"%s\""
+msgstr "Dupliser nøkkel \"%s\""
+
+#: ckan/logic/validators.py:428
+msgid "Group name already exists in database"
+msgstr "En gruppe med dette navnet finnes allerede i databasen"
+
+#: ckan/logic/validators.py:434
+#, python-format
+msgid "Tag \"%s\" length is less than minimum %s"
+msgstr "Lengden til stikkordet \"%s\" er kortere enn minimum %s"
+
+#: ckan/logic/validators.py:438
+#, python-format
+msgid "Tag \"%s\" length is more than maximum %i"
+msgstr "Lengden til stikkordet \"%s\" er mer enn maksimalt %i"
+
+#: ckan/logic/validators.py:446
+#, python-format
+msgid "Tag \"%s\" must be alphanumeric characters or symbols: -_."
+msgstr "Stikkordet \"%s\" må skrives med alfanumeriske tegn (ascii) og symboler: -_."
+
+#: ckan/logic/validators.py:454
+#, python-format
+msgid "Tag \"%s\" must not be uppercase"
+msgstr "Stikkordet \"%s\" kan ikke skrives med store bokstaver"
+
+#: ckan/logic/validators.py:563
+msgid "User names must be strings"
+msgstr "Brukernavn må være tekststrenger"
+
+#: ckan/logic/validators.py:579
+msgid "That login name is not available."
+msgstr "Brukernavnet er ikke tilgjengelig."
+
+#: ckan/logic/validators.py:588
+msgid "Please enter both passwords"
+msgstr "Skriv inn begge passordene"
+
+#: ckan/logic/validators.py:596
+msgid "Passwords must be strings"
+msgstr "Passord må være tekststrenger"
+
+#: ckan/logic/validators.py:600
+msgid "Your password must be 4 characters or longer"
+msgstr "Ditt passord må være 4 tegn eller mer"
+
+#: ckan/logic/validators.py:608
+msgid "The passwords you entered do not match"
+msgstr "Passordene du skrev inn stemmer ikke overens"
+
+#: ckan/logic/validators.py:624
+msgid ""
+"Edit not allowed as it looks like spam. Please avoid links in your "
+"description."
+msgstr "Endring ikke godkjent, da innholdet ser ut som spam. Unngå lenker i beskrivelsen din."
+
+#: ckan/logic/validators.py:633
+#, python-format
+msgid "Name must be at least %s characters long"
+msgstr "Navnet må være minst %s tegn langt"
+
+#: ckan/logic/validators.py:641
+msgid "That vocabulary name is already in use."
+msgstr "Dette navnet er allerede i bruk."
+
+#: ckan/logic/validators.py:647
+#, python-format
+msgid "Cannot change value of key from %s to %s. This key is read-only"
+msgstr "Kan ikke endre verdi på nøkkel fra %s til %s. Nøkkelen er read-only"
+
+#: ckan/logic/validators.py:656
+msgid "Tag vocabulary was not found."
+msgstr "Fant ikke stikkordvokabular."
+
+#: ckan/logic/validators.py:669
+#, python-format
+msgid "Tag %s does not belong to vocabulary %s"
+msgstr "Stikkord %s tilhører ikke vokabularet %s"
+
+#: ckan/logic/validators.py:675
+msgid "No tag name"
+msgstr "Intet stikkordnavn"
+
+#: ckan/logic/validators.py:688
+#, python-format
+msgid "Tag %s already belongs to vocabulary %s"
+msgstr "Stikkord %s tilhører allerede vokabular %s"
+
+#: ckan/logic/validators.py:711
+msgid "Please provide a valid URL"
+msgstr "Oppgi en gyldig URL"
+
+#: ckan/logic/validators.py:725
+msgid "role does not exist."
+msgstr "rollen eksisterer ikke."
+
+#: ckan/logic/validators.py:754
+msgid "Datasets with no organization can't be private."
+msgstr "Datasett uten organisasjon kan ikke være private."
+
+#: ckan/logic/validators.py:760
+msgid "Not a list"
+msgstr "ikke en liste"
+
+#: ckan/logic/validators.py:763
+msgid "Not a string"
+msgstr "ikke en streng"
+
+#: ckan/logic/validators.py:795
+msgid "This parent would create a loop in the hierarchy"
+msgstr "Kan ikke sette dette elementet som overordnet, det ville føre til en sirkel i hierarkiet"
+
+#: ckan/logic/validators.py:805
+msgid "\"filter_fields\" and \"filter_values\" should have the same length"
+msgstr ""
+
+#: ckan/logic/validators.py:816
+msgid "\"filter_fields\" is required when \"filter_values\" is filled"
+msgstr ""
+
+#: ckan/logic/validators.py:819
+msgid "\"filter_values\" is required when \"filter_fields\" is filled"
+msgstr ""
+
+#: ckan/logic/validators.py:833
+msgid "There is a schema field with the same name"
+msgstr ""
+
+#: ckan/logic/action/create.py:178 ckan/logic/action/create.py:638
+#, python-format
+msgid "REST API: Create object %s"
+msgstr "REST API: Opprett objekt %s"
+
+#: ckan/logic/action/create.py:517
+#, python-format
+msgid "REST API: Create package relationship: %s %s %s"
+msgstr "REST API: Opprett relasjon til datakilde: %s %s %s"
+
+#: ckan/logic/action/create.py:558
+#, python-format
+msgid "REST API: Create member object %s"
+msgstr "REST API: Opprett medlemsobjekt %s"
+
+#: ckan/logic/action/create.py:772
+msgid "Trying to create an organization as a group"
+msgstr "Prøver å opprette en organisasjon som en gruppe"
+
+#: ckan/logic/action/create.py:859
+msgid "You must supply a package id or name (parameter \"package\")."
+msgstr "Du må angi et navn eller id for datakilden (parameter \"pakke\")."
+
+#: ckan/logic/action/create.py:862
+msgid "You must supply a rating (parameter \"rating\")."
+msgstr "Du må angi en rangering (parameter \"rating\")."
+
+#: ckan/logic/action/create.py:867
+msgid "Rating must be an integer value."
+msgstr "Rangeringen må være et heltall"
+
+#: ckan/logic/action/create.py:871
+#, python-format
+msgid "Rating must be between %i and %i."
+msgstr "Rangeringen må være mellom %i og %i."
+
+#: ckan/logic/action/create.py:1216 ckan/logic/action/create.py:1223
+msgid "You must be logged in to follow users"
+msgstr "Du må være innlogget for å kunne følge brukere"
+
+#: ckan/logic/action/create.py:1236
+msgid "You cannot follow yourself"
+msgstr "Du kan ikke følge deg selv"
+
+#: ckan/logic/action/create.py:1244 ckan/logic/action/create.py:1301
+#: ckan/logic/action/create.py:1434
+msgid "You are already following {0}"
+msgstr "Du følger allerede {0}"
+
+#: ckan/logic/action/create.py:1275 ckan/logic/action/create.py:1283
+msgid "You must be logged in to follow a dataset."
+msgstr "Du må være innlogget for å følge et datasett."
+
+#: ckan/logic/action/create.py:1335
+msgid "User {username} does not exist."
+msgstr "Bruker {username} eksisterer ikke."
+
+#: ckan/logic/action/create.py:1410 ckan/logic/action/create.py:1418
+msgid "You must be logged in to follow a group."
+msgstr "Du må være logget inn for å følge en gruppe."
+
+#: ckan/logic/action/delete.py:68
+#, python-format
+msgid "REST API: Delete Package: %s"
+msgstr "REST API: Slett datakilde: %s"
+
+#: ckan/logic/action/delete.py:181 ckan/logic/action/delete.py:308
+#, python-format
+msgid "REST API: Delete %s"
+msgstr "REST API: Slett %s"
+
+#: ckan/logic/action/delete.py:270
+#, python-format
+msgid "REST API: Delete Member: %s"
+msgstr "REST API: Slett medlem: %s"
+
+#: ckan/logic/action/delete.py:467 ckan/logic/action/delete.py:493
+#: ckan/logic/action/get.py:2300 ckan/logic/action/update.py:981
+msgid "id not in data"
+msgstr "id finnes ikke i data"
+
+#: ckan/logic/action/delete.py:471 ckan/logic/action/get.py:2303
+#: ckan/logic/action/update.py:985
+#, python-format
+msgid "Could not find vocabulary \"%s\""
+msgstr "Kan ikke finne vokabular \"%s\""
+
+#: ckan/logic/action/delete.py:501
+#, python-format
+msgid "Could not find tag \"%s\""
+msgstr "Kan ikke finne stikkord \"%s\""
+
+#: ckan/logic/action/delete.py:527 ckan/logic/action/delete.py:531
+msgid "You must be logged in to unfollow something."
+msgstr "Du må være innlogget for å slutte å følge noe."
+
+#: ckan/logic/action/delete.py:542
+msgid "You are not following {0}."
+msgstr "Du følger ikke {0}."
+
+#: ckan/logic/action/get.py:1029 ckan/logic/action/update.py:130
+#: ckan/logic/action/update.py:143
+msgid "Resource was not found."
+msgstr "Fant ikke ressursen."
+
+#: ckan/logic/action/get.py:1851
+msgid "Do not specify if using \"query\" parameter"
+msgstr "Ikke spesifiser hvis \"query\"-parameter brukes"
+
+#: ckan/logic/action/get.py:1860
+msgid "Must be <field>:<value> pair(s)"
+msgstr "Må være <field>:<value> pair(s)"
+
+#: ckan/logic/action/get.py:1892
+msgid "Field \"{field}\" not recognised in resource_search."
+msgstr "Feltet \"{field}\" ikke gjenkjent i resource_search."
+
+#: ckan/logic/action/get.py:2238
+msgid "unknown user:"
+msgstr "ukjent bruker:"
+
+#: ckan/logic/action/update.py:65
+msgid "Item was not found."
+msgstr "Element ikke funnet."
+
+#: ckan/logic/action/update.py:293 ckan/logic/action/update.py:1176
+msgid "Package was not found."
+msgstr "Fant ikke datakilden."
+
+#: ckan/logic/action/update.py:336 ckan/logic/action/update.py:554
+#, python-format
+msgid "REST API: Update object %s"
+msgstr "REST API: Oppdater objekt %s"
+
+#: ckan/logic/action/update.py:437
+#, python-format
+msgid "REST API: Update package relationship: %s %s %s"
+msgstr "REST API: Oppdater pakkerelasjon: %s %s %s"
+
+#: ckan/logic/action/update.py:789
+msgid "TaskStatus was not found."
+msgstr "Fant ikke TaskStatus."
+
+#: ckan/logic/action/update.py:1180
+msgid "Organization was not found."
+msgstr "Fant ikke organisasjon."
+
+#: ckan/logic/auth/create.py:25 ckan/logic/auth/create.py:43
+#, python-format
+msgid "User %s not authorized to create packages"
+msgstr "Bruker %s ikke autorisert til å registrere datakilder"
+
+#: ckan/logic/auth/create.py:29 ckan/logic/auth/update.py:43
+#, python-format
+msgid "User %s not authorized to edit these groups"
+msgstr "Bruker %s ikke autorisert til å redigere disse gruppene"
+
+#: ckan/logic/auth/create.py:36
+#, python-format
+msgid "User %s not authorized to add dataset to this organization"
+msgstr "Bruker %s ikke autorisert til å legge datasett til denne organisasjonen"
+
+#: ckan/logic/auth/create.py:58
+msgid "You must be a sysadmin to create a featured related item"
+msgstr "Du må være sysadmin for å opprette et framhevet relatert element"
+
+#: ckan/logic/auth/create.py:62
+msgid "You must be logged in to add a related item"
+msgstr "Du må logge inn for å legge til relatert informasjon"
+
+#: ckan/logic/auth/create.py:77
+msgid "No dataset id provided, cannot check auth."
+msgstr ""
+
+#: ckan/logic/auth/create.py:84 ckan/logic/auth/delete.py:28
+#: ckan/logic/auth/get.py:135 ckan/logic/auth/update.py:61
+msgid "No package found for this resource, cannot check auth."
+msgstr "Ingen datakilde funnet for denne ressursen, kan ikke sjekke aut."
+
+#: ckan/logic/auth/create.py:92
+#, python-format
+msgid "User %s not authorized to create resources on dataset %s"
+msgstr ""
+
+#: ckan/logic/auth/create.py:115
+#, python-format
+msgid "User %s not authorized to edit these packages"
+msgstr "Bruker %s ikke autorisert til å redigere disse datakildene"
+
+#: ckan/logic/auth/create.py:126
+#, python-format
+msgid "User %s not authorized to create groups"
+msgstr "Bruker %s ikke autorisert til å opprette grupper"
+
+#: ckan/logic/auth/create.py:136
+#, python-format
+msgid "User %s not authorized to create organizations"
+msgstr "Bruker %s ikke autorisert til å opprette organisasjoner"
+
+#: ckan/logic/auth/create.py:152
+msgid "User {user} not authorized to create users via the API"
+msgstr "Brukeren  {user} har ikke tillatelse til å opprette brukere via API"
+
+#: ckan/logic/auth/create.py:155
+msgid "Not authorized to create users"
+msgstr "Har ikke tillatelse til å opprette brukere"
+
+#: ckan/logic/auth/create.py:198
+msgid "Group was not found."
+msgstr "Fant ikke gruppen."
+
+#: ckan/logic/auth/create.py:218
+msgid "Valid API key needed to create a package"
+msgstr "Gyldig API-nøkkel kreves for å opprette en datakilde"
+
+#: ckan/logic/auth/create.py:226
+msgid "Valid API key needed to create a group"
+msgstr "Gyldig API-nøkkel påkrevet for å opprette en gruppe"
+
+#: ckan/logic/auth/create.py:246
+#, python-format
+msgid "User %s not authorized to add members"
+msgstr "Bruker %s ikke autorisert til å legge til medlemmer"
+
+#: ckan/logic/auth/create.py:270 ckan/logic/auth/update.py:113
+#, python-format
+msgid "User %s not authorized to edit group %s"
+msgstr "Bruker %s ikke autorisert til å redigere gruppen %s"
+
+#: ckan/logic/auth/delete.py:34
+#, python-format
+msgid "User %s not authorized to delete resource %s"
+msgstr "Bruker %s ikke autorisert til å slette ressursen %s"
+
+#: ckan/logic/auth/delete.py:50
+msgid "Resource view not found, cannot check auth."
+msgstr ""
+
+#: ckan/logic/auth/delete.py:60 ckan/logic/auth/delete.py:74
+msgid "Only the owner can delete a related item"
+msgstr "Bare eier kan slette relatert informasjon"
+
+#: ckan/logic/auth/delete.py:86
+#, python-format
+msgid "User %s not authorized to delete relationship %s"
+msgstr "Bruker %s ikke autorisert til å slette forhold %s"
+
+#: ckan/logic/auth/delete.py:95
+#, python-format
+msgid "User %s not authorized to delete groups"
+msgstr "Bruker %s ikke autorisert til å slette grupper"
+
+#: ckan/logic/auth/delete.py:99
+#, python-format
+msgid "User %s not authorized to delete group %s"
+msgstr "Bruker %s ikke autorisert til å slette gruppen %s"
+
+#: ckan/logic/auth/delete.py:116
+#, python-format
+msgid "User %s not authorized to delete organizations"
+msgstr "Bruker %s ikke autorisert til å slette organisasjoner"
+
+#: ckan/logic/auth/delete.py:120
+#, python-format
+msgid "User %s not authorized to delete organization %s"
+msgstr "Bruker %s ikke autorisert til å slette organisasjonen %s"
+
+#: ckan/logic/auth/delete.py:133
+#, python-format
+msgid "User %s not authorized to delete task_status"
+msgstr "Bruker %s ikke autorisert til å slette task_status"
+
+#: ckan/logic/auth/get.py:97
+#, python-format
+msgid "User %s not authorized to read these packages"
+msgstr "Bruker %s ikke autorisert til å lese disse datakildene"
+
+#: ckan/logic/auth/get.py:119
+#, python-format
+msgid "User %s not authorized to read package %s"
+msgstr "Bruker %s ikke autorisert til å lese datakilden %s"
+
+#: ckan/logic/auth/get.py:141
+#, python-format
+msgid "User %s not authorized to read resource %s"
+msgstr "Bruker %s ikke autorisert til å lese ressurs %s"
+
+#: ckan/logic/auth/get.py:166
+#, python-format
+msgid "User %s not authorized to read group %s"
+msgstr ""
+
+#: ckan/logic/auth/get.py:234
+msgid "You must be logged in to access your dashboard."
+msgstr "Du må være innlogget for å få tilgang til kontrollpanelet ditt."
+
+#: ckan/logic/auth/update.py:37
+#, python-format
+msgid "User %s not authorized to edit package %s"
+msgstr "Bruker %s ikke autorisert til å redigere datakilden %s"
+
+#: ckan/logic/auth/update.py:69
+#, python-format
+msgid "User %s not authorized to edit resource %s"
+msgstr "Bruker %s ikke autorisert til å redigere ressursen %s"
+
+#: ckan/logic/auth/update.py:98
+#, python-format
+msgid "User %s not authorized to change state of package %s"
+msgstr "Bruker %s ikke autorisert til å endre status for datakilden %s"
+
+#: ckan/logic/auth/update.py:126
+#, python-format
+msgid "User %s not authorized to edit organization %s"
+msgstr "Bruker %s ikke autorisert til å redigere organisasjonen %s"
+
+#: ckan/logic/auth/update.py:137 ckan/logic/auth/update.py:143
+msgid "Only the owner can update a related item"
+msgstr "Bare eier kan oppdatere relatert informasjon"
+
+#: ckan/logic/auth/update.py:148
+msgid "You must be a sysadmin to change a related item's featured field."
+msgstr "Du må være sysadmin for å endre framhevet felt til et relatert element."
+
+#: ckan/logic/auth/update.py:165
+#, python-format
+msgid "User %s not authorized to change state of group %s"
+msgstr "Bruker %s ikke autorisert til å endre status for gruppen %s"
+
+#: ckan/logic/auth/update.py:182
+#, python-format
+msgid "User %s not authorized to edit permissions of group %s"
+msgstr "Bruker %s ikke autorisert til å redigere tillatelsene for gruppen %s"
+
+#: ckan/logic/auth/update.py:209
+msgid "Have to be logged in to edit user"
+msgstr "Må være logget inn for å redigere bruker"
+
+#: ckan/logic/auth/update.py:217
+#, python-format
+msgid "User %s not authorized to edit user %s"
+msgstr "Bruker %s ikke autorisert til å redigere bruker %s"
+
+#: ckan/logic/auth/update.py:228
+msgid "User {0} not authorized to update user {1}"
+msgstr ""
+
+#: ckan/logic/auth/update.py:236
+#, python-format
+msgid "User %s not authorized to change state of revision"
+msgstr "Bruker %s ikke autorisert til å endre status for versjonen"
+
+#: ckan/logic/auth/update.py:245
+#, python-format
+msgid "User %s not authorized to update task_status table"
+msgstr "Bruker %s ikke autorisert til å oppdatere tabellen task_status"
+
+#: ckan/logic/auth/update.py:259
+#, python-format
+msgid "User %s not authorized to update term_translation table"
+msgstr "Bruker %s ikke autorisert til å oppdatere term_translation table"
+
+#: ckan/logic/auth/update.py:281
+msgid "Valid API key needed to edit a package"
+msgstr "Gyldig API-nøkkel påkrevet for å redigere en datakilde"
+
+#: ckan/logic/auth/update.py:291
+msgid "Valid API key needed to edit a group"
+msgstr "Gyldig API-nøkkel påkrevet for å redigere en gruppe"
+
+#: ckan/model/license.py:177
+msgid "License not specified"
+msgstr ""
+
+#: ckan/model/license.py:187
+msgid "Open Data Commons Public Domain Dedication and License (PDDL)"
+msgstr "Open Data Commons Public Domain Dedication and License (PDDL)"
+
+#: ckan/model/license.py:197
+msgid "Open Data Commons Open Database License (ODbL)"
+msgstr "Open Data Commons Open Database License (ODbL)"
+
+#: ckan/model/license.py:207
+msgid "Open Data Commons Attribution License"
+msgstr "Open Data Commons Attribution License"
+
+#: ckan/model/license.py:218
+msgid "Creative Commons CCZero"
+msgstr "Creative Commons CCZero"
+
+#: ckan/model/license.py:227
+msgid "Creative Commons Attribution"
+msgstr "Creative Commons Navngivelse"
+
+#: ckan/model/license.py:237
+msgid "Creative Commons Attribution Share-Alike"
+msgstr "Creative Commons Navngivelse-Del på samme vilkår"
+
+#: ckan/model/license.py:246
+msgid "GNU Free Documentation License"
+msgstr "GNU Free Documentation License"
+
+#: ckan/model/license.py:256
+msgid "Other (Open)"
+msgstr "Annet (åpen)"
+
+#: ckan/model/license.py:266
+msgid "Other (Public Domain)"
+msgstr "Annet (public domain)"
+
+#: ckan/model/license.py:276
+msgid "Other (Attribution)"
+msgstr "Annet (navngivelse)"
+
+#: ckan/model/license.py:288
+msgid "UK Open Government Licence (OGL)"
+msgstr "UK Open Government Licence (OGL)"
+
+#: ckan/model/license.py:296
+msgid "Creative Commons Non-Commercial (Any)"
+msgstr "Creative Commons ikke-kommersiell"
+
+#: ckan/model/license.py:304
+msgid "Other (Non-Commercial)"
+msgstr "Annet (ikke-kommersiell)"
+
+#: ckan/model/license.py:312
+msgid "Other (Not Open)"
+msgstr "Annet (ikke åpen)"
+
+#: ckan/model/package_relationship.py:52
+#, python-format
+msgid "depends on %s"
+msgstr "avhenger av %s"
+
+#: ckan/model/package_relationship.py:52
+#, python-format
+msgid "is a dependency of %s"
+msgstr "tilhører %s"
+
+#: ckan/model/package_relationship.py:53
+#, python-format
+msgid "derives from %s"
+msgstr "avledes fra %s"
+
+#: ckan/model/package_relationship.py:53
+#, python-format
+msgid "has derivation %s"
+msgstr "har avledningen %s"
+
+#: ckan/model/package_relationship.py:54
+#, python-format
+msgid "links to %s"
+msgstr "lenker til %s"
+
+#: ckan/model/package_relationship.py:54
+#, python-format
+msgid "is linked from %s"
+msgstr "er lenket fra %s"
+
+#: ckan/model/package_relationship.py:55
+#, python-format
+msgid "is a child of %s"
+msgstr "er underordnet av %s"
+
+#: ckan/model/package_relationship.py:55
+#, python-format
+msgid "is a parent of %s"
+msgstr "er overordnet til %s"
+
+#: ckan/model/package_relationship.py:59
+#, python-format
+msgid "has sibling %s"
+msgstr "har søsken %s"
+
+#: ckan/public/base/javascript/modules/activity-stream.js:20
+#: ckan/public/base/javascript/modules/popover-context.js:45
+#: ckan/templates/package/snippets/data_api_button.html:8
+#: ckan/templates/tests/mock_json_resource_preview_template.html:7
+#: ckan/templates/tests/mock_resource_preview_template.html:7
+#: ckanext/reclineview/theme/templates/recline_view.html:12
+#: ckanext/textview/theme/templates/text_view.html:9
+msgid "Loading..."
+msgstr "Laster..."
+
+#: ckan/public/base/javascript/modules/api-info.js:20
+msgid "There is no API data to load for this resource"
+msgstr "Ingen API-data kan lastes for denne ressursen"
+
+#: ckan/public/base/javascript/modules/api-info.js:21
+msgid "Failed to load data API information"
+msgstr "Kunne ikke laste informasjon om data-API"
+
+#: ckan/public/base/javascript/modules/autocomplete.js:31
+msgid "No matches found"
+msgstr "Ingen treff"
+
+#: ckan/public/base/javascript/modules/autocomplete.js:32
+msgid "Start typing…"
+msgstr "Skriv inn..."
+
+#: ckan/public/base/javascript/modules/autocomplete.js:34
+msgid "Input is too short, must be at least one character"
+msgstr "For kort, må være minst ett tegn"
+
+#: ckan/public/base/javascript/modules/basic-form.js:4
+msgid "There are unsaved modifications to this form"
+msgstr "Du har gjort endringer i skjemaet som ikke er lagret"
+
+#: ckan/public/base/javascript/modules/confirm-action.js:7
+msgid "Please Confirm Action"
+msgstr "Bekreft handling"
+
+#: ckan/public/base/javascript/modules/confirm-action.js:8
+msgid "Are you sure you want to perform this action?"
+msgstr "Er du sikker på at du vil utføre denne handlingen?"
+
+#: ckan/public/base/javascript/modules/confirm-action.js:9
+#: ckan/templates/user/new_user_form.html:9
+#: ckan/templates/user/perform_reset.html:21
+msgid "Confirm"
+msgstr "Bekreft"
+
+#: ckan/public/base/javascript/modules/confirm-action.js:10
+#: ckan/public/base/javascript/modules/resource-reorder.js:11
+#: ckan/public/base/javascript/modules/resource-view-reorder.js:11
+#: ckan/templates/admin/confirm_reset.html:9
+#: ckan/templates/group/confirm_delete.html:14
+#: ckan/templates/group/confirm_delete_member.html:15
+#: ckan/templates/organization/confirm_delete.html:14
+#: ckan/templates/organization/confirm_delete_member.html:15
+#: ckan/templates/package/confirm_delete.html:14
+#: ckan/templates/package/confirm_delete_resource.html:14
+#: ckan/templates/related/confirm_delete.html:14
+#: ckan/templates/related/snippets/related_form.html:32
+msgid "Cancel"
+msgstr "Avbryt"
+
+#: ckan/public/base/javascript/modules/follow.js:23
+#: ckan/templates/snippets/follow_button.html:14
+msgid "Follow"
+msgstr "Følg"
+
+#: ckan/public/base/javascript/modules/follow.js:24
+#: ckan/templates/snippets/follow_button.html:9
+msgid "Unfollow"
+msgstr "Ikke følg"
+
+#: ckan/public/base/javascript/modules/image-upload.js:15
+msgid "Upload"
+msgstr "Opplasting"
+
+#: ckan/public/base/javascript/modules/image-upload.js:16
+msgid "Link"
+msgstr "Lenke"
+
+#: ckan/public/base/javascript/modules/image-upload.js:17
+#: ckan/templates/group/snippets/group_item.html:43
+#: ckan/templates/macros/form.html:235
+#: ckan/templates/snippets/search_form.html:65
+msgid "Remove"
+msgstr "Fjern"
+
+#: ckan/public/base/javascript/modules/image-upload.js:18
+#: ckan/templates/macros/form.html:412 ckanext/imageview/plugin.py:26
+msgid "Image"
+msgstr "Bilde"
+
+#: ckan/public/base/javascript/modules/image-upload.js:19
+msgid "Upload a file on your computer"
+msgstr "Last opp en fil til datamaskinen din"
+
+#: ckan/public/base/javascript/modules/image-upload.js:20
+msgid "Link to a URL on the internet (you can also link to an API)"
+msgstr "Lenke til en URL på internett (du kan også lenke til et API)"
+
+#: ckan/public/base/javascript/modules/related-item.js:25
+msgid "show more"
+msgstr "vis mer"
+
+#: ckan/public/base/javascript/modules/related-item.js:26
+msgid "show less"
+msgstr "vis mindre"
+
+#: ckan/public/base/javascript/modules/resource-reorder.js:8
+msgid "Reorder resources"
+msgstr "Forandre rekkefølge på ressurser"
+
+#: ckan/public/base/javascript/modules/resource-reorder.js:9
+#: ckan/public/base/javascript/modules/resource-view-reorder.js:9
+msgid "Save order"
+msgstr "Lagre rekkefølge"
+
+#: ckan/public/base/javascript/modules/resource-reorder.js:10
+#: ckan/public/base/javascript/modules/resource-view-reorder.js:10
+msgid "Saving..."
+msgstr "Lagrer..."
+
+#: ckan/public/base/javascript/modules/resource-upload-field.js:25
+msgid "Upload a file"
+msgstr "Last opp en fil"
+
+#: ckan/public/base/javascript/modules/resource-upload-field.js:26
+msgid "An Error Occurred"
+msgstr "En feil oppsto"
+
+#: ckan/public/base/javascript/modules/resource-upload-field.js:27
+msgid "Resource uploaded"
+msgstr "Ressurs lastet opp"
+
+#: ckan/public/base/javascript/modules/resource-upload-field.js:28
+msgid "Unable to upload file"
+msgstr "Klarer ikke å laste opp fil"
+
+#: ckan/public/base/javascript/modules/resource-upload-field.js:29
+msgid "Unable to authenticate upload"
+msgstr "Klarer ikke å autentisere opplasting"
+
+#: ckan/public/base/javascript/modules/resource-upload-field.js:30
+msgid "Unable to get data for uploaded file"
+msgstr "Finner ikke data for opplastet fil"
+
+#: ckan/public/base/javascript/modules/resource-upload-field.js:31
+msgid ""
+"You are uploading a file. Are you sure you want to navigate away and stop "
+"this upload?"
+msgstr "Du laster opp en fil. Er du sikker på at du vil forlate siden og stoppe denne opplastingen?"
+
+#: ckan/public/base/javascript/modules/resource-view-reorder.js:8
+msgid "Reorder resource view"
+msgstr ""
+
+#: ckan/public/base/javascript/modules/slug-preview.js:35
+#: ckan/templates/group/snippets/group_form.html:18
+#: ckan/templates/organization/snippets/organization_form.html:18
+#: ckan/templates/package/snippets/package_basic_fields.html:13
+#: ckan/templates/package/snippets/resource_form.html:24
+#: ckan/templates/related/snippets/related_form.html:19
+msgid "URL"
+msgstr "URL"
+
+#: ckan/public/base/javascript/modules/slug-preview.js:36
+#: ckan/templates/group/edit_base.html:20 ckan/templates/group/members.html:32
+#: ckan/templates/organization/bulk_process.html:65
+#: ckan/templates/organization/edit.html:3
+#: ckan/templates/organization/edit_base.html:22
+#: ckan/templates/organization/members.html:32
+#: ckan/templates/package/edit_base.html:11
+#: ckan/templates/package/resource_edit.html:3
+#: ckan/templates/package/resource_edit_base.html:12
+#: ckan/templates/package/snippets/resource_item.html:57
+#: ckan/templates/related/snippets/related_item.html:36
+msgid "Edit"
+msgstr "Rediger"
+
+#: ckan/public/base/javascript/modules/table-toggle-more.js:9
+msgid "Show more"
+msgstr "Vis mer"
+
+#: ckan/public/base/javascript/modules/table-toggle-more.js:10
+msgid "Hide"
+msgstr "Skjul"
+
+#: ckan/templates/error_document_template.html:3
+#, python-format
+msgid "Error %(error_code)s"
+msgstr "Feil %(error_code)s"
+
+#: ckan/templates/footer.html:9
+msgid "About {0}"
+msgstr "Om {0}"
+
+#: ckan/templates/footer.html:15
+msgid "CKAN API"
+msgstr "CKAN API"
+
+#: ckan/templates/footer.html:16
+msgid "Open Knowledge Foundation"
+msgstr "Open Knowledge Foundation"
+
+#: ckan/templates/footer.html:24
+msgid ""
+"<strong>Powered by</strong> <a class=\"hide-text ckan-footer-logo\" "
+"href=\"http://ckan.org\">CKAN</a>"
+msgstr "<strong>Laget med</strong> <a class=\"hide-text ckan-footer-logo\" href=\"http://ckan.org\">CKAN</a>"
+
+#: ckan/templates/header.html:12
+msgid "Sysadmin settings"
+msgstr "Innstillinger for sysadmin"
+
+#: ckan/templates/header.html:18
+msgid "View profile"
+msgstr "vis profil"
+
+#: ckan/templates/header.html:25
+#, python-format
+msgid "Dashboard (%(num)d new item)"
+msgid_plural "Dashboard (%(num)d new items)"
+msgstr[0] "Dashboard (%(num)d nytt element)"
+msgstr[1] "Kontrollpanel (%(num)d nye elementer)"
+
+#: ckan/templates/header.html:33 ckan/templates/user/dashboard.html:16
+msgid "Edit settings"
+msgstr "Rediger innstillinger"
+
+#: ckan/templates/header.html:40
+msgid "Log out"
+msgstr "Logg ut"
+
+#: ckan/templates/header.html:52 ckan/templates/user/logout_first.html:15
+msgid "Log in"
+msgstr "Logg inn"
+
+#: ckan/templates/header.html:54 ckan/templates/user/new.html:3
+msgid "Register"
+msgstr "Registrer"
+
+#: ckan/templates/header.html:99 ckan/templates/group/read_base.html:17
+#: ckan/templates/group/snippets/info.html:36
+#: ckan/templates/organization/bulk_process.html:20
+#: ckan/templates/organization/edit_base.html:23
+#: ckan/templates/organization/read_base.html:17
+#: ckan/templates/package/base.html:7 ckan/templates/package/base.html:17
+#: ckan/templates/package/base.html:21 ckan/templates/package/search.html:4
+#: ckan/templates/package/search.html:7
+#: ckan/templates/package/snippets/new_package_breadcrumb.html:1
+#: ckan/templates/related/base_form_page.html:4
+#: ckan/templates/revision/diff.html:11 ckan/templates/revision/read.html:65
+#: ckan/templates/snippets/organization.html:59
+#: ckan/templates/snippets/context/group.html:17
+#: ckan/templates/snippets/context/user.html:19
+#: ckan/templates/user/read.html:5 ckan/templates/user/read_base.html:19
+#: ckan/templates/user/read_base.html:53
+msgid "Datasets"
+msgstr "Datasett"
+
+#: ckan/templates/header.html:112
+msgid "Search Datasets"
+msgstr "Søk datasett"
+
+#: ckan/templates/header.html:113 ckan/templates/home/snippets/search.html:11
+#: ckan/templates/snippets/simple_search.html:5
+#: ckan/templates/tag/index.html:35
+#: ckan/templates/user/snippets/user_search.html:6
+#: ckan/templates/user/snippets/user_search.html:7
+msgid "Search"
+msgstr "Søk"
+
+#: ckan/templates/page.html:6
+msgid "Skip to content"
+msgstr ""
+
+#: ckan/templates/activity_streams/activity_stream_items.html:9
+msgid "Load less"
+msgstr "Last mindre"
+
+#: ckan/templates/activity_streams/activity_stream_items.html:17
+msgid "Load more"
+msgstr "Last mer"
+
+#: ckan/templates/activity_streams/activity_stream_items.html:23
+msgid "No activities are within this activity stream"
+msgstr "Ingen aktiviteter i denne aktivitetsstrømmen"
+
+#: ckan/templates/admin/base.html:3
+msgid "Administration"
+msgstr "Administrasjon"
+
+#: ckan/templates/admin/base.html:8
+msgid "Sysadmins"
+msgstr "Systemadministratorer"
+
+#: ckan/templates/admin/base.html:9
+msgid "Config"
+msgstr "Oppsett"
+
+#: ckan/templates/admin/base.html:10 ckan/templates/admin/trash.html:29
+msgid "Trash"
+msgstr "Søppel"
+
+#: ckan/templates/admin/config.html:11
+#: ckan/templates/admin/confirm_reset.html:7
+msgid "Are you sure you want to reset the config?"
+msgstr "Er du sikker på at du vil tilbakestille oppsettet?"
+
+#: ckan/templates/admin/config.html:12
+msgid "Reset"
+msgstr "Tilbakestill"
+
+#: ckan/templates/admin/config.html:13
+msgid "Update Config"
+msgstr "Oppdater oppsett"
+
+#: ckan/templates/admin/config.html:22
+msgid "CKAN config options"
+msgstr "Oppsett-valg for CKAN"
+
+#: ckan/templates/admin/config.html:29
+#, python-format
+msgid ""
+" <p><strong>Site Title:</strong> This is the title of this CKAN instance It "
+"appears in various places throughout CKAN.</p> <p><strong>Style:</strong> "
+"Choose from a list of simple variations of the main colour scheme to get a "
+"very quick custom theme working.</p> <p><strong>Site Tag Logo:</strong> This"
+" is the logo that appears in the header of all the CKAN instance "
+"templates.</p> <p><strong>About:</strong> This text will appear on this CKAN"
+" instances <a href=\"%(about_url)s\">about page</a>.</p> <p><strong>Intro "
+"Text:</strong> This text will appear on this CKAN instances <a "
+"href=\"%(home_url)s\">home page</a> as a welcome to visitors.</p> "
+"<p><strong>Custom CSS:</strong> This is a block of CSS that appears in "
+"<code>&lt;head&gt;</code> tag of every page. If you wish to customize the "
+"templates more fully we recommend <a href=\"%(docs_url)s\" "
+"target=\"_blank\">reading the documentation</a>.</p> "
+"<p><strong>Homepage:</strong> This is for choosing a predefined layout for "
+"the modules that appear on your homepage.</p> "
+msgstr " <p><strong>Nettstedets tittel:</strong> Dette er navnet på dette CKAN-nettstedet. Det dukker opp forskjellige steder rundt omkring i CKAN.</p> <p><strong>Stil:</strong> Velg blant flere varianter av fargekart for å få en rask tilpasning av utseendet.</p> <p><strong>Logo:</strong> Dette er logoen som vises i toppteksten på alle sidene.</p> <p><strong>Om:</strong> Denne teksten vises på <a href=\"%(about_url)s\">om-siden</a>.</p> <p><strong>Introtekst:</strong> Denne teksten vises på <a href=\"%(home_url)s\">hjemmesiden</a>, og er en første informasjon til alle besøkende.</p> <p><strong>Egendefinert CSS:</strong> Dette er en CSS-blokk som settes inn i i <code>&lt;head&gt;</code>-tagten på alle sidene. Hvis du vil styre utseendet mer fullstendig, <a href=\"%(docs_url)s\" target=\"_blank\">les dokumentasjonen</a>.</p> <p><strong>Hjemmeside:</strong> Her velger du en forhåndsdefinert layout for modulene som vises på hjemmesiden.</p> "
+
+#: ckan/templates/admin/confirm_reset.html:3
+#: ckan/templates/admin/confirm_reset.html:10
+msgid "Confirm Reset"
+msgstr "Bekreft tilbakestilling"
+
+#: ckan/templates/admin/index.html:15
+msgid "Administer CKAN"
+msgstr ""
+
+#: ckan/templates/admin/index.html:20
+#, python-format
+msgid ""
+" <p>As a sysadmin user you have full control over this CKAN instance. "
+"Proceed with care!</p> <p>For guidance on using sysadmin features, see the "
+"CKAN <a href=\"%(docs_url)s\" target=\"_blank\">sysadmin guide</a></p> "
+msgstr ""
+
+#: ckan/templates/admin/trash.html:20
+msgid "Purge"
+msgstr ""
+
+#: ckan/templates/admin/trash.html:32
+msgid " <p>Purge deleted datasets forever and irreversibly.</p> "
+msgstr ""
+
+#: ckan/templates/ajax_snippets/api_info.html:19
+msgid "CKAN Data API"
+msgstr "CKAN data-API"
+
+#: ckan/templates/ajax_snippets/api_info.html:23
+msgid "Access resource data via a web API with powerful query support"
+msgstr "Få tilgang til ressursdata via et web-API med sterk query-støtte"
+
+#: ckan/templates/ajax_snippets/api_info.html:24
+msgid ""
+" Further information in the <a       "
+"href=\"http://docs.ckan.org/en/latest/maintaining/datastore.html\" "
+"target=\"_blank\">main CKAN Data API and DataStore documentation</a>.</p> "
+msgstr ""
+
+#: ckan/templates/ajax_snippets/api_info.html:33
+msgid "Endpoints"
+msgstr "Endpoints"
+
+#: ckan/templates/ajax_snippets/api_info.html:37
+msgid ""
+"The Data API can be accessed via the following actions of the CKAN action "
+"API."
+msgstr "Data-APIet kan nås via disse handlingene til CKANs action-API."
+
+#: ckan/templates/ajax_snippets/api_info.html:42
+#: ckan/templates/related/edit_form.html:7
+msgid "Create"
+msgstr "Opprett"
+
+#: ckan/templates/ajax_snippets/api_info.html:46
+msgid "Update / Insert"
+msgstr "Oppdater/legg til"
+
+#: ckan/templates/ajax_snippets/api_info.html:50
+msgid "Query"
+msgstr "Spørring"
+
+#: ckan/templates/ajax_snippets/api_info.html:54
+msgid "Query (via SQL)"
+msgstr "Spørring (via SQL)"
+
+#: ckan/templates/ajax_snippets/api_info.html:66
+msgid "Querying"
+msgstr "Spør"
+
+#: ckan/templates/ajax_snippets/api_info.html:70
+msgid "Query example (first 5 results)"
+msgstr "Eksempel på spørring (første fem resultater)"
+
+#: ckan/templates/ajax_snippets/api_info.html:75
+msgid "Query example (results containing 'jones')"
+msgstr "Eksempel på spørring (resultater inneholder 'jones')"
+
+#: ckan/templates/ajax_snippets/api_info.html:81
+msgid "Query example (via SQL statement)"
+msgstr "Eksempel på spørring (via SQL-statement)"
+
+#: ckan/templates/ajax_snippets/api_info.html:93
+msgid "Example: Javascript"
+msgstr "Eksempel: Javascript"
+
+#: ckan/templates/ajax_snippets/api_info.html:97
+msgid "A simple ajax (JSONP) request to the data API using jQuery."
+msgstr "En enkelt ajax (JSONP) forespørsel til data-APIet ved bruk av jQuery"
+
+#: ckan/templates/ajax_snippets/api_info.html:118
+msgid "Example: Python"
+msgstr "Eksempel: Python"
+
+#: ckan/templates/dataviewer/snippets/data_preview.html:9
+msgid "This resource can not be previewed at the moment."
+msgstr "Ingen forhåndsvisning av denne ressursen for øyeblikket."
+
+#: ckan/templates/dataviewer/snippets/data_preview.html:11
+#: ckan/templates/package/resource_read.html:118
+#: ckan/templates/package/snippets/resource_view.html:26
+msgid "Click here for more information."
+msgstr "Klikk her for mer informasjon."
+
+#: ckan/templates/dataviewer/snippets/data_preview.html:18
+#: ckan/templates/package/snippets/resource_view.html:33
+msgid "Download resource"
+msgstr "Last ned ressurs"
+
+#: ckan/templates/dataviewer/snippets/data_preview.html:23
+#: ckan/templates/package/snippets/resource_view.html:56
+#: ckanext/webpageview/theme/templates/webpage_view.html:2
+msgid "Your browser does not support iframes."
+msgstr "Din nettleser støtter ikke iframes."
+
+#: ckan/templates/dataviewer/snippets/no_preview.html:3
+msgid "No preview available."
+msgstr "Ingen forhåndsvisning tilgjengelig."
+
+#: ckan/templates/dataviewer/snippets/no_preview.html:5
+msgid "More details..."
+msgstr "Flere detaljer..."
+
+#: ckan/templates/dataviewer/snippets/no_preview.html:12
+#, python-format
+msgid "No handler defined for data type: %(type)s."
+msgstr "Ingen håndtering definert for datatype: %(type)s."
+
+#: ckan/templates/development/snippets/form.html:5
+msgid "Standard"
+msgstr "Standard"
+
+#: ckan/templates/development/snippets/form.html:5
+msgid "Standard Input"
+msgstr "Standard inndata"
+
+#: ckan/templates/development/snippets/form.html:6
+msgid "Medium"
+msgstr "Medium"
+
+#: ckan/templates/development/snippets/form.html:6
+msgid "Medium Width Input"
+msgstr "Middels bredde inndata"
+
+#: ckan/templates/development/snippets/form.html:7
+msgid "Full"
+msgstr "Full"
+
+#: ckan/templates/development/snippets/form.html:7
+msgid "Full Width Input"
+msgstr "Full bredde inndata"
+
+#: ckan/templates/development/snippets/form.html:8
+msgid "Large"
+msgstr "Stor"
+
+#: ckan/templates/development/snippets/form.html:8
+msgid "Large Input"
+msgstr "Store inndata"
+
+#: ckan/templates/development/snippets/form.html:9
+msgid "Prepend"
+msgstr "Legg til på begynnelsen"
+
+#: ckan/templates/development/snippets/form.html:9
+msgid "Prepend Input"
+msgstr "Legg til på begynnelsen av inndata"
+
+#: ckan/templates/development/snippets/form.html:13
+msgid "Custom Field (empty)"
+msgstr "Tilpasset felt (tomt)"
+
+#: ckan/templates/development/snippets/form.html:19
+#: ckan/templates/group/snippets/group_form.html:35
+#: ckan/templates/group/snippets/group_form.html:48
+#: ckan/templates/organization/snippets/organization_form.html:35
+#: ckan/templates/organization/snippets/organization_form.html:48
+#: ckan/templates/snippets/custom_form_fields.html:20
+#: ckan/templates/snippets/custom_form_fields.html:37
+msgid "Custom Field"
+msgstr "Tilpasset felt"
+
+#: ckan/templates/development/snippets/form.html:22
+msgid "Markdown"
+msgstr "Markdown"
+
+#: ckan/templates/development/snippets/form.html:23
+msgid "Textarea"
+msgstr "Tekstområde"
+
+#: ckan/templates/development/snippets/form.html:24
+msgid "Select"
+msgstr "Velg"
+
+#: ckan/templates/group/activity_stream.html:3
+#: ckan/templates/group/activity_stream.html:6
+#: ckan/templates/group/read_base.html:18
+#: ckan/templates/organization/activity_stream.html:3
+#: ckan/templates/organization/activity_stream.html:6
+#: ckan/templates/organization/read_base.html:18
+#: ckan/templates/package/activity.html:3
+#: ckan/templates/package/activity.html:6
+#: ckan/templates/package/read_base.html:26
+#: ckan/templates/user/activity_stream.html:3
+#: ckan/templates/user/activity_stream.html:6
+#: ckan/templates/user/read_base.html:20
+msgid "Activity Stream"
+msgstr "Aktivitetsstrøm"
+
+#: ckan/templates/group/admins.html:3 ckan/templates/group/admins.html:6
+#: ckan/templates/organization/admins.html:3
+#: ckan/templates/organization/admins.html:6
+msgid "Administrators"
+msgstr "Administratorer"
+
+#: ckan/templates/group/base_form_page.html:7
+msgid "Add a Group"
+msgstr "Legg til en gruppe"
+
+#: ckan/templates/group/base_form_page.html:11
+msgid "Group Form"
+msgstr "Gruppeskjema"
+
+#: ckan/templates/group/confirm_delete.html:3
+#: ckan/templates/group/confirm_delete.html:15
+#: ckan/templates/group/confirm_delete_member.html:3
+#: ckan/templates/group/confirm_delete_member.html:16
+#: ckan/templates/organization/confirm_delete.html:3
+#: ckan/templates/organization/confirm_delete.html:15
+#: ckan/templates/organization/confirm_delete_member.html:3
+#: ckan/templates/organization/confirm_delete_member.html:16
+#: ckan/templates/package/confirm_delete.html:3
+#: ckan/templates/package/confirm_delete.html:15
+#: ckan/templates/package/confirm_delete_resource.html:3
+#: ckan/templates/package/confirm_delete_resource.html:15
+#: ckan/templates/related/confirm_delete.html:3
+#: ckan/templates/related/confirm_delete.html:15
+msgid "Confirm Delete"
+msgstr "Bekreft sletting"
+
+#: ckan/templates/group/confirm_delete.html:11
+msgid "Are you sure you want to delete group - {name}?"
+msgstr "Er du sikker på at du vil slette gruppen - {name}?"
+
+#: ckan/templates/group/confirm_delete_member.html:11
+#: ckan/templates/organization/confirm_delete_member.html:11
+msgid "Are you sure you want to delete member - {name}?"
+msgstr "Er du sikker på at du vil slette medlem - {name}?"
+
+#: ckan/templates/group/edit.html:7 ckan/templates/group/edit_base.html:3
+#: ckan/templates/group/edit_base.html:11
+#: ckan/templates/group/read_base.html:12
+#: ckan/templates/organization/edit_base.html:11
+#: ckan/templates/organization/read_base.html:12
+#: ckan/templates/package/read_base.html:19
+#: ckan/templates/package/resource_read.html:31
+#: ckan/templates/user/edit.html:8 ckan/templates/user/edit_base.html:3
+#: ckan/templates/user/read_base.html:14
+msgid "Manage"
+msgstr "Administrer"
+
+#: ckan/templates/group/edit.html:12
+msgid "Edit Group"
+msgstr "Rediger gruppen"
+
+#: ckan/templates/group/edit_base.html:21 ckan/templates/group/members.html:3
+#: ckan/templates/organization/edit_base.html:24
+#: ckan/templates/organization/members.html:3
+msgid "Members"
+msgstr "Medlemmer"
+
+#: ckan/templates/group/followers.html:3 ckan/templates/group/followers.html:6
+#: ckan/templates/group/snippets/info.html:32
+#: ckan/templates/package/followers.html:3
+#: ckan/templates/package/followers.html:6
+#: ckan/templates/package/snippets/info.html:23
+#: ckan/templates/snippets/organization.html:55
+#: ckan/templates/snippets/context/group.html:13
+#: ckan/templates/snippets/context/user.html:15
+#: ckan/templates/user/followers.html:3 ckan/templates/user/followers.html:7
+#: ckan/templates/user/read_base.html:49
+#: ckanext/example_theme/v18_snippet_api/templates/ajax_snippets/example_theme_popover.html:12
+msgid "Followers"
+msgstr "Følgere"
+
+#: ckan/templates/group/history.html:3 ckan/templates/group/history.html:6
+#: ckan/templates/package/history.html:3 ckan/templates/package/history.html:6
+msgid "History"
+msgstr "Historikk"
+
+#: ckan/templates/group/index.html:13
+#: ckan/templates/user/dashboard_groups.html:7
+msgid "Add Group"
+msgstr "Legg til gruppe"
+
+#: ckan/templates/group/index.html:20
+msgid "Search groups..."
+msgstr "Søk i grupper..."
+
+#: ckan/templates/group/index.html:20 ckan/templates/group/read.html:16
+#: ckan/templates/organization/bulk_process.html:97
+#: ckan/templates/organization/read.html:20
+#: ckan/templates/package/search.html:30
+#: ckan/templates/snippets/search_form.html:4
+#: ckan/templates/snippets/simple_search.html:10
+#: ckan/templates/snippets/sort_by.html:15
+#: ckanext/example_idatasetform/templates/package/search.html:13
+msgid "Name Ascending"
+msgstr "Navn nedenfra og opp"
+
+#: ckan/templates/group/index.html:20 ckan/templates/group/read.html:17
+#: ckan/templates/organization/bulk_process.html:98
+#: ckan/templates/organization/read.html:21
+#: ckan/templates/package/search.html:31
+#: ckan/templates/snippets/search_form.html:4
+#: ckan/templates/snippets/simple_search.html:10
+#: ckan/templates/snippets/sort_by.html:16
+#: ckanext/example_idatasetform/templates/package/search.html:14
+msgid "Name Descending"
+msgstr "Navn ovenfra og ned"
+
+#: ckan/templates/group/index.html:29
+msgid "There are currently no groups for this site"
+msgstr "Det er for tiden ingen grupper for dette nettstedet"
+
+#: ckan/templates/group/index.html:31
+#: ckan/templates/organization/index.html:31
+msgid "How about creating one?"
+msgstr "Hva med å opprette en?"
+
+#: ckan/templates/group/member_new.html:8
+#: ckan/templates/organization/member_new.html:10
+msgid "Back to all members"
+msgstr "Tilbake til alle medlemmer"
+
+#: ckan/templates/group/member_new.html:10
+#: ckan/templates/organization/member_new.html:7
+#: ckan/templates/organization/member_new.html:12
+msgid "Edit Member"
+msgstr "Rediger medlem"
+
+#: ckan/templates/group/member_new.html:10
+#: ckan/templates/group/member_new.html:65 ckan/templates/group/members.html:6
+#: ckan/templates/organization/member_new.html:7
+#: ckan/templates/organization/member_new.html:12
+#: ckan/templates/organization/member_new.html:66
+#: ckan/templates/organization/members.html:6
+msgid "Add Member"
+msgstr "Legg til medlem"
+
+#: ckan/templates/group/member_new.html:18
+#: ckan/templates/organization/member_new.html:20
+msgid "Existing User"
+msgstr "Eksisterende bruker"
+
+#: ckan/templates/group/member_new.html:21
+#: ckan/templates/organization/member_new.html:23
+msgid "If you wish to add an existing user, search for their username below."
+msgstr "Hvis du vil legge til en eksisterende bruker, søk etter brukernavnet nedenfor."
+
+#: ckan/templates/group/member_new.html:38
+#: ckan/templates/organization/member_new.html:40
+msgid "or"
+msgstr "eller"
+
+#: ckan/templates/group/member_new.html:42
+#: ckan/templates/organization/member_new.html:44
+msgid "New User"
+msgstr "Ny bruker"
+
+#: ckan/templates/group/member_new.html:45
+#: ckan/templates/organization/member_new.html:47
+msgid "If you wish to invite a new user, enter their email address."
+msgstr "Hvis du vil invitere en ny bruker, oppgi e-postadressen deres"
+
+#: ckan/templates/group/member_new.html:55
+#: ckan/templates/group/members.html:18
+#: ckan/templates/organization/member_new.html:56
+#: ckan/templates/organization/members.html:18
+msgid "Role"
+msgstr "Rolle"
+
+#: ckan/templates/group/member_new.html:58
+#: ckan/templates/group/members.html:30
+#: ckan/templates/organization/member_new.html:59
+#: ckan/templates/organization/members.html:30
+msgid "Are you sure you want to delete this member?"
+msgstr "Er du sikker på at du vil slette dette medlemmet?"
+
+#: ckan/templates/group/member_new.html:59
+#: ckan/templates/group/members.html:35
+#: ckan/templates/group/snippets/group_form.html:61
+#: ckan/templates/organization/bulk_process.html:47
+#: ckan/templates/organization/member_new.html:60
+#: ckan/templates/organization/members.html:35
+#: ckan/templates/organization/snippets/organization_form.html:61
+#: ckan/templates/package/edit_view.html:19
+#: ckan/templates/package/snippets/package_form.html:40
+#: ckan/templates/package/snippets/resource_form.html:66
+#: ckan/templates/related/snippets/related_form.html:29
+#: ckan/templates/revision/read.html:24
+#: ckan/templates/user/edit_user_form.html:38
+msgid "Delete"
+msgstr "Slett"
+
+#: ckan/templates/group/member_new.html:61
+#: ckan/templates/related/snippets/related_form.html:33
+msgid "Save"
+msgstr "Lagre"
+
+#: ckan/templates/group/member_new.html:78
+#: ckan/templates/organization/member_new.html:79
+msgid "What are roles?"
+msgstr "Hva er roller?"
+
+#: ckan/templates/group/member_new.html:81
+msgid ""
+" <p><strong>Admin:</strong> Can edit group information, as well as manage "
+"organization members.</p> <p><strong>Member:</strong> Can add/remove "
+"datasets from groups</p> "
+msgstr " <p><strong>Admin:</strong> Kan redigere informasjon om gruppa og administrere medlemmer av organisasjonen.</p> <p><strong>Medlem:</strong> Kan legge til og fjerne datasett fra grupper.</p> "
+
+#: ckan/templates/group/new.html:3 ckan/templates/group/new.html:5
+#: ckan/templates/group/new.html:7
+msgid "Create a Group"
+msgstr "Opprett en gruppe"
+
+#: ckan/templates/group/new_group_form.html:17
+msgid "Update Group"
+msgstr "Oppdater gruppen"
+
+#: ckan/templates/group/new_group_form.html:19
+msgid "Create Group"
+msgstr "Opprett gruppe"
+
+#: ckan/templates/group/read.html:15 ckan/templates/organization/read.html:19
+#: ckan/templates/package/search.html:29
+#: ckan/templates/snippets/sort_by.html:14
+#: ckanext/example_idatasetform/templates/package/search.html:12
+msgid "Relevance"
+msgstr "Relevans"
+
+#: ckan/templates/group/read.html:18
+#: ckan/templates/organization/bulk_process.html:99
+#: ckan/templates/organization/read.html:22
+#: ckan/templates/package/search.html:32
+#: ckan/templates/package/snippets/resource_form.html:51
+#: ckan/templates/snippets/sort_by.html:17
+#: ckanext/example_idatasetform/templates/package/search.html:15
+msgid "Last Modified"
+msgstr "Sist endret"
+
+#: ckan/templates/group/read.html:19 ckan/templates/organization/read.html:23
+#: ckan/templates/package/search.html:33
+#: ckan/templates/snippets/package_item.html:50
+#: ckan/templates/snippets/popular.html:3
+#: ckan/templates/snippets/sort_by.html:19
+#: ckanext/example_idatasetform/templates/package/search.html:18
+msgid "Popular"
+msgstr "Populære"
+
+#: ckan/templates/group/read.html:21 ckan/templates/organization/read.html:25
+#: ckan/templates/snippets/search_form.html:3
+msgid "Search datasets..."
+msgstr "Søk i datasett..."
+
+#: ckan/templates/group/snippets/feeds.html:3
+msgid "Datasets in group: {group}"
+msgstr "Datasett i gruppen: {group}"
+
+#: ckan/templates/group/snippets/feeds.html:4
+#: ckan/templates/organization/snippets/feeds.html:4
+msgid "Recent Revision History"
+msgstr "Nylig endringshistorikk"
+
+#: ckan/templates/group/snippets/group_form.html:10
+#: ckan/templates/organization/snippets/organization_form.html:10
+#: ckan/templates/package/snippets/resource_form.html:28
+msgid "Name"
+msgstr "Navn"
+
+#: ckan/templates/group/snippets/group_form.html:10
+msgid "My Group"
+msgstr "Min gruppe"
+
+#: ckan/templates/group/snippets/group_form.html:18
+msgid "my-group"
+msgstr "min-gruppe"
+
+#: ckan/templates/group/snippets/group_form.html:20
+#: ckan/templates/organization/snippets/organization_form.html:20
+#: ckan/templates/package/snippets/package_basic_fields.html:19
+#: ckan/templates/package/snippets/resource_form.html:32
+#: ckan/templates/package/snippets/view_form.html:9
+#: ckan/templates/related/snippets/related_form.html:21
+msgid "Description"
+msgstr "Beskrivelse"
+
+#: ckan/templates/group/snippets/group_form.html:20
+msgid "A little information about my group..."
+msgstr "Litt informasjon om min gruppe..."
+
+#: ckan/templates/group/snippets/group_form.html:60
+msgid "Are you sure you want to delete this Group?"
+msgstr "Er du sikker på at du vil slette denne gruppen?"
+
+#: ckan/templates/group/snippets/group_form.html:64
+msgid "Save Group"
+msgstr "Lagre gruppe"
+
+#: ckan/templates/group/snippets/group_item.html:32
+#: ckan/templates/organization/snippets/organization_item.html:31
+#: ckanext/example_theme/v10_custom_snippet/templates/snippets/example_theme_most_popular_groups.html:23
+#: ckanext/example_theme/v11_HTML_and_CSS/templates/snippets/example_theme_most_popular_groups.html:22
+msgid "{num} Dataset"
+msgid_plural "{num} Datasets"
+msgstr[0] "{num} datasett"
+msgstr[1] "{num} datasett"
+
+#: ckan/templates/group/snippets/group_item.html:34
+#: ckan/templates/organization/snippets/organization_item.html:33
+#: ckanext/example_theme/v10_custom_snippet/templates/snippets/example_theme_most_popular_groups.html:25
+#: ckanext/example_theme/v11_HTML_and_CSS/templates/snippets/example_theme_most_popular_groups.html:24
+msgid "0 Datasets"
+msgstr "0 datasett"
+
+#: ckan/templates/group/snippets/group_item.html:38
+#: ckan/templates/group/snippets/group_item.html:39
+msgid "View {name}"
+msgstr "Se {name}"
+
+#: ckan/templates/group/snippets/group_item.html:43
+msgid "Remove dataset from this group"
+msgstr "Fjern datasett fra denne gruppen"
+
+#: ckan/templates/group/snippets/helper.html:4
+msgid "What are Groups?"
+msgstr "Hva er grupper?"
+
+#: ckan/templates/group/snippets/helper.html:8
+msgid ""
+" You can use CKAN Groups to create and manage collections of datasets. This "
+"could be to catalogue datasets for a particular project or team, or on a "
+"particular theme, or as a very simple way to help people find and search "
+"your own published datasets. "
+msgstr "Du kan bruke grupper i CKAN for å opprette og administrere samlinger av datasett. Du kan for eksempel gruppere datasett for et bestemt prosjekt eller en arbeidsgruppe, et bestemt emne, eller som en enkel måte å hjelpe brukere til å finne fram til datasettene dine."
+
+#: ckan/templates/group/snippets/history_revisions.html:10
+#: ckan/templates/package/snippets/history_revisions.html:10
+msgid "Compare"
+msgstr "Sammenlign"
+
+#: ckan/templates/group/snippets/info.html:16
+#: ckan/templates/organization/bulk_process.html:72
+#: ckan/templates/package/read.html:21
+#: ckan/templates/package/snippets/package_basic_fields.html:111
+#: ckan/templates/snippets/organization.html:37
+#: ckan/templates/snippets/package_item.html:42
+msgid "Deleted"
+msgstr "Slettet"
+
+#: ckan/templates/group/snippets/info.html:24
+#: ckan/templates/package/snippets/package_context.html:7
+#: ckan/templates/snippets/organization.html:45
+msgid "read more"
+msgstr "les mer"
+
+#: ckan/templates/group/snippets/revisions_table.html:7
+#: ckan/templates/package/snippets/revisions_table.html:7
+#: ckan/templates/revision/read.html:5 ckan/templates/revision/read.html:9
+#: ckan/templates/revision/read.html:39
+#: ckan/templates/revision/snippets/revisions_list.html:4
+msgid "Revision"
+msgstr "Versjon"
+
+#: ckan/templates/group/snippets/revisions_table.html:8
+#: ckan/templates/package/snippets/revisions_table.html:8
+#: ckan/templates/revision/read.html:53
+#: ckan/templates/revision/snippets/revisions_list.html:5
+msgid "Timestamp"
+msgstr "Tidsstempel"
+
+#: ckan/templates/group/snippets/revisions_table.html:9
+#: ckan/templates/package/snippets/additional_info.html:25
+#: ckan/templates/package/snippets/additional_info.html:30
+#: ckan/templates/package/snippets/package_metadata_fields.html:14
+#: ckan/templates/package/snippets/revisions_table.html:9
+#: ckan/templates/revision/read.html:50
+#: ckan/templates/revision/snippets/revisions_list.html:6
+msgid "Author"
+msgstr "Forfatter"
+
+#: ckan/templates/group/snippets/revisions_table.html:10
+#: ckan/templates/package/snippets/revisions_table.html:10
+#: ckan/templates/revision/read.html:56
+#: ckan/templates/revision/snippets/revisions_list.html:8
+msgid "Log Message"
+msgstr "Loggmelding"
+
+#: ckan/templates/home/index.html:4
+msgid "Welcome"
+msgstr "Velkommen"
+
+#: ckan/templates/home/snippets/about_text.html:1
+msgid ""
+" <p>CKAN is the world’s leading open-source data portal platform.</p> "
+"<p>CKAN is a complete out-of-the-box software solution that makes data "
+"accessible and usable – by providing tools to streamline publishing, "
+"sharing, finding and using data (including storage of data and provision of "
+"robust data APIs). CKAN is aimed at data publishers (national and regional "
+"governments, companies and organizations) wanting to make their data open "
+"and available.</p> <p>CKAN is used by governments and user groups worldwide "
+"and powers a variety of official and community data portals including "
+"portals for local, national and international government, such as the UK’s "
+"<a href=\"http://data.gov.uk\">data.gov.uk</a> and the European Union’s <a "
+"href=\"http://publicdata.eu/\">publicdata.eu</a>, the Brazilian <a "
+"href=\"http://dados.gov.br/\">dados.gov.br</a>, Dutch and Netherland "
+"government portals, as well as city and municipal sites in the US, UK, "
+"Argentina, Finland and elsewhere.</p> <p>CKAN: <a "
+"href=\"http://ckan.org/\">http://ckan.org/</a><br /> CKAN Tour: <a "
+"href=\"http://ckan.org/tour/\">http://ckan.org/tour/</a><br /> Features "
+"overview: <a "
+"href=\"http://ckan.org/features/\">http://ckan.org/features/</a></p> "
+msgstr " <p>CKAN er verdens ledende programvare for dataportaler, basert på åpen kildekode.</p> <p>CKAN er en komplett programvareløsning som gjør data tilgjengelig og klar for bruk - ved å tilby verktøy som gjør det lett å publisere, dele, finne og bruke data (inkludert lagring av data og robuste data-APIer). CKAN er rettet mot dem som vil publisere data (nasjonale og regionale myndigheter, bedrifter og organisasjoner) og åpne dem opp for viderebruk.</p> <p>CKAN brukes av myndigheter og brukergrupper verden over, og brukes til en rekke offisielle og brukerdrevne dataportaler, som Storbritannias <a href=\"http://data.gov.uk\">data.gov.uk</a> og EUs <a href=\"http://publicdata.eu/\">publicdata.eu</a>, den brasilianske <a href=\"http://dados.gov.br/\">dados.gov.br</a>, så vel som portaler for byer og kommuner i USA, Storbritannia, Argentina, Finland og andre steder.</p> <p>CKAN: <a href=\"http://ckan.org/\">http://ckan.org/</a><br /> CKAN Tour: <a href=\"http://ckan.org/tour/\">http://ckan.org/tour/</a><br /> Features overview: <a href=\"http://ckan.org/features/\">http://ckan.org/features/</a></p> "
+
+#: ckan/templates/home/snippets/promoted.html:8
+msgid "Welcome to CKAN"
+msgstr "Velkommen til CKAN"
+
+#: ckan/templates/home/snippets/promoted.html:10
+msgid ""
+"This is a nice introductory paragraph about CKAN or the site in general. We "
+"don't have any copy to go here yet but soon we will "
+msgstr "Dette er en fin innledning til CKAN eller om nettstedet. Snart har vi en bra tekst klar her."
+
+#: ckan/templates/home/snippets/promoted.html:19
+msgid "This is a featured section"
+msgstr "Dette er en framhevet seksjon"
+
+#: ckan/templates/home/snippets/search.html:2
+msgid "E.g. environment"
+msgstr ""
+
+#: ckan/templates/home/snippets/search.html:6
+msgid "Search data"
+msgstr ""
+
+#: ckan/templates/home/snippets/search.html:16
+msgid "Popular tags"
+msgstr ""
+
+#: ckan/templates/home/snippets/stats.html:5
+msgid "{0} statistics"
+msgstr "{0} statistikker"
+
+#: ckan/templates/home/snippets/stats.html:10
+msgid "dataset"
+msgstr "datasett"
+
+#: ckan/templates/home/snippets/stats.html:10
+msgid "datasets"
+msgstr "datasett"
+
+#: ckan/templates/home/snippets/stats.html:16
+msgid "organization"
+msgstr "organisasjon"
+
+#: ckan/templates/home/snippets/stats.html:16
+msgid "organizations"
+msgstr "organisasjoner"
+
+#: ckan/templates/home/snippets/stats.html:22
+msgid "group"
+msgstr "gruppe"
+
+#: ckan/templates/home/snippets/stats.html:22
+msgid "groups"
+msgstr "grupper"
+
+#: ckan/templates/home/snippets/stats.html:28
+msgid "related item"
+msgstr "relatert materiale"
+
+#: ckan/templates/home/snippets/stats.html:28
+msgid "related items"
+msgstr "relatert materiale"
+
+#: ckan/templates/macros/form.html:126
+#, python-format
+msgid ""
+"You can use <a href=\"#markdown\" title=\"Markdown quick reference\" data-"
+"target=\"popover\" data-content=\"%(markdown_tooltip)s\" data-"
+"html=\"true\">Markdown formatting</a> here"
+msgstr ""
+
+#: ckan/templates/macros/form.html:265
+msgid "This field is required"
+msgstr "Dette feltet er obligatorisk"
+
+#: ckan/templates/macros/form.html:265
+msgid "Custom"
+msgstr "Tilpasset"
+
+#: ckan/templates/macros/form.html:290
+#: ckan/templates/related/snippets/related_form.html:7
+msgid "The form contains invalid entries:"
+msgstr "Skjemaet inneholder ugyldig informasjon:"
+
+#: ckan/templates/macros/form.html:395
+msgid "Required field"
+msgstr "Obligatorisk felt"
+
+#: ckan/templates/macros/form.html:410
+msgid "http://example.com/my-image.jpg"
+msgstr "http://example.com/my-image.jpg"
+
+#: ckan/templates/macros/form.html:411
+#: ckan/templates/related/snippets/related_form.html:20
+msgid "Image URL"
+msgstr "URL for bilde"
+
+#: ckan/templates/macros/form.html:424
+msgid "Clear Upload"
+msgstr "Fjern opplasting"
+
+#: ckan/templates/organization/base_form_page.html:5
+msgid "Organization Form"
+msgstr "Organisasjonsskjema"
+
+#: ckan/templates/organization/bulk_process.html:3
+#: ckan/templates/organization/bulk_process.html:11
+msgid "Edit datasets"
+msgstr "Rediger datasett"
+
+#: ckan/templates/organization/bulk_process.html:6
+msgid "Add dataset"
+msgstr "Legg til datasett"
+
+#: ckan/templates/organization/bulk_process.html:16
+msgid " found for \"{query}\""
+msgstr "funnet for \"{query}\""
+
+#: ckan/templates/organization/bulk_process.html:18
+msgid "Sorry no datasets found for \"{query}\""
+msgstr "Beklager, ingen datasett funnet for \"{query}\""
+
+#: ckan/templates/organization/bulk_process.html:37
+msgid "Make public"
+msgstr "Gjør offentlig"
+
+#: ckan/templates/organization/bulk_process.html:41
+msgid "Make private"
+msgstr "Gjør privat"
+
+#: ckan/templates/organization/bulk_process.html:70
+#: ckan/templates/package/read.html:18
+#: ckan/templates/snippets/package_item.html:40
+msgid "Draft"
+msgstr "Utkast"
+
+#: ckan/templates/organization/bulk_process.html:75
+#: ckan/templates/package/read.html:11
+#: ckan/templates/package/snippets/package_basic_fields.html:91
+#: ckan/templates/snippets/package_item.html:31
+#: ckan/templates/snippets/private.html:2
+#: ckan/templates/user/read_base.html:82 ckan/templates/user/read_base.html:96
+msgid "Private"
+msgstr "Privat"
+
+#: ckan/templates/organization/bulk_process.html:88
+msgid "This organization has no datasets associated to it"
+msgstr "Ingen datasett knyttet til denne organisasjonen"
+
+#: ckan/templates/organization/confirm_delete.html:11
+msgid "Are you sure you want to delete organization - {name}?"
+msgstr "Er du sikker på at du vil slette organisasjonen - {name}?"
+
+#: ckan/templates/organization/edit.html:6
+#: ckan/templates/organization/snippets/info.html:13
+#: ckan/templates/organization/snippets/info.html:16
+msgid "Edit Organization"
+msgstr "Rediger organisasjon"
+
+#: ckan/templates/organization/index.html:13
+#: ckan/templates/user/dashboard_organizations.html:7
+msgid "Add Organization"
+msgstr "Legg til organisasjon"
+
+#: ckan/templates/organization/index.html:20
+msgid "Search organizations..."
+msgstr "Søk i organisasjoner..."
+
+#: ckan/templates/organization/index.html:29
+msgid "There are currently no organizations for this site"
+msgstr "Det er for tiden ingen organisasjoner for dette nettstedet"
+
+#: ckan/templates/organization/member_new.html:62
+msgid "Update Member"
+msgstr "Oppdater medlem"
+
+#: ckan/templates/organization/member_new.html:82
+msgid ""
+" <p><strong>Admin:</strong> Can add/edit and delete datasets, as well as "
+"manage organization members.</p> <p><strong>Editor:</strong> Can add and "
+"edit datasets, but not manage organization members.</p> "
+"<p><strong>Member:</strong> Can view the organization's private datasets, "
+"but not add new datasets.</p> "
+msgstr "<p><strong>Admin:</strong> Kan legge til, redigere og slette datasett, og administrere gruppemedlemmer.</p> <p><strong>Redaktør:</strong> Kan legge til og redigere datasett, men ikke administrere gruppemedlemmer.</p> <p><strong>Medlem:</strong> Kan se gruppens private datasett, men ikke legge til nye datasett.</p> "
+
+#: ckan/templates/organization/new.html:3
+#: ckan/templates/organization/new.html:5
+#: ckan/templates/organization/new.html:7
+#: ckan/templates/organization/new.html:12
+msgid "Create an Organization"
+msgstr "Opprett en organisasjon"
+
+#: ckan/templates/organization/new_organization_form.html:17
+msgid "Update Organization"
+msgstr "Oppdater organisasjon"
+
+#: ckan/templates/organization/new_organization_form.html:19
+msgid "Create Organization"
+msgstr "Opprett organisasjon"
+
+#: ckan/templates/organization/read.html:5
+#: ckan/templates/package/search.html:16
+#: ckan/templates/user/dashboard_datasets.html:7
+msgid "Add Dataset"
+msgstr "Legg til datasett"
+
+#: ckan/templates/organization/snippets/feeds.html:3
+msgid "Datasets in organization: {group}"
+msgstr ""
+
+#: ckan/templates/organization/snippets/help.html:4
+#: ckan/templates/organization/snippets/helper.html:4
+msgid "What are Organizations?"
+msgstr "Hva er organisasjoner?"
+
+#: ckan/templates/organization/snippets/help.html:7
+msgid ""
+" <p>Organizations act like publishing departments for datasets (for example,"
+" the Department of Health). This means that datasets can be published by and"
+" belong to a department instead of an individual user.</p> <p>Within "
+"organizations, admins can assign roles and authorise its members, giving "
+"individual users the right to publish datasets from that particular "
+"organisation (e.g. Office of National Statistics).</p> "
+msgstr ""
+
+#: ckan/templates/organization/snippets/helper.html:8
+msgid ""
+" CKAN Organizations are used to create, manage and publish collections of "
+"datasets. Users can have different roles within an Organization, depending "
+"on their level of authorisation to create, edit and publish. "
+msgstr "Organisasjoner i CKAN brukes for å opprette, administrere og publisere samlinger av datasett. Brukere kan ha forskjellige roller innen en organisasjon, med forskjellige tillatelser til å opprette, redigere og publisere."
+
+#: ckan/templates/organization/snippets/organization_form.html:10
+msgid "My Organization"
+msgstr "Min organisasjon"
+
+#: ckan/templates/organization/snippets/organization_form.html:18
+msgid "my-organization"
+msgstr "min-organisasjon"
+
+#: ckan/templates/organization/snippets/organization_form.html:20
+msgid "A little information about my organization..."
+msgstr "Litt informasjon om min organisasjon..."
+
+#: ckan/templates/organization/snippets/organization_form.html:60
+msgid ""
+"Are you sure you want to delete this Organization? This will delete all the "
+"public and private datasets belonging to this organization."
+msgstr "Er du sikker på at du vil slette denne organisasjon? Dette vil slette alle de offentlige og private datasettene som er knyttet til denne organisasjonen."
+
+#: ckan/templates/organization/snippets/organization_form.html:64
+msgid "Save Organization"
+msgstr "Lagre organisasjon"
+
+#: ckan/templates/organization/snippets/organization_item.html:37
+#: ckan/templates/organization/snippets/organization_item.html:38
+msgid "View {organization_name}"
+msgstr "Vis {organization_name}"
+
+#: ckan/templates/package/base.html:22 ckan/templates/package/new.html:3
+#: ckan/templates/package/snippets/new_package_breadcrumb.html:2
+msgid "Create Dataset"
+msgstr "Opprett datasett"
+
+#: ckan/templates/package/base_form_page.html:22
+msgid "What are datasets?"
+msgstr "Hva er datasett?"
+
+#: ckan/templates/package/base_form_page.html:25
+msgid ""
+" A CKAN Dataset is a collection of data resources (such as files), together "
+"with a description and other information, at a fixed URL. Datasets are what "
+"users see when searching for data. "
+msgstr "Datasett i CKAN er en samling av dataressurser (f.eks. filer), sammen med beskrivelse og annen informasjon, på en fast URL. Datasett er det brukere ser når de søker etter data."
+
+#: ckan/templates/package/confirm_delete.html:11
+msgid "Are you sure you want to delete dataset - {name}?"
+msgstr "Er du sikker på at du vil slette datasettet - {name}?"
+
+#: ckan/templates/package/confirm_delete_resource.html:11
+msgid "Are you sure you want to delete resource - {name}?"
+msgstr "Er du sikker på at du vil slette ressursen - {name}?"
+
+#: ckan/templates/package/edit_base.html:16
+msgid "View dataset"
+msgstr "Vis datasett"
+
+#: ckan/templates/package/edit_base.html:20
+msgid "Edit metadata"
+msgstr "Rediger metadata"
+
+#: ckan/templates/package/edit_view.html:3
+#: ckan/templates/package/edit_view.html:4
+#: ckan/templates/package/edit_view.html:8
+#: ckan/templates/package/edit_view.html:12
+msgid "Edit view"
+msgstr ""
+
+#: ckan/templates/package/edit_view.html:20
+#: ckan/templates/package/new_view.html:28
+#: ckan/templates/package/snippets/resource_item.html:33
+#: ckan/templates/snippets/datapreview_embed_dialog.html:16
+msgid "Preview"
+msgstr "Forhåndsvisning"
+
+#: ckan/templates/package/edit_view.html:21
+#: ckan/templates/related/edit_form.html:5
+msgid "Update"
+msgstr "Oppdater"
+
+#: ckan/templates/package/group_list.html:14
+msgid "Associate this group with this dataset"
+msgstr "Knytt denne gruppen til dette datasettet"
+
+#: ckan/templates/package/group_list.html:14
+msgid "Add to group"
+msgstr "Legg til i gruppe"
+
+#: ckan/templates/package/group_list.html:23
+msgid "There are no groups associated with this dataset"
+msgstr "Ingen grupper er knyttet til dette datasettet"
+
+#: ckan/templates/package/new_package_form.html:15
+msgid "Update Dataset"
+msgstr "Oppdater datasettet"
+
+#: ckan/templates/package/new_resource.html:5
+msgid "Add data to the dataset"
+msgstr "Legg data til datasettet"
+
+#: ckan/templates/package/new_resource.html:11
+#: ckan/templates/package/new_resource_not_draft.html:8
+msgid "Add New Resource"
+msgstr "Legg til ressurser"
+
+#: ckan/templates/package/new_resource_not_draft.html:3
+#: ckan/templates/package/new_resource_not_draft.html:4
+msgid "Add resource"
+msgstr "Legg til ressurs"
+
+#: ckan/templates/package/new_resource_not_draft.html:16
+msgid "New resource"
+msgstr "Ny ressurs"
+
+#: ckan/templates/package/new_view.html:3
+#: ckan/templates/package/new_view.html:4
+#: ckan/templates/package/new_view.html:8
+#: ckan/templates/package/new_view.html:12
+msgid "Add view"
+msgstr ""
+
+#: ckan/templates/package/new_view.html:19
+msgid ""
+" Data Explorer views may be slow and unreliable unless the DataStore "
+"extension is enabled. For more information, please see the <a "
+"href='http://docs.ckan.org/en/latest/maintaining/data-viewer.html#viewing-"
+"structured-data-the-data-explorer' target='_blank'>Data Explorer "
+"documentation</a>. "
+msgstr ""
+
+#: ckan/templates/package/new_view.html:29
+#: ckan/templates/package/snippets/resource_form.html:82
+msgid "Add"
+msgstr "Legg til"
+
+#: ckan/templates/package/read_base.html:38
+#, python-format
+msgid ""
+"This is an old revision of this dataset, as edited at %(timestamp)s. It may "
+"differ significantly from the <a href=\"%(url)s\">current revision</a>."
+msgstr "Dette er en eldre versjon av dette datasettet, redigert %(timestamp)s. Det kan være forskjellig fra den <a href=\"%(url)s\">nåværende versjonen</a>."
+
+#: ckan/templates/package/related_list.html:7
+msgid "Related Media for {dataset}"
+msgstr "Relaterte medier for {dataset}"
+
+#: ckan/templates/package/related_list.html:12
+msgid "No related items"
+msgstr "Intet relatert materiale"
+
+#: ckan/templates/package/related_list.html:17
+msgid "Add Related Item"
+msgstr "Legg til relatert informasjon"
+
+#: ckan/templates/package/resource_data.html:12
+msgid "Upload to DataStore"
+msgstr "Last opp til DataStore"
+
+#: ckan/templates/package/resource_data.html:19
+msgid "Upload error:"
+msgstr "Feil ved opplasting:"
+
+#: ckan/templates/package/resource_data.html:25
+#: ckan/templates/package/resource_data.html:27
+msgid "Error:"
+msgstr "Feil:"
+
+#: ckan/templates/package/resource_data.html:45
+msgid "Status"
+msgstr "Status"
+
+#: ckan/templates/package/resource_data.html:49
+#: ckan/templates/package/resource_read.html:157
+msgid "Last updated"
+msgstr "Sist endret"
+
+#: ckan/templates/package/resource_data.html:53
+msgid "Never"
+msgstr "Aldri"
+
+#: ckan/templates/package/resource_data.html:59
+msgid "Upload Log"
+msgstr "Last opp logg"
+
+#: ckan/templates/package/resource_data.html:71
+msgid "Details"
+msgstr "Detaljer"
+
+#: ckan/templates/package/resource_data.html:78
+msgid "End of log"
+msgstr "Slutt på logg"
+
+#: ckan/templates/package/resource_edit_base.html:17
+msgid "All resources"
+msgstr "Alle ressurser"
+
+#: ckan/templates/package/resource_edit_base.html:19
+msgid "View resource"
+msgstr "Vis datasettets ressurser"
+
+#: ckan/templates/package/resource_edit_base.html:24
+#: ckan/templates/package/resource_edit_base.html:32
+msgid "Edit resource"
+msgstr "Rediger ressurs"
+
+#: ckan/templates/package/resource_edit_base.html:26
+msgid "DataStore"
+msgstr "DataStore"
+
+#: ckan/templates/package/resource_edit_base.html:28
+msgid "Views"
+msgstr ""
+
+#: ckan/templates/package/resource_read.html:39
+msgid "API Endpoint"
+msgstr "API Endpoint"
+
+#: ckan/templates/package/resource_read.html:41
+#: ckan/templates/package/snippets/resource_item.html:48
+msgid "Go to resource"
+msgstr "Gå til ressurs"
+
+#: ckan/templates/package/resource_read.html:43
+#: ckan/templates/package/snippets/resource_item.html:45
+msgid "Download"
+msgstr "Nedlasting"
+
+#: ckan/templates/package/resource_read.html:59
+#: ckan/templates/package/resource_read.html:61
+msgid "URL:"
+msgstr "URL:"
+
+#: ckan/templates/package/resource_read.html:69
+msgid "From the dataset abstract"
+msgstr "Fra sammendrag av datasettet"
+
+#: ckan/templates/package/resource_read.html:71
+#, python-format
+msgid "Source: <a href=\"%(url)s\">%(dataset)s</a>"
+msgstr "Kilde: <a href=\"%(url)s\">%(dataset)s</a>"
+
+#: ckan/templates/package/resource_read.html:112
+msgid "There are no views created for this resource yet."
+msgstr ""
+
+#: ckan/templates/package/resource_read.html:116
+msgid "Not seeing the views you were expecting?"
+msgstr ""
+
+#: ckan/templates/package/resource_read.html:121
+msgid "Here are some reasons you may not be seeing expected views:"
+msgstr ""
+
+#: ckan/templates/package/resource_read.html:123
+msgid "No view has been created that is suitable for this resource"
+msgstr ""
+
+#: ckan/templates/package/resource_read.html:124
+msgid "The site administrators may not have enabled the relevant view plugins"
+msgstr ""
+
+#: ckan/templates/package/resource_read.html:125
+msgid ""
+"If a view requires the DataStore, the DataStore plugin may not be enabled, "
+"or the data may not have been pushed to the DataStore, or the DataStore "
+"hasn't finished processing the data yet"
+msgstr ""
+
+#: ckan/templates/package/resource_read.html:147
+msgid "Additional Information"
+msgstr "Tilleggsinformasjon"
+
+#: ckan/templates/package/resource_read.html:151
+#: ckan/templates/package/snippets/additional_info.html:6
+#: ckan/templates/revision/diff.html:43
+#: ckan/templates/snippets/additional_info.html:11
+msgid "Field"
+msgstr "Felt"
+
+#: ckan/templates/package/resource_read.html:152
+#: ckan/templates/package/snippets/additional_info.html:7
+#: ckan/templates/snippets/additional_info.html:12
+msgid "Value"
+msgstr "Verdi"
+
+#: ckan/templates/package/resource_read.html:158
+#: ckan/templates/package/resource_read.html:162
+#: ckan/templates/package/resource_read.html:166
+msgid "unknown"
+msgstr "ukjent"
+
+#: ckan/templates/package/resource_read.html:161
+#: ckan/templates/package/snippets/additional_info.html:68
+msgid "Created"
+msgstr "Opprettet"
+
+#: ckan/templates/package/resource_read.html:165
+#: ckan/templates/package/snippets/resource_form.html:37
+#: ckan/templates/package/snippets/resource_info.html:16
+msgid "Format"
+msgstr "Format"
+
+#: ckan/templates/package/resource_read.html:169
+#: ckan/templates/package/snippets/package_basic_fields.html:30
+#: ckan/templates/snippets/license.html:21
+msgid "License"
+msgstr "Lisens"
+
+#: ckan/templates/package/resource_views.html:10
+msgid "New view"
+msgstr ""
+
+#: ckan/templates/package/resource_views.html:28
+msgid "This resource has no views"
+msgstr ""
+
+#: ckan/templates/package/resources.html:8
+msgid "Add new resource"
+msgstr "Legg til ny ressurs"
+
+#: ckan/templates/package/resources.html:19
+#: ckan/templates/package/snippets/resources_list.html:25
+#, python-format
+msgid ""
+" <p class=\"empty\">This dataset has no data, <a href=\"%(url)s\">why not "
+"add some?</a></p> "
+msgstr " <p class=\"empty\">Dette datasettet har ingen data, <a href=\"%(url)s\">hva med å legge til noen?</a></p> "
+
+#: ckan/templates/package/search.html:53
+msgid "API Docs"
+msgstr "API-dokumenter"
+
+#: ckan/templates/package/search.html:55
+msgid "full {format} dump"
+msgstr "full {format}-dump"
+
+#: ckan/templates/package/search.html:56
+#, python-format
+msgid ""
+" You can also access this registry using the %(api_link)s (see "
+"%(api_doc_link)s) or download a %(dump_link)s. "
+msgstr "Du kan også få tilgang til registeret ved å bruke %(api_link)s (se %(api_doc_link)s) eller last ned en %(dump_link)s. "
+
+#: ckan/templates/package/search.html:60
+#, python-format
+msgid ""
+" You can also access this registry using the %(api_link)s (see "
+"%(api_doc_link)s). "
+msgstr "Du får også tilgang til dette registeret med %(api_link)s (se %(api_doc_link)s). "
+
+#: ckan/templates/package/view_edit_base.html:9
+msgid "All views"
+msgstr ""
+
+#: ckan/templates/package/view_edit_base.html:12
+msgid "View view"
+msgstr ""
+
+#: ckan/templates/package/view_edit_base.html:37
+msgid "View preview"
+msgstr ""
+
+#: ckan/templates/package/snippets/additional_info.html:2
+#: ckan/templates/snippets/additional_info.html:7
+msgid "Additional Info"
+msgstr "Tilleggsinformasjon"
+
+#: ckan/templates/package/snippets/additional_info.html:14
+#: ckan/templates/package/snippets/package_metadata_fields.html:6
+msgid "Source"
+msgstr "Kilde"
+
+#: ckan/templates/package/snippets/additional_info.html:37
+#: ckan/templates/package/snippets/additional_info.html:42
+#: ckan/templates/package/snippets/package_metadata_fields.html:20
+msgid "Maintainer"
+msgstr "Vedlikeholdes av"
+
+#: ckan/templates/package/snippets/additional_info.html:49
+#: ckan/templates/package/snippets/package_metadata_fields.html:10
+msgid "Version"
+msgstr "Versjon"
+
+#: ckan/templates/package/snippets/additional_info.html:56
+#: ckan/templates/package/snippets/package_basic_fields.html:107
+#: ckan/templates/user/read_base.html:91
+msgid "State"
+msgstr "Status"
+
+#: ckan/templates/package/snippets/additional_info.html:62
+msgid "Last Updated"
+msgstr ""
+
+#: ckan/templates/package/snippets/data_api_button.html:10
+msgid "Data API"
+msgstr "Data-API"
+
+#: ckan/templates/package/snippets/package_basic_fields.html:4
+#: ckan/templates/package/snippets/view_form.html:8
+#: ckan/templates/related/snippets/related_form.html:18
+msgid "Title"
+msgstr "Tittel"
+
+#: ckan/templates/package/snippets/package_basic_fields.html:4
+msgid "eg. A descriptive title"
+msgstr "f.eks. en beskrivende tittel"
+
+#: ckan/templates/package/snippets/package_basic_fields.html:13
+msgid "eg. my-dataset"
+msgstr "f.eks. mitt-datasett"
+
+#: ckan/templates/package/snippets/package_basic_fields.html:19
+msgid "eg. Some useful notes about the data"
+msgstr "f.eks. noen nyttige notater om dataene"
+
+#: ckan/templates/package/snippets/package_basic_fields.html:24
+msgid "eg. economy, mental health, government"
+msgstr "f.eks. økonomi, helse, myndigheter"
+
+#: ckan/templates/package/snippets/package_basic_fields.html:40
+msgid ""
+" License definitions and additional information can be found at <a "
+"href=\"http://opendefinition.org/licenses/\">opendefinition.org</a> "
+msgstr "Definisjoner av lisenser og tilleggsinformasjon kan bil funnet på  <a href=\"http://opendefinition.org/licenses/\">opendefinition.org</a>"
+
+#: ckan/templates/package/snippets/package_basic_fields.html:69
+#: ckan/templates/snippets/organization.html:23
+msgid "Organization"
+msgstr "Organisasjon"
+
+#: ckan/templates/package/snippets/package_basic_fields.html:73
+msgid "No organization"
+msgstr "Ingen organisasjon"
+
+#: ckan/templates/package/snippets/package_basic_fields.html:88
+msgid "Visibility"
+msgstr "Synlighet"
+
+#: ckan/templates/package/snippets/package_basic_fields.html:91
+msgid "Public"
+msgstr "Offentlig"
+
+#: ckan/templates/package/snippets/package_basic_fields.html:110
+msgid "Active"
+msgstr "Aktiv"
+
+#: ckan/templates/package/snippets/package_form.html:28
+msgid ""
+"The <i>data license</i> you select above only applies to the contents of any"
+" resource files that you add to this dataset. By submitting this form, you "
+"agree to release the <i>metadata</i> values that you enter into the form "
+"under the <a href=\"http://opendatacommons.org/licenses/odbl/1-0/\">Open "
+"Database License</a>."
+msgstr ""
+
+#: ckan/templates/package/snippets/package_form.html:39
+msgid "Are you sure you want to delete this dataset?"
+msgstr "Er du sikker på at du vil slette dette datasettet?"
+
+#: ckan/templates/package/snippets/package_form.html:44
+msgid "Next: Add Data"
+msgstr "Neste: Legg til data"
+
+#: ckan/templates/package/snippets/package_metadata_fields.html:6
+msgid "http://example.com/dataset.json"
+msgstr "http://example.com/dataset.json"
+
+#: ckan/templates/package/snippets/package_metadata_fields.html:10
+msgid "1.0"
+msgstr "1.0"
+
+#: ckan/templates/package/snippets/package_metadata_fields.html:14
+#: ckan/templates/package/snippets/package_metadata_fields.html:20
+#: ckan/templates/user/new_user_form.html:6
+msgid "Joe Bloggs"
+msgstr "Kari Nordmann"
+
+#: ckan/templates/package/snippets/package_metadata_fields.html:16
+msgid "Author Email"
+msgstr "Forfatters e-post"
+
+#: ckan/templates/package/snippets/package_metadata_fields.html:16
+#: ckan/templates/package/snippets/package_metadata_fields.html:22
+#: ckan/templates/user/new_user_form.html:7
+msgid "joe@example.com"
+msgstr "kari@example.com"
+
+#: ckan/templates/package/snippets/package_metadata_fields.html:22
+msgid "Maintainer Email"
+msgstr "Vedlikeholders e-post"
+
+#: ckan/templates/package/snippets/resource_edit_form.html:12
+msgid "Update Resource"
+msgstr "Oppdater ressurs"
+
+#: ckan/templates/package/snippets/resource_form.html:24
+msgid "File"
+msgstr "Fil"
+
+#: ckan/templates/package/snippets/resource_form.html:28
+msgid "eg. January 2011 Gold Prices"
+msgstr "f.eks. gullpriser i januar 2011"
+
+#: ckan/templates/package/snippets/resource_form.html:32
+msgid "Some useful notes about the data"
+msgstr "Noen nyttige notater om dataene"
+
+#: ckan/templates/package/snippets/resource_form.html:37
+msgid "eg. CSV, XML or JSON"
+msgstr "f.eks. CSV, XML eller JSON"
+
+#: ckan/templates/package/snippets/resource_form.html:40
+msgid "This will be guessed automatically. Leave blank if you wish"
+msgstr ""
+
+#: ckan/templates/package/snippets/resource_form.html:51
+msgid "eg. 2012-06-05"
+msgstr "f.eks. 2012-06-05"
+
+#: ckan/templates/package/snippets/resource_form.html:53
+msgid "File Size"
+msgstr "Filstørrelse"
+
+#: ckan/templates/package/snippets/resource_form.html:53
+msgid "eg. 1024"
+msgstr "f.eks. 1024"
+
+#: ckan/templates/package/snippets/resource_form.html:55
+#: ckan/templates/package/snippets/resource_form.html:57
+msgid "MIME Type"
+msgstr "MIME Type"
+
+#: ckan/templates/package/snippets/resource_form.html:55
+#: ckan/templates/package/snippets/resource_form.html:57
+msgid "eg. application/json"
+msgstr "f.eks. application/json"
+
+#: ckan/templates/package/snippets/resource_form.html:65
+msgid "Are you sure you want to delete this resource?"
+msgstr "Er du sikker på at du vil slette denne ressursen?"
+
+#: ckan/templates/package/snippets/resource_form.html:72
+msgid "Previous"
+msgstr "Tidligere"
+
+#: ckan/templates/package/snippets/resource_form.html:75
+msgid "Save & add another"
+msgstr "Lagre og legg til et nytt"
+
+#: ckan/templates/package/snippets/resource_form.html:78
+msgid "Finish"
+msgstr "Avslutt"
+
+#: ckan/templates/package/snippets/resource_help.html:2
+msgid "What's a resource?"
+msgstr "Hva er en ressurs?"
+
+#: ckan/templates/package/snippets/resource_help.html:4
+msgid "A resource can be any file or link to a file containing useful data."
+msgstr "En ressurs kan være en fil eller lenke til en fil som inneholder nyttige data."
+
+#: ckan/templates/package/snippets/resource_item.html:24
+msgid "Explore"
+msgstr "Utforsk"
+
+#: ckan/templates/package/snippets/resource_item.html:36
+msgid "More information"
+msgstr "Tilleggsinformasjon"
+
+#: ckan/templates/package/snippets/resource_view.html:10
+msgid "Embed"
+msgstr "Inkluder (embed)"
+
+#: ckan/templates/package/snippets/resource_view.html:24
+msgid "This resource view is not available at the moment."
+msgstr ""
+
+#: ckan/templates/package/snippets/resource_view.html:63
+msgid "Embed resource view"
+msgstr ""
+
+#: ckan/templates/package/snippets/resource_view.html:66
+msgid ""
+"You can copy and paste the embed code into a CMS or blog software that "
+"supports raw HTML"
+msgstr ""
+
+#: ckan/templates/package/snippets/resource_view.html:69
+msgid "Width"
+msgstr ""
+
+#: ckan/templates/package/snippets/resource_view.html:72
+msgid "Height"
+msgstr ""
+
+#: ckan/templates/package/snippets/resource_view.html:75
+msgid "Code"
+msgstr "Kode"
+
+#: ckan/templates/package/snippets/resource_views_list.html:8
+msgid "Resource Preview"
+msgstr ""
+
+#: ckan/templates/package/snippets/resources_list.html:13
+msgid "Data and Resources"
+msgstr "Data og ressurser"
+
+#: ckan/templates/package/snippets/resources_list.html:29
+msgid "This dataset has no data"
+msgstr ""
+
+#: ckan/templates/package/snippets/revisions_table.html:24
+#, python-format
+msgid "Read dataset as of %s"
+msgstr "Les datasett: %s"
+
+#: ckan/templates/package/snippets/stages.html:23
+#: ckan/templates/package/snippets/stages.html:25
+msgid "Create dataset"
+msgstr "Opprett et datasett »"
+
+#: ckan/templates/package/snippets/stages.html:30
+#: ckan/templates/package/snippets/stages.html:34
+#: ckan/templates/package/snippets/stages.html:36
+msgid "Add data"
+msgstr "Legg til data"
+
+#: ckan/templates/package/snippets/view_form.html:8
+msgid "eg. My View"
+msgstr ""
+
+#: ckan/templates/package/snippets/view_form.html:9
+msgid "eg. Information about my view"
+msgstr ""
+
+#: ckan/templates/package/snippets/view_form_filters.html:16
+msgid "Add Filter"
+msgstr ""
+
+#: ckan/templates/package/snippets/view_form_filters.html:28
+msgid "Remove Filter"
+msgstr ""
+
+#: ckan/templates/package/snippets/view_form_filters.html:46
+msgid "Filters"
+msgstr ""
+
+#: ckan/templates/package/snippets/view_help.html:2
+msgid "What's a view?"
+msgstr ""
+
+#: ckan/templates/package/snippets/view_help.html:4
+msgid "A view is a representation of the data held against a resource"
+msgstr ""
+
+#: ckan/templates/related/base_form_page.html:12
+msgid "Related Form"
+msgstr "Relatert skjema"
+
+#: ckan/templates/related/base_form_page.html:20
+msgid "What are related items?"
+msgstr "Hva er relatert informasjon?"
+
+#: ckan/templates/related/base_form_page.html:22
+msgid ""
+" <p>Related Media is any app, article, visualisation or idea related to this"
+" dataset.</p> <p>For example, it could be a custom visualisation, pictograph"
+" or bar chart, an app using all or part of the data or even a news story "
+"that references this dataset.</p> "
+msgstr " <p>Relaterte medier er en app, artikkel, visualisering eller ide relatert til dette datasettet.</p> <p>For eksempel en spesiallaget visualisering eller grafikk, an app som bruker alle eller deler av dataene, eller en nyhetssak som refererer til dette datasettet.</p> "
+
+#: ckan/templates/related/confirm_delete.html:11
+msgid "Are you sure you want to delete related item - {name}?"
+msgstr "Er du sikker på at du vil slette beslektet element - {name}?"
+
+#: ckan/templates/related/dashboard.html:6
+#: ckan/templates/related/dashboard.html:9
+#: ckan/templates/related/dashboard.html:16
+msgid "Apps & Ideas"
+msgstr "Apper & ideer"
+
+#: ckan/templates/related/dashboard.html:21
+#, python-format
+msgid ""
+" <p>Showing items <strong>%(first)s - %(last)s</strong> of "
+"<strong>%(item_count)s</strong> related items found</p> "
+msgstr " <p>Viser <strong>%(first)s - %(last)s</strong> element av i alt <strong>%(item_count)s</strong> relaterte elementer</p> "
+
+#: ckan/templates/related/dashboard.html:25
+#, python-format
+msgid " <p><strong>%(item_count)s</strong> related items found</p> "
+msgstr " <p><strong>%(item_count)s</strong> relaterte elementer funnet</p> "
+
+#: ckan/templates/related/dashboard.html:29
+msgid "There have been no apps submitted yet."
+msgstr "Ingen apper har blitt sendt inn ennå."
+
+#: ckan/templates/related/dashboard.html:48
+msgid "What are applications?"
+msgstr "Hva er applikasjoner?"
+
+#: ckan/templates/related/dashboard.html:50
+msgid ""
+" These are applications built with the datasets as well as ideas for things "
+"that could be done with them. "
+msgstr "Dette er applikasjoner som bruker datasettene, og ideer til bruksområder for datasettene."
+
+#: ckan/templates/related/dashboard.html:58
+#: ckan/templates/snippets/search_form.html:70
+msgid "Filter Results"
+msgstr "Filterresultater"
+
+#: ckan/templates/related/dashboard.html:63
+msgid "Filter by type"
+msgstr "Filtrer etter type"
+
+#: ckan/templates/related/dashboard.html:65
+msgid "All"
+msgstr "Alle"
+
+#: ckan/templates/related/dashboard.html:73
+msgid "Sort by"
+msgstr "Sorter etter"
+
+#: ckan/templates/related/dashboard.html:75
+msgid "Default"
+msgstr "Standard"
+
+#: ckan/templates/related/dashboard.html:85
+msgid "Only show featured items"
+msgstr "Bare vis framhevede elementer"
+
+#: ckan/templates/related/dashboard.html:90
+msgid "Apply"
+msgstr "Bruk"
+
+#: ckan/templates/related/edit.html:3
+msgid "Edit related item"
+msgstr "Rediger relatert materiale"
+
+#: ckan/templates/related/edit.html:6
+msgid "Edit Related"
+msgstr "Rediger relatert"
+
+#: ckan/templates/related/edit.html:8
+msgid "Edit Related Item"
+msgstr "Rediger relatert materiale"
+
+#: ckan/templates/related/new.html:3
+msgid "Create a related item"
+msgstr "Opprett relatert materiale"
+
+#: ckan/templates/related/new.html:5
+msgid "Create Related"
+msgstr "Opprett relatert"
+
+#: ckan/templates/related/new.html:7
+msgid "Create Related Item"
+msgstr "Opprett relatert materiale"
+
+#: ckan/templates/related/snippets/related_form.html:18
+msgid "My Related Item"
+msgstr "Mitt relaterte materiale"
+
+#: ckan/templates/related/snippets/related_form.html:19
+msgid "http://example.com/"
+msgstr "http://example.com/"
+
+#: ckan/templates/related/snippets/related_form.html:20
+msgid "http://example.com/image.png"
+msgstr "http://example.com/image.png"
+
+#: ckan/templates/related/snippets/related_form.html:21
+msgid "A little information about the item..."
+msgstr "Litt informasjon om materialet"
+
+#: ckan/templates/related/snippets/related_form.html:22
+msgid "Type"
+msgstr "Type"
+
+#: ckan/templates/related/snippets/related_form.html:28
+msgid "Are you sure you want to delete this related item?"
+msgstr "Er du sikker på at du vil slette dette relaterte materialet?"
+
+#: ckan/templates/related/snippets/related_item.html:16
+msgid "Go to {related_item_type}"
+msgstr "Gå til {related_item_type}"
+
+#: ckan/templates/revision/diff.html:6
+msgid "Differences"
+msgstr "Endringer"
+
+#: ckan/templates/revision/diff.html:13 ckan/templates/revision/diff.html:18
+#: ckan/templates/revision/diff.html:23
+msgid "Revision Differences"
+msgstr "Forskjeller mellom versjoner"
+
+#: ckan/templates/revision/diff.html:44
+msgid "Difference"
+msgstr "Forskjell"
+
+#: ckan/templates/revision/diff.html:54
+msgid "No Differences"
+msgstr "Ingen endringer"
+
+#: ckan/templates/revision/list.html:3 ckan/templates/revision/list.html:6
+#: ckan/templates/revision/list.html:10
+msgid "Revision History"
+msgstr "Endringshistorikk"
+
+#: ckan/templates/revision/list.html:6 ckan/templates/revision/read.html:8
+msgid "Revisions"
+msgstr "Siste endringer"
+
+#: ckan/templates/revision/read.html:30
+msgid "Undelete"
+msgstr "Angre sletting"
+
+#: ckan/templates/revision/read.html:64
+msgid "Changes"
+msgstr "Endringer"
+
+#: ckan/templates/revision/read.html:74
+msgid "Datasets' Tags"
+msgstr "Datasettets stikkord"
+
+#: ckan/templates/revision/snippets/revisions_list.html:7
+msgid "Entity"
+msgstr "Enhet"
+
+#: ckan/templates/snippets/activity_item.html:3
+msgid "New activity item"
+msgstr "Nytt aktivitetselement"
+
+#: ckan/templates/snippets/datapreview_embed_dialog.html:4
+msgid "Embed Data Viewer"
+msgstr "Embed Data Viewer"
+
+#: ckan/templates/snippets/datapreview_embed_dialog.html:8
+msgid "Embed this view by copying this into your webpage:"
+msgstr "Inkluder denne visningen ved å kopiere dette til nettstedet ditt:"
+
+#: ckan/templates/snippets/datapreview_embed_dialog.html:10
+msgid "Choose width and height in pixels:"
+msgstr "Velg bredde og høyde i piksler:"
+
+#: ckan/templates/snippets/datapreview_embed_dialog.html:11
+msgid "Width:"
+msgstr "Bredde:"
+
+#: ckan/templates/snippets/datapreview_embed_dialog.html:13
+msgid "Height:"
+msgstr "Høyde:"
+
+#: ckan/templates/snippets/datapusher_status.html:8
+msgid "Datapusher status: {status}."
+msgstr "Datapusher-status: {status}."
+
+#: ckan/templates/snippets/disqus_trackback.html:2
+msgid "Trackback URL"
+msgstr "Tilbakesporings-URL"
+
+#: ckan/templates/snippets/facet_list.html:80
+msgid "Show More {facet_type}"
+msgstr "Vis mer {facet_type}"
+
+#: ckan/templates/snippets/facet_list.html:83
+msgid "Show Only Popular {facet_type}"
+msgstr "Vis bare populære {facet_type}"
+
+#: ckan/templates/snippets/facet_list.html:87
+msgid "There are no {facet_type} that match this search"
+msgstr "Det er ingen {facet_type} som passer med dette søket"
+
+#: ckan/templates/snippets/home_breadcrumb_item.html:2
+#: ckanext/stats/templates_legacy/ckanext/stats/index.html:51
+msgid "Home"
+msgstr "Hjem"
+
+#: ckan/templates/snippets/language_selector.html:4
+msgid "Language"
+msgstr "Språk"
+
+#: ckan/templates/snippets/language_selector.html:12
+#: ckan/templates/snippets/search_form.html:40
+#: ckan/templates/snippets/simple_search.html:15
+#: ckan/templates/snippets/sort_by.html:22
+msgid "Go"
+msgstr "Velg"
+
+#: ckan/templates/snippets/license.html:14
+msgid "No License Provided"
+msgstr "Lisens er ikke oppgitt"
+
+#: ckan/templates/snippets/license.html:28
+msgid "This dataset satisfies the Open Definition."
+msgstr "Dette datasettet tilfredsstiller \"Open Definition\", en definisjon av åpen kunnskap."
+
+#: ckan/templates/snippets/organization.html:48
+msgid "There is no description for this organization"
+msgstr "Det er ingen beskrivelse av denne organisasjonen"
+
+#: ckan/templates/snippets/package_item.html:57
+msgid "This dataset has no description"
+msgstr "Dette datasettet mangler beskrivelse"
+
+#: ckan/templates/snippets/related.html:15
+msgid ""
+"No apps, ideas, news stories or images have been related to this dataset "
+"yet."
+msgstr "Ingen apper, ideer, nyheter eller bilder er satt som relatert til dette datasettet ennå."
+
+#: ckan/templates/snippets/related.html:18
+msgid "Add Item"
+msgstr "Legg til element"
+
+#: ckan/templates/snippets/search_form.html:16
+msgid "Submit"
+msgstr "Send inn"
+
+#: ckan/templates/snippets/search_form.html:31
+#: ckan/templates/snippets/simple_search.html:8
+#: ckan/templates/snippets/sort_by.html:12
+msgid "Order by"
+msgstr "Sorter etter"
+
+#: ckan/templates/snippets/search_form.html:77
+msgid " <p class=\"extra\">Please try another search.</p> "
+msgstr " <p class=\"extra\">Prøv et annet søk.</p> "
+
+#: ckan/templates/snippets/search_form.html:83
+msgid ""
+" <p><strong>There was an error while searching.</strong> Please try "
+"again.</p> "
+msgstr " <p><strong>Det oppstod en feil under søking.</strong> Prøv igjen.</p> "
+
+#: ckan/templates/snippets/search_result_text.html:15
+msgid "{number} dataset found for \"{query}\""
+msgid_plural "{number} datasets found for \"{query}\""
+msgstr[0] "Fant {number} datasett for \"{query}\""
+msgstr[1] "Fant {number} datasett for \"{query}\""
+
+#: ckan/templates/snippets/search_result_text.html:16
+msgid "No datasets found for \"{query}\""
+msgstr "Fant ingen datasett for \"{query}\""
+
+#: ckan/templates/snippets/search_result_text.html:17
+msgid "{number} dataset found"
+msgid_plural "{number} datasets found"
+msgstr[0] "Fant {number} datasett"
+msgstr[1] "Fant {number} datasett"
+
+#: ckan/templates/snippets/search_result_text.html:18
+msgid "No datasets found"
+msgstr "Fant ikke noen datasett"
+
+#: ckan/templates/snippets/search_result_text.html:21
+msgid "{number} group found for \"{query}\""
+msgid_plural "{number} groups found for \"{query}\""
+msgstr[0] "Fant {number} datasett for \"{query}\""
+msgstr[1] "Fant {number} datasett for \"{query}\""
+
+#: ckan/templates/snippets/search_result_text.html:22
+msgid "No groups found for \"{query}\""
+msgstr "Fant ingen grupper for \"{query}\""
+
+#: ckan/templates/snippets/search_result_text.html:23
+msgid "{number} group found"
+msgid_plural "{number} groups found"
+msgstr[0] "Fant {number} gruppe"
+msgstr[1] "Fant {number} grupper"
+
+#: ckan/templates/snippets/search_result_text.html:24
+msgid "No groups found"
+msgstr "Fant ingen grupper"
+
+#: ckan/templates/snippets/search_result_text.html:27
+msgid "{number} organization found for \"{query}\""
+msgid_plural "{number} organizations found for \"{query}\""
+msgstr[0] "Fant {number} organisasjon for \"{query}\""
+msgstr[1] "Fant {number} organisasjoner for \"{query}\""
+
+#: ckan/templates/snippets/search_result_text.html:28
+msgid "No organizations found for \"{query}\""
+msgstr "Fant ingen organisasjoner for \"{query}\""
+
+#: ckan/templates/snippets/search_result_text.html:29
+msgid "{number} organization found"
+msgid_plural "{number} organizations found"
+msgstr[0] "Fant {number} organisasjon"
+msgstr[1] "Fant {number} organisasjoner"
+
+#: ckan/templates/snippets/search_result_text.html:30
+msgid "No organizations found"
+msgstr "Fant ingen organisasjoner"
+
+#: ckan/templates/snippets/social.html:5
+msgid "Social"
+msgstr "Sosiale nettverk"
+
+#: ckan/templates/snippets/subscribe.html:2
+msgid "Subscribe"
+msgstr "Abonner"
+
+#: ckan/templates/snippets/subscribe.html:4
+#: ckan/templates/user/edit_user_form.html:13
+#: ckan/templates/user/new_user_form.html:7
+#: ckan/templates/user/read_base.html:82
+msgid "Email"
+msgstr "E-post"
+
+#: ckan/templates/snippets/subscribe.html:5
+msgid "RSS"
+msgstr "RSS"
+
+#: ckan/templates/snippets/context/user.html:23
+#: ckan/templates/user/read_base.html:57
+msgid "Edits"
+msgstr "Endringer"
+
+#: ckan/templates/tag/index.html:33 ckan/templates/tag/index.html:34
+msgid "Search Tags"
+msgstr "Søk i stikkord"
+
+#: ckan/templates/user/dashboard.html:6
+msgid "Dashboard"
+msgstr "Kontrollpanel"
+
+#: ckan/templates/user/dashboard.html:19 ckan/templates/user/dashboard.html:37
+msgid "News feed"
+msgstr "Nyhetsstrøm"
+
+#: ckan/templates/user/dashboard.html:20
+#: ckan/templates/user/dashboard_datasets.html:12
+msgid "My Datasets"
+msgstr "Mine datasett"
+
+#: ckan/templates/user/dashboard.html:21
+#: ckan/templates/user/dashboard_organizations.html:12
+msgid "My Organizations"
+msgstr "Mine organisasjoner"
+
+#: ckan/templates/user/dashboard.html:22
+#: ckan/templates/user/dashboard_groups.html:12
+msgid "My Groups"
+msgstr "Mine grupper"
+
+#: ckan/templates/user/dashboard.html:39
+msgid "Activity from items that I'm following"
+msgstr "Aktiviteter fra elementer jeg følger"
+
+#: ckan/templates/user/dashboard_datasets.html:17
+#: ckan/templates/user/read.html:14
+msgid "You haven't created any datasets."
+msgstr "Du har ikke opprettet noen datasett."
+
+#: ckan/templates/user/dashboard_datasets.html:19
+#: ckan/templates/user/dashboard_groups.html:22
+#: ckan/templates/user/dashboard_organizations.html:22
+#: ckan/templates/user/read.html:16
+msgid "Create one now?"
+msgstr "Opprette nå?"
+
+#: ckan/templates/user/dashboard_groups.html:20
+msgid "You are not a member of any groups."
+msgstr "Du er ikke medlem av noen grupper."
+
+#: ckan/templates/user/dashboard_organizations.html:20
+msgid "You are not a member of any organizations."
+msgstr "Du er ikke medlem av noen organisasjoner."
+
+#: ckan/templates/user/edit.html:6 ckan/templates/user/edit_base.html:3
+#: ckan/templates/user/list.html:6 ckan/templates/user/list.html:13
+#: ckan/templates/user/read_base.html:5 ckan/templates/user/read_base.html:8
+#: ckan/templates/user/snippets/user_search.html:2
+msgid "Users"
+msgstr "Brukere:"
+
+#: ckan/templates/user/edit.html:17
+msgid "Account Info"
+msgstr "Kontoinformasjon"
+
+#: ckan/templates/user/edit.html:19
+msgid ""
+" Your profile lets other CKAN users know about who you are and what you do. "
+msgstr "I profilen kan du fortelle andre CKAN-brukere om hvem du er og hva du gjør."
+
+#: ckan/templates/user/edit_user_form.html:7
+msgid "Change details"
+msgstr "Endre detaljer"
+
+#: ckan/templates/user/edit_user_form.html:9
+#: ckan/templates/user/logout_first.html:11
+#: ckan/templates/user/new_user_form.html:5
+#: ckan/templates/user/read_base.html:76
+#: ckan/templates/user/request_reset.html:16
+#: ckan/templates/user/snippets/login_form.html:20
+msgid "Username"
+msgstr "Brukernavn"
+
+#: ckan/templates/user/edit_user_form.html:11
+msgid "Full name"
+msgstr "Fullt navn"
+
+#: ckan/templates/user/edit_user_form.html:11
+msgid "eg. Joe Bloggs"
+msgstr "f.eks. Kari Nordmann"
+
+#: ckan/templates/user/edit_user_form.html:13
+msgid "eg. joe@example.com"
+msgstr "f.eks. kari@example.com"
+
+#: ckan/templates/user/edit_user_form.html:15
+msgid "A little information about yourself"
+msgstr "Litt informasjon om deg selv."
+
+#: ckan/templates/user/edit_user_form.html:18
+msgid "Subscribe to notification emails"
+msgstr "Abonner på e-postvarsling"
+
+#: ckan/templates/user/edit_user_form.html:27
+msgid "Change password"
+msgstr "Endre passord"
+
+#: ckan/templates/user/edit_user_form.html:29
+#: ckan/templates/user/logout_first.html:12
+#: ckan/templates/user/new_user_form.html:8
+#: ckan/templates/user/perform_reset.html:20
+#: ckan/templates/user/snippets/login_form.html:22
+msgid "Password"
+msgstr "Passord"
+
+#: ckan/templates/user/edit_user_form.html:31
+msgid "Confirm Password"
+msgstr "Bekreft passord"
+
+#: ckan/templates/user/edit_user_form.html:37
+msgid "Are you sure you want to delete this User?"
+msgstr "Er du sikker på at du vil slette denne brukeren?"
+
+#: ckan/templates/user/edit_user_form.html:43
+msgid "Are you sure you want to regenerate the API key?"
+msgstr ""
+
+#: ckan/templates/user/edit_user_form.html:44
+msgid "Regenerate API Key"
+msgstr ""
+
+#: ckan/templates/user/edit_user_form.html:48
+msgid "Update Profile"
+msgstr "Oppdater profil"
+
+#: ckan/templates/user/list.html:3
+#: ckan/templates/user/snippets/user_search.html:11
+msgid "All Users"
+msgstr "Alle brukere"
+
+#: ckan/templates/user/login.html:3 ckan/templates/user/login.html:6
+#: ckan/templates/user/login.html:12
+#: ckan/templates/user/snippets/login_form.html:28
+msgid "Login"
+msgstr "Innlogging"
+
+#: ckan/templates/user/login.html:25
+msgid "Need an Account?"
+msgstr "Trenger du en konto?"
+
+#: ckan/templates/user/login.html:27
+msgid "Then sign right up, it only takes a minute."
+msgstr "Opprett brukerkonto, det tar bare et øyeblikk."
+
+#: ckan/templates/user/login.html:30
+msgid "Create an Account"
+msgstr "Opprett konto"
+
+#: ckan/templates/user/login.html:42
+msgid "Forgotten your password?"
+msgstr "Har du glemt passordet ditt?"
+
+#: ckan/templates/user/login.html:44
+msgid "No problem, use our password recovery form to reset it."
+msgstr "Ikke noe problem, bruk skjemaet vårt for tilbakestilling av passord."
+
+#: ckan/templates/user/login.html:47
+msgid "Forgot your password?"
+msgstr "Glemt passordet?"
+
+#: ckan/templates/user/logout.html:3 ckan/templates/user/logout.html:9
+msgid "Logged Out"
+msgstr "Logget ut"
+
+#: ckan/templates/user/logout.html:11
+msgid "You are now logged out."
+msgstr "Du er logget ut."
+
+#: ckan/templates/user/logout_first.html:9
+msgid "You're already logged in as {user}."
+msgstr "Du er allerede logget inn som  {user}."
+
+#: ckan/templates/user/logout_first.html:9
+msgid "Logout"
+msgstr "Logg ut"
+
+#: ckan/templates/user/logout_first.html:13
+#: ckan/templates/user/snippets/login_form.html:24
+msgid "Remember me"
+msgstr "Husk meg"
+
+#: ckan/templates/user/logout_first.html:22
+msgid "You're already logged in"
+msgstr "Du er logget inn allerede"
+
+#: ckan/templates/user/logout_first.html:24
+msgid "You need to log out before you can log in with another account."
+msgstr "Du må logge ut før du kan logge inn med en annen konto."
+
+#: ckan/templates/user/logout_first.html:25
+msgid "Log out now"
+msgstr "Logg ut nå"
+
+#: ckan/templates/user/new.html:6
+msgid "Registration"
+msgstr "Registrering"
+
+#: ckan/templates/user/new.html:14
+msgid "Register for an Account"
+msgstr "Opprette brukerkonto"
+
+#: ckan/templates/user/new.html:26
+msgid "Why Sign Up?"
+msgstr "Hvorfor registrere deg?"
+
+#: ckan/templates/user/new.html:28
+msgid "Create datasets, groups and other exciting things"
+msgstr "Opprett datasett, grupper og andre interessante ting"
+
+#: ckan/templates/user/new_user_form.html:5
+msgid "username"
+msgstr ""
+
+#: ckan/templates/user/new_user_form.html:6
+msgid "Full Name"
+msgstr "Fullt navn"
+
+#: ckan/templates/user/new_user_form.html:17
+msgid "Create Account"
+msgstr "Opprett konto"
+
+#: ckan/templates/user/perform_reset.html:4
+#: ckan/templates/user/perform_reset.html:14
+msgid "Reset Your Password"
+msgstr "Tilbakestill passordet ditt"
+
+#: ckan/templates/user/perform_reset.html:7
+msgid "Password Reset"
+msgstr "Tilbakestill passord"
+
+#: ckan/templates/user/perform_reset.html:24
+msgid "Update Password"
+msgstr "Oppdater passord"
+
+#: ckan/templates/user/perform_reset.html:38
+#: ckan/templates/user/request_reset.html:32
+msgid "How does this work?"
+msgstr "Hvordan virker dette?"
+
+#: ckan/templates/user/perform_reset.html:40
+msgid "Simply enter a new password and we'll update your account"
+msgstr "Oppgi nytt passord, så oppdaterer vi informasjonen for kontoen din"
+
+#: ckan/templates/user/read.html:21
+msgid "User hasn't created any datasets."
+msgstr "Brukeren har ikke opprettet noen datasett"
+
+#: ckan/templates/user/read_base.html:39
+msgid "You have not provided a biography."
+msgstr "Du har ikke skrevet noen biografi."
+
+#: ckan/templates/user/read_base.html:41
+msgid "This user has no biography."
+msgstr "Denne brukeren har ingen biografi."
+
+#: ckan/templates/user/read_base.html:73
+msgid "Open ID"
+msgstr "Open ID"
+
+#: ckan/templates/user/read_base.html:82 ckan/templates/user/read_base.html:96
+msgid "This means only you can see this"
+msgstr "Det betyr at du er den eneste som kan se dette"
+
+#: ckan/templates/user/read_base.html:87
+msgid "Member Since"
+msgstr "Medlem siden"
+
+#: ckan/templates/user/read_base.html:96
+msgid "API Key"
+msgstr "API-nøkkel"
+
+#: ckan/templates/user/request_reset.html:6
+msgid "Password reset"
+msgstr ""
+
+#: ckan/templates/user/request_reset.html:19
+msgid "Request reset"
+msgstr ""
+
+#: ckan/templates/user/request_reset.html:34
+msgid ""
+"Enter your username into the box and we will send you an email with a link "
+"to enter a new password."
+msgstr "Oppgi brukernavnet ditt, så sender vi deg en e-post med lenke som du kan bruke for å velge nytt passord."
+
+#: ckan/templates/user/snippets/followee_dropdown.html:14
+#: ckan/templates/user/snippets/followee_dropdown.html:15
+msgid "Activity from:"
+msgstr "Aktivitet fra:"
+
+#: ckan/templates/user/snippets/followee_dropdown.html:23
+msgid "Search list..."
+msgstr "Søk i lista..."
+
+#: ckan/templates/user/snippets/followee_dropdown.html:44
+msgid "You are not following anything"
+msgstr "Du følger ikke noe"
+
+#: ckan/templates/user/snippets/followers.html:9
+msgid "No followers"
+msgstr "Ingen følgere"
+
+#: ckan/templates/user/snippets/user_search.html:5
+msgid "Search Users"
+msgstr "Søk brukere"
+
+#: ckanext/datapusher/helpers.py:19
+msgid "Complete"
+msgstr "Fullfør"
+
+#: ckanext/datapusher/helpers.py:20
+msgid "Pending"
+msgstr "Venter"
+
+#: ckanext/datapusher/helpers.py:21
+msgid "Submitting"
+msgstr "Sender inn"
+
+#: ckanext/datapusher/helpers.py:27
+msgid "Not Uploaded Yet"
+msgstr "Ikke lastet opp ennå"
+
+#: ckanext/datastore/controller.py:31
+msgid "DataStore resource not found"
+msgstr "Fant ikke DataStore-ressurs"
+
+#: ckanext/datastore/db.py:652
+msgid ""
+"The data was invalid (for example: a numeric value is out of range or was "
+"inserted into a text field)."
+msgstr ""
+
+#: ckanext/datastore/logic/action.py:209 ckanext/datastore/logic/action.py:259
+#: ckanext/datastore/logic/action.py:343 ckanext/datastore/logic/action.py:425
+#: ckanext/datastore/logic/action.py:451
+msgid "Resource \"{0}\" was not found."
+msgstr "Fant ikke ressursen \"{0}\""
+
+#: ckanext/datastore/logic/auth.py:16
+msgid "User {0} not authorized to update resource {1}"
+msgstr "Brukeren {0} har ikke tillatelse til å oppdatere ressursen {1}"
+
+#: ckanext/example_idatasetform/templates/package/search.html:16
+msgid "Custom Field Ascending"
+msgstr ""
+
+#: ckanext/example_idatasetform/templates/package/search.html:17
+msgid "Custom Field Descending"
+msgstr ""
+
+#: ckanext/example_idatasetform/templates/package/snippets/additional_info.html:6
+#: ckanext/example_idatasetform/templates/package/snippets/package_basic_fields.html:4
+#: ckanext/example_idatasetform/templates/package/snippets/resource_form.html:6
+msgid "Custom Text"
+msgstr "Egendefinert tekst"
+
+#: ckanext/example_idatasetform/templates/package/snippets/package_basic_fields.html:4
+msgid "custom text"
+msgstr "egendefinert tekst"
+
+#: ckanext/example_idatasetform/templates/package/snippets/package_metadata_fields.html:11
+msgid "Country Code"
+msgstr "Landkode"
+
+#: ckanext/example_idatasetform/templates/package/snippets/resource_form.html:6
+msgid "custom resource text"
+msgstr ""
+
+#: ckanext/example_theme/v10_custom_snippet/templates/snippets/example_theme_most_popular_groups.html:20
+#: ckanext/example_theme/v11_HTML_and_CSS/templates/snippets/example_theme_most_popular_groups.html:19
+msgid "This group has no description"
+msgstr "Denne gruppen har ingen beskrivelse"
+
+#: ckanext/example_theme/v12_extra_public_dir/templates/home/snippets/promoted.html:4
+msgid "CKAN's data previewing tool has many powerful features"
+msgstr ""
+
+#: ckanext/imageview/theme/templates/image_form.html:3
+msgid "Image url"
+msgstr ""
+
+#: ckanext/imageview/theme/templates/image_form.html:3
+msgid "eg. http://example.com/image.jpg (if blank uses resource url)"
+msgstr ""
+
+#: ckanext/reclineview/plugin.py:82
+msgid "Data Explorer"
+msgstr ""
+
+#: ckanext/reclineview/plugin.py:106
+msgid "Table"
+msgstr ""
+
+#: ckanext/reclineview/plugin.py:149
+msgid "Graph"
+msgstr ""
+
+#: ckanext/reclineview/plugin.py:207
+msgid "Map"
+msgstr ""
+
+#: ckanext/reclineview/theme/public/vendor/slickgrid/2.0.1/MIT-LICENSE.txt:1
+msgid ""
+"Copyright (c) 2010 Michael Leibman, http://github.com/mleibman/slickgrid\n"
+"\n"
+"Permission is hereby granted, free of charge, to any person obtaining\n"
+"a copy of this software and associated documentation files (the\n"
+"\"Software\"), to deal in the Software without restriction, including\n"
+"without limitation the rights to use, copy, modify, merge, publish,\n"
+"distribute, sublicense, and/or sell copies of the Software, and to\n"
+"permit persons to whom the Software is furnished to do so, subject to\n"
+"the following conditions:\n"
+"\n"
+"The above copyright notice and this permission notice shall be\n"
+"included in all copies or substantial portions of the Software.\n"
+"\n"
+"THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND,\n"
+"EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF\n"
+"MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND\n"
+"NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE\n"
+"LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION\n"
+"OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION\n"
+"WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE."
+msgstr ""
+
+#: ckanext/reclineview/theme/public/vendor/slickgrid/2.0.1/README.txt:1
+msgid ""
+"This compiled version of SlickGrid has been obtained with the Google Closure\n"
+"Compiler, using the following command:\n"
+"\n"
+"java -jar compiler.jar --js=slick.core.js --js=slick.grid.js --js=slick.editors.js --js_output_file=slick.grid.min.js\n"
+"\n"
+"There are two other files required for the SlickGrid view to work properly:\n"
+"\n"
+" * jquery-ui-1.8.16.custom.min.js \n"
+" * jquery.event.drag-2.0.min.js\n"
+"\n"
+"These are included in the Recline source, but have not been included in the\n"
+"built file to make easier to handle compatibility problems.\n"
+"\n"
+"Please check SlickGrid license in the included MIT-LICENSE.txt file.\n"
+"\n"
+"[1] https://developers.google.com/closure/compiler/"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:3
+#: ckanext/reclineview/theme/templates/recline_map_form.html:3
+msgid "Row offset"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:3
+#: ckanext/reclineview/theme/templates/recline_map_form.html:3
+msgid "eg: 0"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:4
+#: ckanext/reclineview/theme/templates/recline_map_form.html:4
+msgid "Number of rows"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:4
+#: ckanext/reclineview/theme/templates/recline_map_form.html:4
+msgid "eg: 100"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:6
+msgid "Graph type"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:7
+msgid "Group (Axis 1)"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_graph_form.html:8
+msgid "Series (Axis 2)"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_map_form.html:6
+msgid "Field type"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_map_form.html:7
+msgid "Latitude field"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_map_form.html:8
+msgid "Longitude field"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_map_form.html:9
+msgid "GeoJSON field"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_map_form.html:10
+msgid "Auto zoom to features"
+msgstr ""
+
+#: ckanext/reclineview/theme/templates/recline_map_form.html:11
+msgid "Cluster markers"
+msgstr ""
+
+#: ckanext/stats/templates/ckanext/stats/index.html:10
+#: ckanext/stats/templates_legacy/ckanext/stats/index.html:57
+msgid "Total number of Datasets"
+msgstr "Totalt antall datasett"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:17
+#: ckanext/stats/templates/ckanext/stats/index.html:40
+msgid "Date"
+msgstr "Dato"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:18
+msgid "Total datasets"
+msgstr "Totalt antall datasett"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:33
+#: ckanext/stats/templates/ckanext/stats/index.html:179
+msgid "Dataset Revisions per Week"
+msgstr "Datasettversjoner per uke"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:41
+msgid "All dataset revisions"
+msgstr "Alle datasettversjoner"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:42
+msgid "New datasets"
+msgstr "Nye datasett"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:58
+#: ckanext/stats/templates/ckanext/stats/index.html:180
+#: ckanext/stats/templates_legacy/ckanext/stats/index.html:63
+msgid "Top Rated Datasets"
+msgstr "Best vurderte datasett"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:64
+#: ckanext/stats/templates_legacy/ckanext/stats/index.html:65
+msgid "Average rating"
+msgstr "Gjennomsnittlig vurdering"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:65
+#: ckanext/stats/templates_legacy/ckanext/stats/index.html:65
+msgid "Number of ratings"
+msgstr "Antall vurderinger"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:79
+#: ckanext/stats/templates_legacy/ckanext/stats/index.html:70
+msgid "No ratings"
+msgstr "Ingen vurderinger"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:84
+#: ckanext/stats/templates/ckanext/stats/index.html:181
+#: ckanext/stats/templates_legacy/ckanext/stats/index.html:72
+msgid "Most Edited Datasets"
+msgstr "Oftest redigerte datasett"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:90
+#: ckanext/stats/templates_legacy/ckanext/stats/index.html:74
+msgid "Number of edits"
+msgstr "Antall endringer"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:103
+msgid "No edited datasets"
+msgstr "Ingen redigerte datasett"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:108
+#: ckanext/stats/templates/ckanext/stats/index.html:182
+#: ckanext/stats/templates_legacy/ckanext/stats/index.html:80
+msgid "Largest Groups"
+msgstr "Største grupper"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:114
+#: ckanext/stats/templates_legacy/ckanext/stats/index.html:82
+msgid "Number of datasets"
+msgstr "Antall datasett"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:127
+msgid "No groups"
+msgstr "Ingen grupper"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:132
+#: ckanext/stats/templates/ckanext/stats/index.html:183
+#: ckanext/stats/templates_legacy/ckanext/stats/index.html:88
+msgid "Top Tags"
+msgstr "Mest brukte stikkord"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:136
+msgid "Tag Name"
+msgstr "Stikkordnavn"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:137
+#: ckanext/stats/templates/ckanext/stats/index.html:157
+msgid "Number of Datasets"
+msgstr "Antall datasett"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:152
+#: ckanext/stats/templates/ckanext/stats/index.html:184
+msgid "Users Owning Most Datasets"
+msgstr "Brukere med flest datasett"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:175
+msgid "Statistics Menu"
+msgstr "Statistikkmeny"
+
+#: ckanext/stats/templates/ckanext/stats/index.html:178
+msgid "Total Number of Datasets"
+msgstr "Totalt antall datasett"
+
+#: ckanext/stats/templates_legacy/ckanext/stats/index.html:6
+#: ckanext/stats/templates_legacy/ckanext/stats/index.html:8
+msgid "Statistics"
+msgstr "Statistikk"
+
+#: ckanext/stats/templates_legacy/ckanext/stats/index.html:60
+msgid "Revisions to Datasets per week"
+msgstr "Endringer i datasett per uke"
+
+#: ckanext/stats/templates_legacy/ckanext/stats/index.html:95
+msgid "Users owning most datasets"
+msgstr "Brukerne med fleste datasett"
+
+#: ckanext/stats/templates_legacy/ckanext/stats/index.html:102
+msgid "Page last updated:"
+msgstr "Side sist oppdatert:"
+
+#: ckanext/stats/templates_legacy/ckanext/stats/leaderboard.html:6
+msgid "Leaderboard - Stats"
+msgstr "Leaderboard - Stats"
+
+#: ckanext/stats/templates_legacy/ckanext/stats/leaderboard.html:17
+msgid "Dataset Leaderboard"
+msgstr "Dataset Leaderboard"
+
+#: ckanext/stats/templates_legacy/ckanext/stats/leaderboard.html:18
+msgid ""
+"Choose a dataset attribute and find out which categories in that area have "
+"the most datasets. E.g. tags, groups, license, res_format, country."
+msgstr "Velg en egenskap ved datasettet og se hvilke kategorier som har flest datasett. F.eks. stikkord, gruppe, lisens, land."
+
+#: ckanext/stats/templates_legacy/ckanext/stats/leaderboard.html:20
+msgid "Choose area"
+msgstr "Velg område"
+
+#: ckanext/webpageview/plugin.py:24
+msgid "Website"
+msgstr ""
+
+#: ckanext/webpageview/theme/templates/webpage_form.html:3
+msgid "Web Page url"
+msgstr ""
+
+#: ckanext/webpageview/theme/templates/webpage_form.html:3
+msgid "eg. http://example.com (if blank uses resource url)"
+msgstr ""
