@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: CKAN\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2015-01-26 11:55+0000\n"
-"PO-Revision-Date: 2015-04-23 16:14+0200\n"
+"PO-Revision-Date: 2015-04-24 14:22+0200\n"
 "Last-Translator: \n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/ckan/language/"
 "ro/)\n"
@@ -1051,20 +1051,20 @@ msgstr[2] "{days} zile în urmă"
 #: ckan/lib/formatters.py:123
 msgid "{months} month ago"
 msgid_plural "{months} months ago"
-msgstr[0] "{mins} minut în urmă"
-msgstr[1] "{mins} minute în urmă"
-msgstr[2] "{mins} minute în urmă"
+msgstr[0] "{mins} lună în urmă"
+msgstr[1] "{mins} luni în urmă"
+msgstr[2] "{mins} luni în urmă"
 
 #: ckan/lib/formatters.py:125
 msgid "over {years} year ago"
 msgid_plural "over {years} years ago"
-msgstr[0] ""
-msgstr[1] ""
-msgstr[2] ""
+msgstr[0] "{years} an în urmă"
+msgstr[1] "{years} ani în urmă"
+msgstr[2] "{years} ani în urmă"
 
 #: ckan/lib/formatters.py:138
 msgid "{month} {day}, {year}, {hour:02}:{min:02}"
-msgstr "{day} {month} {year}"
+msgstr "{day} {month} {year}, {hour:02}:{min:02}"
 
 #: ckan/lib/formatters.py:142
 msgid "{month} {day}, {year}"
@@ -1950,7 +1950,7 @@ msgstr "Altele (Atribuții)"
 
 #: ckan/model/license.py:288
 msgid "UK Open Government Licence (OGL)"
-msgstr ""
+msgstr "OGL-ROU-1.0"
 
 #: ckan/model/license.py:296
 msgid "Creative Commons Non-Commercial (Any)"
