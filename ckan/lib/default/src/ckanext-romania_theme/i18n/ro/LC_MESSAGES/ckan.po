@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: CKAN\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2015-01-26 11:55+0000\n"
-"PO-Revision-Date: 2015-04-24 14:22+0200\n"
+"PO-Revision-Date: 2015-05-14 00:05+0200\n"
 "Last-Translator: \n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/ckan/language/"
 "ro/)\n"
@@ -230,7 +230,8 @@ msgstr "Valoare qjson formată eronată: %r"
 #: ckan/controllers/api.py:596
 msgid "Request params must be in form of a json encoded dictionary."
 msgstr ""
-"Parametrii ceruți trebuie să fie într-o formă din dicționarul de codare json."
+"Parametrii ceruți trebuie să fie într-o formă din dicționarul de encodare "
+"JSON."
 
 #: ckan/controllers/feed.py:223 ckan/controllers/group.py:190
 #: ckan/controllers/group.py:385 ckan/controllers/group.py:484
@@ -504,7 +505,7 @@ msgstr "Neautorizat pentru actualizarea acestui set de date"
 #: ckan/controllers/package.py:685 ckan/controllers/package.py:717
 #: ckan/controllers/package.py:745
 msgid "The dataset {id} could not be found."
-msgstr "Bază de date negăsită"
+msgstr "Setul de date {id} nu a putut fi găsit."
 
 #: ckan/controllers/package.py:688
 msgid "You must add at least one data resource"
@@ -594,7 +595,7 @@ msgstr "De negăsit"
 
 #: ckan/controllers/package.py:1609
 msgid "Bad resource view data"
-msgstr "Datele cererii incorecte: %s"
+msgstr ""
 
 #: ckan/controllers/package.py:1618
 #, python-format
@@ -733,7 +734,7 @@ msgstr "Neautorizat pentru a crea un utilizator"
 
 #: ckan/controllers/user.py:197
 msgid "Unauthorized to delete user with id \"{user_id}\"."
-msgstr "Neautorizat pentru a șterge itemul corespunzător %s"
+msgstr "Neautorizat pentru a șterge utilizator cu id-ul \"{user_id}\"."
 
 #: ckan/controllers/user.py:211 ckan/controllers/user.py:270
 msgid "No user specified"
@@ -769,7 +770,7 @@ msgstr ""
 
 #: ckan/controllers/user.py:276
 msgid "Unauthorized to edit a user."
-msgstr "Neautorizat pentru a edita utilizatorul %s"
+msgstr "Neautorizat pentru a edita un utilizator."
 
 #: ckan/controllers/user.py:302
 #, python-format
@@ -782,7 +783,7 @@ msgstr "Autentificarea a eșuat. Nume de utilizator sau parola incorecte"
 
 #: ckan/controllers/user.py:417
 msgid "Unauthorized to request reset password."
-msgstr "Neautorizat pentru ștergerea resursei %s"
+msgstr "Neautorizat pentru a cere resetarea parolei."
 
 #: ckan/controllers/user.py:446
 #, python-format
@@ -882,11 +883,13 @@ msgstr "{actor} și-a actualizat profilul"
 #: ckan/lib/activity_streams.py:86
 msgid ""
 "{actor} updated the {related_type} {related_item} of the dataset {dataset}"
-msgstr "{actor} a actualizat resursa {resource} din setul de date {dataset}"
+msgstr ""
+"{actor} a actualizat {related_type} {related_item} din setul de date "
+"{dataset}"
 
 #: ckan/lib/activity_streams.py:89
 msgid "{actor} updated the {related_type} {related_item}"
-msgstr "{actor} a șters itemul relaționat {related_item}"
+msgstr "{actor} a actualizat {related_type} {related_item}"
 
 #: ckan/lib/activity_streams.py:92
 msgid "{actor} deleted the group {group}"
@@ -955,11 +958,12 @@ msgstr "{actor} s-a abonat la {group}"
 #: ckan/lib/activity_streams.py:142
 msgid ""
 "{actor} added the {related_type} {related_item} to the dataset {dataset}"
-msgstr "{actor} a adăugat extra {extra} în setul de date {dataset}"
+msgstr ""
+"{actor} a adăugat {related_type} {related_item} în setul de date {dataset}"
 
 #: ckan/lib/activity_streams.py:145
 msgid "{actor} added the {related_type} {related_item}"
-msgstr "{actor} a șters itemul relaționat {related_item}"
+msgstr "{actor} a șters {related_type} {related_item}"
 
 #: ckan/lib/datapreview.py:268 ckan/templates/group/edit_base.html:16
 #: ckan/templates/organization/edit_base.html:17
@@ -973,7 +977,7 @@ msgid "1 new activity from {site_title}"
 msgid_plural "{n} new activities from {site_title}"
 msgstr[0] "O nouă activitate din {site_title}"
 msgstr[1] "{n} noi activități din {site_title}"
-msgstr[2] ""
+msgstr[2] "{n} noi activități din {site_title}"
 
 #: ckan/lib/formatters.py:17
 msgid "January"
@@ -1025,7 +1029,7 @@ msgstr "Decembrie"
 
 #: ckan/lib/formatters.py:109
 msgid "Just now"
-msgstr "Adineaori"
+msgstr "Chiar acum"
 
 #: ckan/lib/formatters.py:111
 msgid "{mins} minute ago"
@@ -1051,16 +1055,16 @@ msgstr[2] "{days} zile în urmă"
 #: ckan/lib/formatters.py:123
 msgid "{months} month ago"
 msgid_plural "{months} months ago"
-msgstr[0] "{mins} lună în urmă"
+msgstr[0] "{months} lună în urmă"
 msgstr[1] "{mins} luni în urmă"
 msgstr[2] "{mins} luni în urmă"
 
 #: ckan/lib/formatters.py:125
 msgid "over {years} year ago"
 msgid_plural "over {years} years ago"
-msgstr[0] "{years} an în urmă"
-msgstr[1] "{years} ani în urmă"
-msgstr[2] "{years} ani în urmă"
+msgstr[0] "peste {years} an în urmă"
+msgstr[1] "peste {years} ani în urmă"
+msgstr[2] "peste {years} ani în urmă"
 
 #: ckan/lib/formatters.py:138
 msgid "{month} {day}, {year}, {hour:02}:{min:02}"
@@ -1092,39 +1096,39 @@ msgstr "{tebibytes} TiB"
 
 #: ckan/lib/formatters.py:178
 msgid "{n}"
-msgstr ""
+msgstr "{n}"
 
 #: ckan/lib/formatters.py:180
 msgid "{k}k"
-msgstr ""
+msgstr "{k}k"
 
 #: ckan/lib/formatters.py:182
 msgid "{m}M"
-msgstr ""
+msgstr "{m}M"
 
 #: ckan/lib/formatters.py:184
 msgid "{g}G"
-msgstr ""
+msgstr "{g}G"
 
 #: ckan/lib/formatters.py:186
 msgid "{t}T"
-msgstr ""
+msgstr "{t}T"
 
 #: ckan/lib/formatters.py:188
 msgid "{p}P"
-msgstr ""
+msgstr "{p}P"
 
 #: ckan/lib/formatters.py:190
 msgid "{e}E"
-msgstr ""
+msgstr "{e}E"
 
 #: ckan/lib/formatters.py:192
 msgid "{z}Z"
-msgstr ""
+msgstr "{z}Z"
 
 #: ckan/lib/formatters.py:194
 msgid "{y}Y"
-msgstr ""
+msgstr "{y}Y"
 
 #: ckan/lib/helpers.py:858
 msgid "Update your avatar at gravatar.com"
@@ -1162,7 +1166,7 @@ msgid "{number} recent view"
 msgid_plural "{number} recent views"
 msgstr[0] "{number} vizualizare recentă"
 msgstr[1] "{number} vizualizări recente"
-msgstr[2] ""
+msgstr[2] "{number} vizualizări recente"
 
 #: ckan/lib/mailer.py:25
 #, python-format
@@ -1186,7 +1190,7 @@ msgid ""
 "\n"
 "   {reset_link}\n"
 msgstr ""
-"Ai solicitat resetarea parolei de pe  %(site_title)s \n"
+"Ai solicitat resetarea parolei de pe %(site_title)s \n"
 "\n"
 "Te rugăm să urmezi link-ul următor pentru a confirma această cerere:\n"
 "\n"
@@ -1209,7 +1213,7 @@ msgstr "Resetează parola"
 
 #: ckan/lib/mailer.py:151
 msgid "Invite for {site_title}"
-msgstr "O nouă activitate din {site_title}"
+msgstr "Invitație pentru {site_title}"
 
 #: ckan/lib/navl/dictization_functions.py:11
 #: ckan/lib/navl/dictization_functions.py:13
@@ -1281,7 +1285,7 @@ msgstr "Grup"
 
 #: ckan/logic/converters.py:178
 msgid "Could not parse as valid JSON"
-msgstr "Nu am putut trimite link-ul de resetare: %s"
+msgstr "Nu s-a putut parsa un JSON valid"
 
 #: ckan/logic/validators.py:30 ckan/logic/validators.py:39
 msgid "A organization must be supplied"
@@ -1305,11 +1309,11 @@ msgstr "Număr invalid"
 
 #: ckan/logic/validators.py:98
 msgid "Must be a natural number"
-msgstr ""
+msgstr "Trebuie să fie un număr natural"
 
 #: ckan/logic/validators.py:104
 msgid "Must be a postive integer"
-msgstr "Parametrul \"page\" trebuie să fie un număr întreg pozitiv"
+msgstr "Trebuie să fie un număr întreg pozitiv"
 
 #: ckan/logic/validators.py:122
 msgid "Date format incorrect"
@@ -1730,11 +1734,11 @@ msgstr "Utilizatorul %s nu este autorizat să creeze instituții"
 
 #: ckan/logic/auth/create.py:152
 msgid "User {user} not authorized to create users via the API"
-msgstr "Utilizatorul %s nu este autorizat să creeze alți utilizatori"
+msgstr "Utilizatorul {user} nu este autorizat să creeze alți utilizatori"
 
 #: ckan/logic/auth/create.py:155
 msgid "Not authorized to create users"
-msgstr "Neautorizat pentru a crea un utilizator %s"
+msgstr "Neautorizat pentru a crea un utilizator"
 
 #: ckan/logic/auth/create.py:198
 msgid "Group was not found."
@@ -2463,7 +2467,7 @@ msgstr ""
 
 #: ckan/templates/ajax_snippets/api_info.html:118
 msgid "Example: Python"
-msgstr "exemplu"
+msgstr "Exemplu: Python"
 
 #: ckan/templates/dataviewer/snippets/data_preview.html:9
 msgid "This resource can not be previewed at the moment."
@@ -2739,7 +2743,7 @@ msgstr ""
 #: ckan/templates/group/member_new.html:42
 #: ckan/templates/organization/member_new.html:44
 msgid "New User"
-msgstr "- Utilizator"
+msgstr "Utilizator nou"
 
 #: ckan/templates/group/member_new.html:45
 #: ckan/templates/organization/member_new.html:47
@@ -2927,7 +2931,7 @@ msgstr ""
 #: ckan/templates/group/snippets/history_revisions.html:10
 #: ckan/templates/package/snippets/history_revisions.html:10
 msgid "Compare"
-msgstr " Compară»"
+msgstr "Compară"
 
 #: ckan/templates/group/snippets/info.html:16
 #: ckan/templates/organization/bulk_process.html:72
@@ -3059,27 +3063,27 @@ msgstr "seturi de date"
 
 #: ckan/templates/home/snippets/stats.html:16
 msgid "organization"
-msgstr "Instituție"
+msgstr "instituție"
 
 #: ckan/templates/home/snippets/stats.html:16
 msgid "organizations"
-msgstr "Instituţii"
+msgstr "instituţii"
 
 #: ckan/templates/home/snippets/stats.html:22
 msgid "group"
-msgstr "Grup"
+msgstr "grup"
 
 #: ckan/templates/home/snippets/stats.html:22
 msgid "groups"
-msgstr "Grupuri"
+msgstr "grupuri"
 
 #: ckan/templates/home/snippets/stats.html:28
 msgid "related item"
-msgstr "Niciun fișier corelat"
+msgstr "fișier corelat"
 
 #: ckan/templates/home/snippets/stats.html:28
 msgid "related items"
-msgstr "Niciun fișier corelat"
+msgstr "fișiere corelat"
 
 #: ckan/templates/macros/form.html:126
 #, python-format
@@ -3095,7 +3099,7 @@ msgstr ""
 
 #: ckan/templates/macros/form.html:265
 msgid "Custom"
-msgstr "Custo"
+msgstr "Particular"
 
 #: ckan/templates/macros/form.html:290
 #: ckan/templates/related/snippets/related_form.html:7
@@ -3134,7 +3138,7 @@ msgstr "Adaugă seturi de date"
 
 #: ckan/templates/organization/bulk_process.html:16
 msgid " found for \"{query}\""
-msgstr "{number} grup găsit pentru \"{query}\""
+msgstr " găsit pentru \"{query}\""
 
 #: ckan/templates/organization/bulk_process.html:18
 msgid "Sorry no datasets found for \"{query}\""
@@ -3425,11 +3429,11 @@ msgstr "Adaugă fișier corelat"
 
 #: ckan/templates/package/resource_data.html:12
 msgid "Upload to DataStore"
-msgstr "Actualizează setul de date"
+msgstr "Încarcă în DataSore"
 
 #: ckan/templates/package/resource_data.html:19
 msgid "Upload error:"
-msgstr "Încarcă"
+msgstr "Eroare de încărcare:"
 
 #: ckan/templates/package/resource_data.html:25
 #: ckan/templates/package/resource_data.html:27
@@ -3447,7 +3451,7 @@ msgstr "Ultima actualizare"
 
 #: ckan/templates/package/resource_data.html:53
 msgid "Never"
-msgstr ""
+msgstr "Niciodată"
 
 #: ckan/templates/package/resource_data.html:59
 msgid "Upload Log"
@@ -3455,7 +3459,7 @@ msgstr "Încarcă"
 
 #: ckan/templates/package/resource_data.html:71
 msgid "Details"
-msgstr ""
+msgstr "Detalii"
 
 #: ckan/templates/package/resource_data.html:78
 msgid "End of log"
@@ -3476,7 +3480,7 @@ msgstr "Modifică resurse"
 
 #: ckan/templates/package/resource_edit_base.html:26
 msgid "DataStore"
-msgstr "DataStore activat"
+msgstr "DataStore"
 
 #: ckan/templates/package/resource_edit_base.html:28
 msgid "Views"
@@ -3605,7 +3609,7 @@ msgstr "Documente API"
 
 #: ckan/templates/package/search.html:55
 msgid "full {format} dump"
-msgstr "export complet  {format} "
+msgstr "export complet {format}"
 
 #: ckan/templates/package/search.html:56
 #, python-format
@@ -3721,7 +3725,7 @@ msgstr "Public"
 
 #: ckan/templates/package/snippets/package_basic_fields.html:110
 msgid "Active"
-msgstr "activ"
+msgstr "Activ"
 
 #: ckan/templates/package/snippets/package_form.html:28
 msgid ""
@@ -4074,7 +4078,7 @@ msgstr "Ești sigur că vrei să ștergi acest item corelat?"
 
 #: ckan/templates/related/snippets/related_item.html:16
 msgid "Go to {related_item_type}"
-msgstr "Mergi la {type}"
+msgstr "Mergi la {related_item_type}"
 
 #: ckan/templates/revision/diff.html:6
 msgid "Differences"
@@ -4152,20 +4156,20 @@ msgstr "URL Trackback"
 
 #: ckan/templates/snippets/facet_list.html:80
 msgid "Show More {facet_type}"
-msgstr "Mai multe ... {facet}"
+msgstr "Mai multe... {facet_type}"
 
 #: ckan/templates/snippets/facet_list.html:83
 msgid "Show Only Popular {facet_type}"
-msgstr "Arată cele mai active  {facet}"
+msgstr "Arată cele mai active {facet_type}"
 
 #: ckan/templates/snippets/facet_list.html:87
 msgid "There are no {facet_type} that match this search"
-msgstr "Niciun filtru specificat pentru această căutare"
+msgstr "Niciun {facet_type} specificat pentru această căutare"
 
 #: ckan/templates/snippets/home_breadcrumb_item.html:2
 #: ckanext/stats/templates_legacy/ckanext/stats/index.html:51
 msgid "Home"
-msgstr "Home"
+msgstr "Acasă"
 
 #: ckan/templates/snippets/language_selector.html:4
 msgid "Language"
@@ -4203,7 +4207,7 @@ msgstr ""
 
 #: ckan/templates/snippets/related.html:18
 msgid "Add Item"
-msgstr "Adaugă item"
+msgstr "Adaugă element"
 
 #: ckan/templates/snippets/search_form.html:16
 msgid "Submit"
@@ -4232,7 +4236,7 @@ msgid "{number} dataset found for \"{query}\""
 msgid_plural "{number} datasets found for \"{query}\""
 msgstr[0] "{number} set de date găsit pentru\"{query}\""
 msgstr[1] "{number} seturi de date găsite pentru\"{query}\""
-msgstr[2] ""
+msgstr[2] "{number} seturi de date găsite pentru\"{query}\""
 
 #: ckan/templates/snippets/search_result_text.html:16
 msgid "No datasets found for \"{query}\""
@@ -4254,7 +4258,7 @@ msgid "{number} group found for \"{query}\""
 msgid_plural "{number} groups found for \"{query}\""
 msgstr[0] "{number} grup găsit pentru \"{query}\""
 msgstr[1] "{number} grupuri găsite pentru \"{query}\""
-msgstr[2] ""
+msgstr[2] "{number} grupuri găsite pentru \"{query}\""
 
 #: ckan/templates/snippets/search_result_text.html:22
 msgid "No groups found for \"{query}\""
@@ -4265,7 +4269,7 @@ msgid "{number} group found"
 msgid_plural "{number} groups found"
 msgstr[0] "{number} grup găsit"
 msgstr[1] "{number} grupuri găsite"
-msgstr[2] ""
+msgstr[2] "{number} grupuri găsite"
 
 #: ckan/templates/snippets/search_result_text.html:24
 msgid "No groups found"
@@ -4276,7 +4280,7 @@ msgid "{number} organization found for \"{query}\""
 msgid_plural "{number} organizations found for \"{query}\""
 msgstr[0] "{number} instituție găsită pentru \"{query}\""
 msgstr[1] "{number} instituții găsite pentru \"{query}\""
-msgstr[2] ""
+msgstr[2] "{number} instituții găsite pentru \"{query}\""
 
 #: ckan/templates/snippets/search_result_text.html:28
 msgid "No organizations found for \"{query}\""
@@ -4287,7 +4291,7 @@ msgid "{number} organization found"
 msgid_plural "{number} organizations found"
 msgstr[0] "{number} instituție găsită"
 msgstr[1] "{number} instituții găsite"
-msgstr[2] ""
+msgstr[2] "{number} instituții găsite"
 
 #: ckan/templates/snippets/search_result_text.html:30
 msgid "No organizations found"
@@ -4319,7 +4323,7 @@ msgstr "Modificări"
 
 #: ckan/templates/tag/index.html:33 ckan/templates/tag/index.html:34
 msgid "Search Tags"
-msgstr "Caută -"
+msgstr "Etichete de Căutare"
 
 #: ckan/templates/user/dashboard.html:6
 msgid "Dashboard"
@@ -4358,7 +4362,7 @@ msgstr "Nu ai creat niciun set de date"
 #: ckan/templates/user/dashboard_organizations.html:22
 #: ckan/templates/user/read.html:16
 msgid "Create one now?"
-msgstr "Creezi unul acum?"
+msgstr "Creează unul acum?"
 
 #: ckan/templates/user/dashboard_groups.html:20
 msgid "You are not a member of any groups."
@@ -4539,7 +4543,7 @@ msgstr "Creează seturi de date, grupuri și alte lucruri interesante"
 
 #: ckan/templates/user/new_user_form.html:5
 msgid "username"
-msgstr "Utilizator"
+msgstr "nume de utilizator"
 
 #: ckan/templates/user/new_user_form.html:6
 msgid "Full Name"
