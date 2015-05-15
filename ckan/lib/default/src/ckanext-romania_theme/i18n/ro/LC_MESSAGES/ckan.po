@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: CKAN\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2015-01-26 11:55+0000\n"
-"PO-Revision-Date: 2015-05-15 11:32+0200\n"
+"PO-Revision-Date: 2015-05-15 12:00+0200\n"
 "Last-Translator: \n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/ckan/language/"
 "ro/)\n"
@@ -2927,6 +2927,10 @@ msgid ""
 "particular theme, or as a very simple way to help people find and search "
 "your own published datasets. "
 msgstr ""
+"Grupurile permit organizarea seturilor de date în cadrul unui domeniu "
+"(exemplu: datele din domeniul transporturilor) pentru a facilita accesul "
+"utilizatorilor în funcție de tematica subiectului. Seturile de date pot "
+"aparține unui grup, însă nu pot fi modificate de acolo."
 
 #: ckan/templates/group/snippets/history_revisions.html:10
 #: ckan/templates/package/snippets/history_revisions.html:10
@@ -4642,7 +4646,7 @@ msgstr "Caută utilizatori"
 
 #: ckanext/datapusher/helpers.py:19
 msgid "Complete"
-msgstr "Eliminare completă"
+msgstr "Complet"
 
 #: ckanext/datapusher/helpers.py:20
 msgid "Pending"
