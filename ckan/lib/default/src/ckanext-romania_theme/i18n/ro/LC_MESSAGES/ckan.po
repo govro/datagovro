@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: CKAN\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2015-01-26 11:55+0000\n"
-"PO-Revision-Date: 2015-05-14 15:19+0200\n"
+"PO-Revision-Date: 2015-05-15 11:32+0200\n"
 "Last-Translator: \n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/ckan/language/"
 "ro/)\n"
@@ -2634,7 +2634,7 @@ msgstr "Ești sigur că vrei să ștergi membrul - {name}?"
 #: ckan/templates/user/edit.html:8 ckan/templates/user/edit_base.html:3
 #: ckan/templates/user/read_base.html:14
 msgid "Manage"
-msgstr "Administrează utilizatori"
+msgstr "Administrează"
 
 #: ckan/templates/group/edit.html:12
 msgid "Edit Group"
