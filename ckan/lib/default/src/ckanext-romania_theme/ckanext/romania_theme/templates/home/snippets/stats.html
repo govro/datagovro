@@ -1,5 +1,3 @@
-{% set stats = h.get_site_statistics() %}
-
 <div class="box stats">
   <div class="inner">
     <h3>{{ _('{0} statistics').format(g.site_title) }}</h3>
@@ -22,6 +20,18 @@
           {{ _('group') if stats.group_count == 1 else _('groups') }}
         </a>
       </li>
-    </ul>
+       <li>
+        <a href="{{ h.url_for(controller='package', action='search') }}">
+          <b>{{ h.SI_number_span(stats.fisiere) }}</b>
+          {{ _('fisier') if stats.fisiere == 1 else _('fişiere') }}
+        </a>
+      </li>
+      <li>
+        <a href="{{ h.url_for(controller='package', action='search') }}">
+          <b>{{ h.SI_number_span(stats.linkuri_externe) }}</b>
+          {{ _('link') if stats.linkuri_externe == 1 else _('linkuri externe') }}
+        </a>
+      </li>
+   </ul>
   </div>
 </div>
