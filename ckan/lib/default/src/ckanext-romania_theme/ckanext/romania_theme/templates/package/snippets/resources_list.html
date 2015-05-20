@@ -21,41 +21,40 @@ Example:
         {% endblock %}
       </ul>
 
+      <!-- TODO @palcu: clean this stuff -->
       <div class="rw-ui-container"></div>
+      <div id="pd_rating_holder_7325314"></div>
+      <script type="text/javascript">
+      PDRTJS_settings_7325314 = {
+      "id" : "7325314",
+      "unique_id" : "{{url}}",
+      "title" : "",
+      "permalink" : ""
+      };
+      </script>
+      <script type="text/javascript" src="http://i0.poll.fm/js/rating/rating.js"></script>
+      <br /><br />
+
+      <div id="disqus_thread"></div>
+      <script type="text/javascript">
+          /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+
+      var disqus_shortname = 'datagovro';
+      var disqus_url = document.URL;
+          /* * * DON'T EDIT BELOW THIS LINE * * */
+          (function() {
+              var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+              dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+              (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+          })();
+      </script>
+      <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+      <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
     {% else %}
       {% if h.check_access('resource_create', {'package_id': pkg['id']}) %}
           {% trans url=h.url_for(controller='package', action='new_resource', id=pkg.name) %}
             <p class="empty">This dataset has no data, <a href="{{ url }}">why not add some?</a></p>
-
-<!-- TODO @palcu: clean this stuff -->
-<div id="pd_rating_holder_7325314"></div>
-<script type="text/javascript">
-PDRTJS_settings_7325314 = {
-"id" : "7325314",
-"unique_id" : "{{url}}",
-"title" : "",
-"permalink" : ""
-};
-</script>
-<script type="text/javascript" src="http://i0.poll.fm/js/rating/rating.js"></script>
-<br /><br />
-
-<div id="disqus_thread"></div>
-<script type="text/javascript">
-    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-
-var disqus_shortname = 'datagovro';
-var disqus_url = document.URL;
-    /* * * DON'T EDIT BELOW THIS LINE * * */
-    (function() {
-        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-
           {% endtrans %}
       {% else %}
           <p class="empty">{{ _('This dataset has no data') }}</p>
