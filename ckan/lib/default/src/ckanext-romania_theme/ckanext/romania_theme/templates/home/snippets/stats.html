@@ -23,7 +23,7 @@
         </a>
       </li>
       <li class="width-50">
-        <a href="{{ h.url_for(controller='related', action='search') }}">
+        <a href="{{ h.url_for(controller='package', action='search') }}">
           <b>{{ h.get_number_of_files() }}</b>
           {{ _('related item') if h.get_number_of_files() == 1 else _('related items') }}
         </a>
