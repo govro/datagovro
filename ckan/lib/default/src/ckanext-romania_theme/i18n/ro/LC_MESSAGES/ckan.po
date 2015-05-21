@@ -10,7 +10,7 @@ msgstr ""
 "Project-Id-Version: CKAN\n"
 "Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
 "POT-Creation-Date: 2015-01-26 11:55+0000\n"
-"PO-Revision-Date: 2015-05-15 12:00+0200\n"
+"PO-Revision-Date: 2015-05-21 14:10+0200\n"
 "Last-Translator: \n"
 "Language-Team: Romanian (http://www.transifex.com/projects/p/ckan/language/"
 "ro/)\n"
@@ -2092,7 +2092,7 @@ msgstr "Încarcă"
 
 #: ckan/public/base/javascript/modules/image-upload.js:16
 msgid "Link"
-msgstr ""
+msgstr "Adresă de legătură"
 
 #: ckan/public/base/javascript/modules/image-upload.js:17
 #: ckan/templates/group/snippets/group_item.html:43
@@ -3782,7 +3782,7 @@ msgstr "Actualizare resursă"
 
 #: ckan/templates/package/snippets/resource_form.html:24
 msgid "File"
-msgstr "Fișier:"
+msgstr "Fișier"
 
 #: ckan/templates/package/snippets/resource_form.html:28
 msgid "eg. January 2011 Gold Prices"
