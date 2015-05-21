@@ -25,7 +25,7 @@
       <li class="width-50">
         <a href="{{ h.url_for(controller='related', action='dashboard') }}">
           <b>{{ h.get_number_of_files() }}</b>
-          {{ _('related item') if stats.related_count == 1 else _('related items') }}
+          {{ _('related item') if h.get_number_of_files() == 1 else _('related items') }}
         </a>
       </li>
       <li class="width-50">
