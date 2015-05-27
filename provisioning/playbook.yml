@@ -8,7 +8,7 @@
     - db_user: ckan_default
     - db_password: ckan_default
     - ckan_package_filename: 'python-ckan_2.0_amd64.deb'
-    - ckan_version: '2.3'
+    - ckan_version: 'ckan-2.3'
     - paster: '/usr/lib/ckan/default/bin/paster'
 
   tasks:
