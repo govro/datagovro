@@ -82,11 +82,20 @@
     - name: Start Jetty service
       service: name=jetty state=started
 
-    # Other
+    # Other CKAN steps
     - name: Setup database
       command: "{{ paster }} db init -c {{ ckan_config_file }} chdir={{ ckan_path }}/src/ckan"
 
     - name: Fix debug.css error
       copy: src=/usr/lib/ckan/default/src/ckan/ckan/public/base/css/main.css
             dest=/usr/lib/ckan/default/src/ckan/ckan/public/base/css/main.debug.css
-      tags: debug
+
+    # Configure supervisord
+    - name: Copy supervisor settings
+      template: src=files/ckan.conf dest=/etc/supervisor/conf.d/ckan.conf
+
+    - name: Load CKAN process settings
+      supervisorctl: name=ckan state=present
+
+    - name: Restart CKAN process
+      supervisorctl: name=ckan state=restarted
