@@ -1,7 +1,9 @@
+import airbrake
 import ckan.model as model
 import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
-import airbrake
+import os
+
 
 # Setup error logger
 if os.getenv('AIRBRAKE_API_KEY'):
