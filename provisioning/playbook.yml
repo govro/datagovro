@@ -16,23 +16,11 @@
     - name: Install necessities and nice-to-haves
       apt: pkg={{ item }} state=installed
       with_items:
-        - acl
-        - apache2
-        - apt-transport-https
-        - apticron
-        - aptitude
-        - build-essential
-        - git
-        - htop
-        - libapache2-mod-wsgi
-        - libpq-dev
-        - nginx
+        - git-core
+        - openjdk-6-jdk
         - postgresql
-        - python
+        - python-dev
         - python-pip
-        - python-psycopg2
-        - python-pycurl
-        - python-software-properties
         - python-virtualenv
         - solr-jetty
 
@@ -60,9 +48,6 @@
 
     - name: Ensure database is initialised
       command: ckan db init
-      notify:
-        - Restart Apache
-        - Restart Nginx
 
     - name: Remove Repoze.who configuration file for CKAN
       file: path=/usr/lib/ckan/default/src/ckan/who.ini state=absent
@@ -72,12 +57,6 @@
       file: 'path=/usr/lib/ckan/default/src/ckan/who.ini src=/etc/ckan/default/who.ini state=link'
 
   handlers:
-    - name: Restart Apache
-      service: name=apache2 state=restarted
-
-    - name: Restart Nginx
-      service: name=nginx state=restarted
-
     - name: Start Jetty
       service: name=jetty state=started
 
