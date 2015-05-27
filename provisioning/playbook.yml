@@ -93,6 +93,9 @@
       copy: src=/usr/lib/ckan/default/src/ckan/ckan/public/base/css/main.css
             dest=/usr/lib/ckan/default/src/ckan/ckan/public/base/css/main.debug.css
 
+    - name: Add custom bash_aliases
+      template: src=files/.bash_aliases dest=/home/vagrant/.bash_aliases
+
     # Configure supervisord
     - name: Copy supervisor settings
       template: src=files/ckan.conf dest=/etc/supervisor/conf.d/ckan.conf
