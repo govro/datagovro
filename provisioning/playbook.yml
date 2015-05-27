@@ -10,10 +10,10 @@
     - ckan_package_filename: 'python-ckan_2.0_amd64.deb'
     - ckan_version: 'ckan-2.3'
     - ckan_path: '/usr/lib/ckan/default'
-    - virtualenv_path: ''
     - paster: '{{ ckan_path }}/bin/paster'
 
   tasks:
+    # General configuration
     - name: Update apt cache
       apt: update_cache=yes
 
@@ -60,3 +60,18 @@
 
     - name: Link Repoze.who configuration file for CKAN
       file: 'path={{ ckan_path }}/src/ckan/who.ini src={{ ckan_path }}/who.ini state=link'
+
+    # Jetty
+    - name: Jetty settings
+      lineinfile: dest=/etc/default/jetty regexp="^NO_START" line="NO_START=0"
+    - lineinfile: dest=/etc/default/jetty regexp="^JETTY_HOST" line="JETTY_HOST=127.0.0.1"
+    - lineinfile: dest=/etc/default/jetty regexp="^JETTY_PORT" line="JETTY_PORT=8983"
+
+    - name: Remove old configuration settings
+      file: path=/etc/solr/conf/schema.xml state=absent
+
+    - name: Link new configuration settings
+      file: src=/usr/lib/ckan/default/src/ckan/ckan/config/solr/schema.xml dest=/etc/solr/conf/schema.xml state=link
+
+    - name: Start Jetty service
+      service: name=jetty state=started
