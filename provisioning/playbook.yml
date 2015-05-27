@@ -10,7 +10,7 @@
     - ckan_package_filename: 'python-ckan_2.0_amd64.deb'
     - ckan_version: 'ckan-2.3'
     - ckan_path: '/usr/lib/ckan/default'
-    - paster: '{{ ckan_path }}/bin/paster'
+    - paster: '{{ ckan_path }}/bin/paster -c /etc/ckan/default/development.ini'
 
   tasks:
     # General configuration
@@ -27,6 +27,7 @@
         - python-pip
         - python-virtualenv
         - solr-jetty
+        - supervisor
         - vim
 
     - name: Enable passwordless sudo
@@ -40,10 +41,10 @@
       file: src=/vagrant/ckan/lib dest=/usr/lib/ckan state=link
 
     - name: Install CKAN PIP package
-      pip: name='git+https://github.com/ckan/ckan.git@ckan-2.3#egg=ckan' virtualenv={{ ckan_path }}
+      pip: name='git+https://github.com/ckan/ckan.git@ckan-2.3#egg=ckan'
 
     - name: Install CKAN dependencies
-      pip: requirements={{ ckan_path }}/src/ckan/requirements.txt
+      pip: requirements={{ ckan_path }}/src/ckan/requirements.txt virtualenv={{ ckan_path }}
 
     # Postgres
     - name: Ensure CKAN database is created
@@ -57,9 +58,6 @@
     - name: Minimise CKAN database user priveliges
       postgresql_user: 'name={{ db_user }} role_attr_flags=NOSUPERUSER,NOCREATEROLE,NOCREATEDB'
       sudo_user: postgres
-
-    - name: Link Repoze.who configuration file for CKAN
-      file: 'path={{ ckan_path }}/src/ckan/who.ini src={{ ckan_path }}/who.ini state=link'
 
     # Jetty
     - name: Jetty settings
@@ -75,3 +73,7 @@
 
     - name: Start Jetty service
       service: name=jetty state=started
+
+    # Other
+    - name: Setup database
+      command: {{ paster }} db init
