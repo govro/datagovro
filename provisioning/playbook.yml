@@ -47,10 +47,10 @@
     - name: Install CKAN dependencies
       pip: requirements={{ ckan_path }}/src/ckan/requirements.txt virtualenv={{ ckan_path }}
 
-    - name: Install Python dependencies
+    - name: Install other Python dependencies
       pip: name='airbrake' virtualenv={{ ckan_path }}
 
-    - name: Install my custom theme
+    - name: Install custom theme
       command: "{{python_virtualenv}} setup.py develop chdir={{ ckan_path }}/src/ckanext-romania_theme"
 
     # Postgres
@@ -67,7 +67,7 @@
       sudo_user: postgres
 
     # Jetty
-    - name: Jetty settings
+    - name: Configure Jetty settings
       lineinfile: dest=/etc/default/jetty regexp="^NO_START" line="NO_START=0"
     - lineinfile: dest=/etc/default/jetty regexp="^JETTY_HOST" line="JETTY_HOST=127.0.0.1"
     - lineinfile: dest=/etc/default/jetty regexp="^JETTY_PORT" line="JETTY_PORT=8983"
@@ -79,11 +79,11 @@
     - name: Link new configuration settings
       file: src=/usr/lib/ckan/default/src/ckan/ckan/config/solr/schema.xml dest=/etc/solr/conf/schema.xml state=link
 
-    - name: Start Jetty service
-      service: name=jetty state=started
+    - name: Restart Jetty service
+      service: name=jetty state=restarted
 
     # Other CKAN steps
-    - name: Setup database
+    - name: Setup database schema
       command: "{{ paster }} db init -c {{ ckan_config_file }} chdir={{ ckan_path }}/src/ckan"
 
     - name: Create test data
