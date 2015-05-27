@@ -7,66 +7,53 @@
     - db_name: ckan_default
     - db_user: ckan_default
     - db_password: ckan_default
-    - ckan_package_filename: 'python-ckan_2.0_amd64.deb'
+    - ckan_version: 'ckan-2.3'
+    - ckan_path: '/usr/lib/ckan/default'
+    - ckan_config_file: '/etc/ckan/default/development.ini'
+    - paster: '{{ ckan_path }}/bin/paster'
+    - python_virtualenv: '{{ ckan_path }}/bin/python'
 
   tasks:
+    # General configuration
     - name: Update apt cache
       apt: update_cache=yes
-
-    - name: Upgrade all safe packages
-      apt: upgrade=safe
-
-    - name: Install unattended upgrades (Debian/Ubuntu only)
-      apt: pkg=unattended-upgrades state=installed
-      when: ansible_distribution == 'Debian' or ansible_distribution == 'Ubuntu'
-
-    - name: 'Make sure unattended-upgrades only installs from $ubuntu_release-security'
-      lineinfile: 'dest=/etc/apt/apt.conf.d/50unattended-upgrades regexp="$ubuntu_release-updates" state=absent'
-      when: ansible_distribution == 'Ubuntu'
 
     - name: Install necessities and nice-to-haves
       apt: pkg={{ item }} state=installed
       with_items:
-        - acl
-        - apache2
-        - apt-transport-https
-        - apticron
-        - aptitude
-        - build-essential
-        - debian-goodies
-        - fail2ban
-        - git
-        - htop
-        - iftop
-        - iotop
-        - libapache2-mod-wsgi
-        - libpq-dev
-        - nginx
+        - ansible
+        - git-core
+        - openjdk-6-jdk
         - postgresql
-        - python
+        - python-dev
         - python-pip
         - python-psycopg2
-        - python-pycurl
-        - python-software-properties
         - python-virtualenv
-        - screen
         - solr-jetty
-        - sudo
-        - update-notifier-common
-        - wget
-      when: ansible_pkg_mgr == 'apt'
+        - supervisor
+        - vim
 
     - name: Enable passwordless sudo
       lineinfile: 'dest=/etc/sudoers regexp="sudo ALL=NOPASSWD: ALL" line="%sudo ALL=NOPASSWD: ALL" state=present'
 
-    - name: Create ckan folder
-      file: path=/vagrant/ckan state=directory
-
+    # CKAN Instalation
     - name: Create symlink for /etc/ckan
       file: src=/vagrant/ckan/etc dest=/etc/ckan state=link
 
     - name: Create symlink for /usr/lib/ckan
-      file: src=/vagrant/ckan/lib dest=/var/lib/ckan state=link
+      file: src=/vagrant/ckan/lib dest=/usr/lib/ckan state=link
+
+    - name: Install CKAN PIP package
+      pip: name='git+https://github.com/ckan/ckan.git@ckan-2.3#egg=ckan' virtualenv={{ ckan_path }}
+
+    - name: Install CKAN dependencies
+      pip: requirements={{ ckan_path }}/src/ckan/requirements.txt virtualenv={{ ckan_path }}
+
+    - name: Install other Python dependencies
+      pip: name='airbrake' virtualenv={{ ckan_path }}
+
+    - name: Install custom theme
+      command: "{{python_virtualenv}} setup.py develop chdir={{ ckan_path }}/src/ckanext-romania_theme"
 
     # Postgres
     - name: Ensure CKAN database is created
@@ -81,32 +68,46 @@
       postgresql_user: 'name={{ db_user }} role_attr_flags=NOSUPERUSER,NOCREATEROLE,NOCREATEDB'
       sudo_user: postgres
 
-    - name: Set CKAN database server address
-      lineinfile: 'dest=/etc/ckan/default/production.ini regexp=sqlalchemy.url line="sqlalchemy.url = postgresql://{{ db_user }}:{{ db_password }}@localhost/{{ db_name }}?sslmode=disable"'
+    # Jetty
+    - name: Configure Jetty settings
+      lineinfile: dest=/etc/default/jetty regexp="^NO_START" line="NO_START=0"
+    - lineinfile: dest=/etc/default/jetty regexp="^JETTY_HOST" line="JETTY_HOST=127.0.0.1"
+    - lineinfile: dest=/etc/default/jetty regexp="^JETTY_PORT" line="JETTY_PORT=8983"
+    - lineinfile: dest=/etc/default/jetty regexp="^JAVA_HOME" line="JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64"
 
-    - name: Ensure database is initialised
-      command: ckan db init
-      notify:
-        - Restart Apache
-        - Restart Nginx
+    - name: Remove old configuration settings
+      file: path=/etc/solr/conf/schema.xml state=absent
 
-    - name: Remove Repoze.who configuration file for CKAN
-      file: path=/usr/lib/ckan/default/src/ckan/who.ini state=absent
-      when: ckan_installed.changed
+    - name: Link new configuration settings
+      file: src=/usr/lib/ckan/default/src/ckan/ckan/config/solr/schema.xml dest=/etc/solr/conf/schema.xml state=link
 
-    - name: Link Repoze.who configuration file for CKAN
-      file: 'path=/usr/lib/ckan/default/src/ckan/who.ini src=/etc/ckan/default/who.ini state=link'
-
-  handlers:
-    - name: Restart Apache
-      service: name=apache2 state=restarted
-
-    - name: Restart Nginx
-      service: name=nginx state=restarted
-
-    - name: Start Jetty
-      service: name=jetty state=started
-
-    - name: Restart Jetty
+    - name: Restart Jetty service
       service: name=jetty state=restarted
 
+    # Other CKAN steps
+    - name: Setup database schema
+      command: "{{ paster }} db init -c {{ ckan_config_file }} chdir={{ ckan_path }}/src/ckan"
+
+    - name: Create test data
+      command: "{{ paster }} create-test-data gov -c {{ ckan_config_file }} chdir={{ ckan_path }}/src/ckan"
+
+    - name: Fix debug.css error
+      file: src=/usr/lib/ckan/default/src/ckan/ckan/public/base/css/main.css
+            dest=/usr/lib/ckan/default/src/ckan/ckan/public/base/css/main.debug.css
+            state=link
+
+    - name: Add custom bash_aliases
+      template: src=files/.bash_aliases dest=/home/vagrant/.bash_aliases
+
+    - name: Make easier to run the ansible-playbook command
+      lineinfile: line="localhost ansible_connection=local" state=present dest=/etc/ansible/hosts
+
+    # Configure supervisord
+    - name: Copy supervisor settings
+      template: src=files/ckan.conf dest=/etc/supervisor/conf.d/ckan.conf
+
+    - name: Load CKAN process settings
+      supervisorctl: name=ckan state=present
+
+    - name: Restart CKAN process
+      supervisorctl: name=ckan state=restarted
