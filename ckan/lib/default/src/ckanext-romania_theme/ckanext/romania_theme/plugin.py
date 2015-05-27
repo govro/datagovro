@@ -3,9 +3,10 @@ import ckan.plugins as plugins
 import ckan.plugins.toolkit as toolkit
 import airbrake
 
-# Setup logger
-# TODO @palcu: remove these once the project goes public
-logger = airbrake.getLogger(api_key='d6652cdfa031e900485e34539212531d', project_id=111438)
+# Setup error logger
+if os.getenv('AIRBRAKE_API_KEY'):
+    logger = airbrake.getLogger(api_key=os.getenv('AIRBRAKE_API_KEY'),
+                                project_id=os.getenv('AIRBRAKE_PROJECT_ID'))
 
 def get_number_of_files():
     return model.Session.execute("select count(*) from resource where state = 'active'").first()[0]
