@@ -9,7 +9,9 @@
     - db_password: ckan_default
     - ckan_package_filename: 'python-ckan_2.0_amd64.deb'
     - ckan_version: 'ckan-2.3'
-    - paster: '/usr/lib/ckan/default/bin/paster'
+    - ckan_path: '/usr/lib/ckan/default'
+    - virtualenv_path: ''
+    - paster: '{{ ckan_path }}/bin/paster'
 
   tasks:
     - name: Update apt cache
@@ -25,18 +27,23 @@
         - python-pip
         - python-virtualenv
         - solr-jetty
+        - vim
 
     - name: Enable passwordless sudo
       lineinfile: 'dest=/etc/sudoers regexp="sudo ALL=NOPASSWD: ALL" line="%sudo ALL=NOPASSWD: ALL" state=present'
 
+    # CKAN Instalation
     - name: Create symlink for /etc/ckan
       file: src=/vagrant/ckan/etc dest=/etc/ckan state=link
 
     - name: Create symlink for /usr/lib/ckan
       file: src=/vagrant/ckan/lib dest=/usr/lib/ckan state=link
 
-    - name: Checkout CKAN repo
-      action: git repo=https://github.com/okfn/ckan dest=/usr/lib/ckan/default/src/ckan version={{ ckan_version }} force=yes
+    - name: Install CKAN PIP package
+      pip: name='git+https://github.com/ckan/ckan.git@ckan-2.3#egg=ckan' virtualenv={{ ckan_path }}
+
+    - name: Install CKAN dependencies
+      pip: requirements={{ ckan_path }}/src/ckan/requirements.txt
 
     # Postgres
     - name: Ensure CKAN database is created
@@ -52,4 +59,4 @@
       sudo_user: postgres
 
     - name: Link Repoze.who configuration file for CKAN
-      file: 'path=/usr/lib/ckan/default/src/ckan/who.ini src=/etc/ckan/default/who.ini state=link'
+      file: 'path={{ ckan_path }}/src/ckan/who.ini src={{ ckan_path }}/who.ini state=link'
