@@ -8,6 +8,8 @@
     - db_user: ckan_default
     - db_password: ckan_default
     - ckan_package_filename: 'python-ckan_2.0_amd64.deb'
+    - ckan_version: '2.3'
+    - paster: '/usr/lib/ckan/default/bin/paster'
 
   tasks:
     - name: Update apt cache
@@ -31,7 +33,10 @@
       file: src=/vagrant/ckan/etc dest=/etc/ckan state=link
 
     - name: Create symlink for /usr/lib/ckan
-      file: src=/vagrant/ckan/lib dest=/var/lib/ckan state=link
+      file: src=/vagrant/ckan/lib dest=/usr/lib/ckan state=link
+
+    - name: Checkout CKAN repo
+      action: git repo=https://github.com/okfn/ckan dest=/usr/lib/ckan/default/src/ckan version={{ ckan_version }} force=yes
 
     # Postgres
     - name: Ensure CKAN database is created
@@ -46,19 +51,5 @@
       postgresql_user: 'name={{ db_user }} role_attr_flags=NOSUPERUSER,NOCREATEROLE,NOCREATEDB'
       sudo_user: postgres
 
-    - name: Ensure database is initialised
-      command: ckan db init
-
-    - name: Remove Repoze.who configuration file for CKAN
-      file: path=/usr/lib/ckan/default/src/ckan/who.ini state=absent
-      when: ckan_installed.changed
-
     - name: Link Repoze.who configuration file for CKAN
       file: 'path=/usr/lib/ckan/default/src/ckan/who.ini src=/etc/ckan/default/who.ini state=link'
-
-  handlers:
-    - name: Start Jetty
-      service: name=jetty state=started
-
-    - name: Restart Jetty
-      service: name=jetty state=restarted
