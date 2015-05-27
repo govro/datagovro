@@ -8,9 +8,9 @@
 ## Folder hierarchy
 
 - `ckan/`
-  - `etc/` - symlinked to `/etc/ckan`
-  - `lib/` - symlinked to `/usr/lib/ckan`
-    - `default/src/ckanext-romania_theme/` - code of the theme
+  - `etc/` - symlinked to `/etc/ckan`, contains the configuration file
+  - `lib/` - symlinked to `/usr/lib/ckan`, contains CKAN code
+    - `default/src/ckanext-romania_theme/` - code for the theme
       - `i18n/ro/` - custom translations
 - `docs/`
 - `provisioning/playbook.yml` - provisioning Ansible scripts
