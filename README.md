@@ -6,9 +6,16 @@
 
 ## Setup
 
-`vagrant up` will provision a Vagrant machine using Ansible, with a CKAN 2.3
+1. Install [Vagrant](https://www.vagrantup.com/).
+2. Clone this repo.
+2. `cd datagovro && vagrant up` will provision the machine using Ansible, with a CKAN 2.3
 [installation](http://docs.ckan.org/en/ckan-2.3/maintaining/installing/install-from-source.html)
-from source. Use `supervisorctl` to control the `ckan` process.
+from source.
+3. `vagrant ssh` to log into the machine.
+4. `sudo supervisorctl status` should show a running process.
+5. On [localhost:8080](http://localhost:8080) should be the website.
+
+If you have Windows, check these [instructions](/docs/windows.md).
 
 ## Folder hierarchy
 
