@@ -2,6 +2,8 @@
 
 [data.gov.ro](http://data.gov.ro) is the Romanian national portal for open data.
 
+![homepage](https://cloud.githubusercontent.com/assets/772220/7836915/ba2043b0-048c-11e5-9c06-25368d95cba0.png)
+
 ## Setup
 
 `vagrant up` will provision a Vagrant machine using Ansible, with a CKAN 2.3
