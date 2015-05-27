@@ -7,10 +7,11 @@
     - db_name: ckan_default
     - db_user: ckan_default
     - db_password: ckan_default
-    - ckan_package_filename: 'python-ckan_2.0_amd64.deb'
     - ckan_version: 'ckan-2.3'
     - ckan_path: '/usr/lib/ckan/default'
-    - paster: '{{ ckan_path }}/bin/paster -c /etc/ckan/default/development.ini'
+    - ckan_config_file: '/etc/ckan/default/development.ini'
+    - paster: '{{ ckan_path }}/bin/paster'
+    - python_virtualenv: '{{ ckan_path }}/bin/python'
 
   tasks:
     # General configuration
@@ -41,10 +42,16 @@
       file: src=/vagrant/ckan/lib dest=/usr/lib/ckan state=link
 
     - name: Install CKAN PIP package
-      pip: name='git+https://github.com/ckan/ckan.git@ckan-2.3#egg=ckan'
+      pip: name='git+https://github.com/ckan/ckan.git@ckan-2.3#egg=ckan' virtualenv={{ ckan_path }}
 
     - name: Install CKAN dependencies
       pip: requirements={{ ckan_path }}/src/ckan/requirements.txt virtualenv={{ ckan_path }}
+
+    - name: Install Python dependencies
+      pip: name='airbrake' virtualenv={{ ckan_path }}
+
+    - name: Install my custom theme
+      command: "{{python_virtualenv}} setup.py develop chdir={{ ckan_path }}/src/ckanext-romania_theme"
 
     # Postgres
     - name: Ensure CKAN database is created
@@ -64,6 +71,7 @@
       lineinfile: dest=/etc/default/jetty regexp="^NO_START" line="NO_START=0"
     - lineinfile: dest=/etc/default/jetty regexp="^JETTY_HOST" line="JETTY_HOST=127.0.0.1"
     - lineinfile: dest=/etc/default/jetty regexp="^JETTY_PORT" line="JETTY_PORT=8983"
+    - lineinfile: dest=/etc/default/jetty regexp="^JAVA_HOME" line="JAVA_HOME=/usr/lib/jvm/java-6-openjdk-amd64"
 
     - name: Remove old configuration settings
       file: path=/etc/solr/conf/schema.xml state=absent
@@ -76,4 +84,9 @@
 
     # Other
     - name: Setup database
-      command: {{ paster }} db init
+      command: "{{ paster }} db init -c {{ ckan_config_file }} chdir={{ ckan_path }}/src/ckan"
+
+    - name: Fix debug.css error
+      copy: src=/usr/lib/ckan/default/src/ckan/ckan/public/base/css/main.css
+            dest=/usr/lib/ckan/default/src/ckan/ckan/public/base/css/main.debug.css
+      tags: debug
