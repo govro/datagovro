@@ -22,12 +22,8 @@
         - apticron
         - aptitude
         - build-essential
-        - debian-goodies
-        - fail2ban
         - git
         - htop
-        - iftop
-        - iotop
         - libapache2-mod-wsgi
         - libpq-dev
         - nginx
@@ -38,18 +34,10 @@
         - python-pycurl
         - python-software-properties
         - python-virtualenv
-        - screen
         - solr-jetty
-        - sudo
-        - update-notifier-common
-        - wget
-      when: ansible_pkg_mgr == 'apt'
 
     - name: Enable passwordless sudo
       lineinfile: 'dest=/etc/sudoers regexp="sudo ALL=NOPASSWD: ALL" line="%sudo ALL=NOPASSWD: ALL" state=present'
-
-    - name: Create ckan folder
-      file: path=/vagrant/ckan state=directory
 
     - name: Create symlink for /etc/ckan
       file: src=/vagrant/ckan/etc dest=/etc/ckan state=link
@@ -95,4 +83,3 @@
 
     - name: Restart Jetty
       service: name=jetty state=restarted
-
