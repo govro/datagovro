@@ -28,3 +28,7 @@ If you have Windows, check these [instructions](/docs/windows.md).
 - `provisioning/playbook.yml` - provisioning Ansible script
 
 Logs are in `/var/log/supervisor`.
+
+## Monitoring
+
+<a href="http://uptime.statuscake.com/?TestID=8pM4VcMsBu" title="Website Uptime Monitoring"><img src="https://www.statuscake.com/App/button/index.php?Track=FPupDABBg2&Days=1&Design=1" /></a>
