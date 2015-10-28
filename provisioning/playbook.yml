@@ -48,7 +48,7 @@
       command: "virtualenv --no-site-packages /usr/lib/ckan/default"
 
     - name: Install CKAN PIP package
-      command: "{{ ckan_path }}/bin/pip install -e git+https://github.com/ckan/ckan.git@ckan-2.3#egg=ckan"
+      command: "{{ ckan_path }}/bin/pip install -e git+https://github.com/ckan/ckan.git@ckan-2.4#egg=ckan"
 
     - name: Install CKAN dependencies
       pip: requirements={{ ckan_path }}/src/ckan/requirements.txt virtualenv={{ ckan_path }}
