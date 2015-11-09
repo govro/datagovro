@@ -38,23 +38,11 @@
       lineinfile: 'dest=/etc/sudoers regexp="sudo ALL=NOPASSWD: ALL" line="%sudo ALL=NOPASSWD: ALL" state=present'
 
     # CKAN Instalation
-    - name: Create symlink for /etc/ckan
-      file: src=/vagrant/ckan/etc dest=/etc/ckan state=link
-
-    - name: Create symlink for /usr/lib/ckan
-      file: src=/vagrant/ckan/lib dest=/usr/lib/ckan state=link
-
     - name: Create virtualenv
       command: "virtualenv --no-site-packages /usr/lib/ckan/default"
 
-    - name: Install CKAN PIP package
-      command: "{{ ckan_path }}/bin/pip install -e git+https://github.com/ckan/ckan.git@ckan-2.3#egg=ckan"
-
     - name: Install CKAN dependencies
       pip: requirements={{ ckan_path }}/src/ckan/requirements.txt virtualenv={{ ckan_path }}
-
-    - name: Install other Python dependencies
-      pip: name='airbrake' virtualenv={{ ckan_path }}
 
     - name: Install custom theme
       command: "{{python_virtualenv}} setup.py develop chdir={{ ckan_path }}/src/ckanext-romania_theme"
