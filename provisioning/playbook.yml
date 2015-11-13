@@ -41,6 +41,9 @@
     - name: Create virtualenv
       command: "virtualenv --no-site-packages /usr/lib/ckan/default"
 
+    - name: Install CKAN PIP package
+      command: "{{ ckan_path }}/bin/pip install -e git+https://github.com/govro/ckan.git@2508eff656668d7f46ca1f54ecccec9586907ebb#egg=ckan"
+
     - name: Install CKAN dependencies
       pip: requirements={{ ckan_path }}/src/ckan/requirements.txt virtualenv={{ ckan_path }}
 
