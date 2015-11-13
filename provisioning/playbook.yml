@@ -54,7 +54,7 @@
       git: repo=https://github.com/govro/ckanext-inventory.git dest=/root/ckanext-inventory
       
     - name: Install custom extension
-      command: "{{ ckan_path }}/bin/ python /root/ckanext-inventory/setup.py develop"
+      command: "{{ ckan_path }}/bin/python /root/ckanext-inventory/setup.py develop"
 
     # Postgres
     - name: Ensure CKAN database is created
