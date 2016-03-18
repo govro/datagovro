@@ -104,10 +104,7 @@
             state=link
 
     - name: Add custom bash_aliases
-      template: src=files/.bash_aliases dest=/home/vagrant/.bash_aliases
-
-    - name: Make easier to run the ansible-playbook command
-      lineinfile: line="localhost ansible_connection=local" state=present dest=/etc/ansible/hosts
+      template: src=files/.bash_aliases dest=~/.bash_aliases
 
     # Configure supervisord
     - name: Copy supervisor settings
