@@ -53,9 +53,6 @@
     - name: Install CKAN dependencies
       pip: requirements={{ ckan_path }}/src/ckan/requirements.txt virtualenv={{ ckan_path }}
 
-    - name: Install other Python dependencies
-      pip: name='airbrake' virtualenv={{ ckan_path }}
-
     - name: Install custom theme
       command: "{{python_virtualenv}} setup.py develop chdir={{ ckan_path }}/src/ckanext-romania_theme"
 
