@@ -26,13 +26,9 @@ from source.
 
 ## Folder hierarchy
 
-- `ckan/`
-  - `etc/` - symlinked to `/etc/ckan`, contains the configuration file
-  - `lib/` - symlinked to `/usr/lib/ckan`, contains CKAN code
-    - `default/src/ckanext-romania_theme/` - code for our custom theme
-      - `i18n/ro/` - custom translations
 - `docs/`
 - `provisioning/playbook.yml` - provisioning Ansible script
+- `provisioning/files` - configs
 
 Logs are in `/var/log/supervisor`.
 

@@ -15,3 +15,4 @@
   - Ansible
   - repos
   - extensions: romania_theme and inventory
+- Github Flow
