@@ -7,7 +7,6 @@
     - db_name: ckan_default
     - db_user: ckan_default
     - db_password: ckan_default
-    - ckan_version: 'ckan-2.3'
     - ckan_path: '/usr/lib/ckan/default'
     - ckan_config_file: '/etc/ckan/default/development.ini'
     - paster: '{{ ckan_path }}/bin/paster'
@@ -38,17 +37,23 @@
       lineinfile: 'dest=/etc/sudoers regexp="sudo ALL=NOPASSWD: ALL" line="%sudo ALL=NOPASSWD: ALL" state=present'
 
     # CKAN Instalation
-    - name: Create symlink for /etc/ckan
-      file: src=/vagrant/ckan/etc dest=/etc/ckan state=link
+    - name: Create /etc/ckan/default folder
+      file: path=/etc/ckan/default state=directory
 
-    - name: Create symlink for /usr/lib/ckan
-      file: src=/vagrant/ckan/lib dest=/usr/lib/ckan state=link
+    - name: Create symlink for development.ini
+      file: src=files/development.ini dest=/etc/ckan/default/development.ini state=link
+
+    - name: Create symlink for who.ini
+      file: src=files/who.ini dest=/etc/ckan/default/who.ini state=link
+
+    - name: Create /usr/lib/ckan folder
+      file: path=/usr/lib/ckan state=directory
 
     - name: Create virtualenv
       command: "virtualenv --no-site-packages /usr/lib/ckan/default"
 
     - name: Install CKAN PIP package
-      command: "{{ ckan_path }}/bin/pip install -e git+https://github.com/ckan/ckan.git@ckan-2.4#egg=ckan"
+      command: "{{ ckan_path }}/bin/pip install -e git+https://github.com/govro/ckan.git@ckan-2.4#egg=ckan"
 
     - name: Install CKAN dependencies
       pip: requirements={{ ckan_path }}/src/ckan/requirements.txt virtualenv={{ ckan_path }}
