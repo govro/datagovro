@@ -41,10 +41,10 @@
       file: path=/etc/ckan/default state=directory
 
     - name: Create symlink for development.ini
-      file: src=files/development.ini dest=/etc/ckan/default/development.ini state=link
+      template: src=files/development.ini dest=/etc/ckan/default/development.ini
 
     - name: Create symlink for who.ini
-      file: src=files/who.ini dest=/etc/ckan/default/who.ini state=link
+      template: src=files/who.ini dest=/etc/ckan/default/who.ini
 
     - name: Create /usr/lib/ckan folder
       file: path=/usr/lib/ckan state=directory
