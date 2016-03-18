@@ -7,7 +7,6 @@
     - db_name: ckan_default
     - db_user: ckan_default
     - db_password: ckan_default
-    - ckan_version: 'ckan-2.3'
     - ckan_path: '/usr/lib/ckan/default'
     - ckan_config_file: '/etc/ckan/default/development.ini'
     - paster: '{{ ckan_path }}/bin/paster'
@@ -33,28 +32,35 @@
         - solr-jetty
         - supervisor
         - vim
+        - tmux
 
     - name: Enable passwordless sudo
       lineinfile: 'dest=/etc/sudoers regexp="sudo ALL=NOPASSWD: ALL" line="%sudo ALL=NOPASSWD: ALL" state=present'
 
     # CKAN Instalation
-    - name: Create symlink for /etc/ckan
-      file: src=/vagrant/ckan/etc dest=/etc/ckan state=link
+    - name: Create /etc/ckan/default folder
+      file: path=/etc/ckan/default state=directory
 
-    - name: Create symlink for /usr/lib/ckan
-      file: src=/vagrant/ckan/lib dest=/usr/lib/ckan state=link
+    - name: Create symlink for development.ini
+      template: src=files/development.ini dest=/etc/ckan/default/development.ini
+
+    - name: Create symlink for who.ini
+      template: src=files/who.ini dest=/etc/ckan/default/who.ini
+
+    - name: Create /usr/lib/ckan folder
+      file: path=/usr/lib/ckan state=directory
 
     - name: Create virtualenv
       command: "virtualenv --no-site-packages /usr/lib/ckan/default"
 
     - name: Install CKAN PIP package
-      command: "{{ ckan_path }}/bin/pip install -e git+https://github.com/ckan/ckan.git@ckan-2.4#egg=ckan"
+      command: "{{ ckan_path }}/bin/pip install -e git+https://github.com/govro/ckan.git@ckanext-inventory#egg=ckan"
 
     - name: Install CKAN dependencies
       pip: requirements={{ ckan_path }}/src/ckan/requirements.txt virtualenv={{ ckan_path }}
 
-    - name: Install other Python dependencies
-      pip: name='airbrake' virtualenv={{ ckan_path }}
+    - name: Clone custom theme
+      git: repo=https://github.com/govro/ckanext-romania_theme dest={{ ckan_path }}/src/ckanext-romania_theme
 
     - name: Install custom theme
       command: "{{python_virtualenv}} setup.py develop chdir={{ ckan_path }}/src/ckanext-romania_theme"
@@ -101,10 +107,7 @@
             state=link
 
     - name: Add custom bash_aliases
-      template: src=files/.bash_aliases dest=/home/vagrant/.bash_aliases
-
-    - name: Make easier to run the ansible-playbook command
-      lineinfile: line="localhost ansible_connection=local" state=present dest=/etc/ansible/hosts
+      template: src=files/.bash_aliases dest=~/.bash_aliases
 
     # Configure supervisord
     - name: Copy supervisor settings
