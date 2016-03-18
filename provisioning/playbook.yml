@@ -59,8 +59,11 @@
     - name: Install CKAN dependencies
       pip: requirements={{ ckan_path }}/src/ckan/requirements.txt virtualenv={{ ckan_path }}
 
+    - name: Clone custom theme
+      git: src=https://github.com/govro/ckanext-inventory dest={{ ckan_path }}/src/ckanext-romania_theme
+
     - name: Install custom theme
-      command: "{{ ckan_path }}/bin/pip install -e git+https://github.com/govro/ckanext-romania_theme.git#egg=ckanext-romania_theme"
+      command: "{{python_virtualenv}} setup.py develop chdir={{ ckan_path }}/src/ckanext-romania_theme"
 
     # Postgres
     - name: Ensure CKAN database is created
