@@ -60,7 +60,7 @@
       pip: requirements={{ ckan_path }}/src/ckan/requirements.txt virtualenv={{ ckan_path }}
 
     - name: Clone custom theme
-      git: repo=https://github.com/govro/ckanext-inventory dest={{ ckan_path }}/src/ckanext-romania_theme
+      git: repo=https://github.com/govro/ckanext-romania_theme dest={{ ckan_path }}/src/ckanext-romania_theme
 
     - name: Install custom theme
       command: "{{python_virtualenv}} setup.py develop chdir={{ ckan_path }}/src/ckanext-romania_theme"
