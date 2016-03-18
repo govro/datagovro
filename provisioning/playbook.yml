@@ -32,6 +32,7 @@
         - solr-jetty
         - supervisor
         - vim
+        - tmux
 
     - name: Enable passwordless sudo
       lineinfile: 'dest=/etc/sudoers regexp="sudo ALL=NOPASSWD: ALL" line="%sudo ALL=NOPASSWD: ALL" state=present'
@@ -53,7 +54,7 @@
       command: "virtualenv --no-site-packages /usr/lib/ckan/default"
 
     - name: Install CKAN PIP package
-      command: "{{ ckan_path }}/bin/pip install -e git+https://github.com/govro/ckan.git@ckan-2.4#egg=ckan"
+      command: "{{ ckan_path }}/bin/pip install -e git+https://github.com/govro/ckan.git@ckanext-inventory#egg=ckan"
 
     - name: Install CKAN dependencies
       pip: requirements={{ ckan_path }}/src/ckan/requirements.txt virtualenv={{ ckan_path }}
