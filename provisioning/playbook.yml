@@ -17,6 +17,10 @@
     - name: Update apt cache
       apt: update_cache=yes
 
+    # Hotfix for Postgres on AWS
+    - name: Generate locales
+      command: dpkg-reconfigure locales
+
     - name: Install necessities and nice-to-haves
       apt: pkg={{ item }} state=installed
       with_items:
