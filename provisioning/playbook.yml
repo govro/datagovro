@@ -1,7 +1,8 @@
 ---
 - hosts: all
 
-  sudo: yes
+  become: yes
+  become_method: sudo
 
   vars:
     - db_name: ckan_default
@@ -68,15 +69,15 @@
     # Postgres
     - name: Ensure CKAN database is created
       postgresql_db: 'name={{ db_name }}'
-      sudo_user: postgres
+      become_user: postgres
 
     - name: Ensure CKAN database user can access CKAN database
       postgresql_user: 'db={{ db_name }} name={{ db_user }} password={{ db_password }} priv=ALL'
-      sudo_user: postgres
+      become_user: postgres
 
     - name: Minimise CKAN database user priveliges
       postgresql_user: 'name={{ db_user }} role_attr_flags=NOSUPERUSER,NOCREATEROLE,NOCREATEDB'
-      sudo_user: postgres
+      become_user: postgres
 
     # Jetty
     - name: Configure Jetty settings
