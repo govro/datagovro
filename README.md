@@ -21,12 +21,10 @@ from source.
 
 ### Dev Server
 
-1. `sudo apt-add-repository ppa:ansible/ansible`
-2. `sudo apt-get update`
-3. `sudo apt-get install git ansible software-properties-common`
-4. `git clone https://github.com/govro/datagovro.git`
-5. `cd datagovro/provisioning`
-6. `ansible-playbook -i "localhost," -c local playbook.yml`
+1. `sudo apt-get install git`
+2. `git clone https://github.com/govro/datagovro.git`
+3. `sudo ./datagovro/install-dependencies.sh`
+4. `ansible-playbook -i "localhost," -c local datagovro/provisioning/playbook.yml`
 
 ## Folder hierarchy
 
