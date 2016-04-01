@@ -1,5 +1,7 @@
 # data.gov.ro
 
+[![Build Status](https://travis-ci.org/govro/datagovro.svg?branch=master)](https://travis-ci.org/govro/datagovro)
+
 [data.gov.ro](http://data.gov.ro) is the Romanian national portal for open data.
 
 ![homepage](https://cloud.githubusercontent.com/assets/772220/7836915/ba2043b0-048c-11e5-9c06-25368d95cba0.png)
@@ -19,10 +21,12 @@ from source.
 
 ### Dev Server
 
-1. `sudo apt-get install git ansible`
-2. `git clone https://github.com/govro/datagovro.git`
-3. `cd datagovro/provisioning`
-4. `ansible-playbook -i "localhost," -c local playbook.yml`
+1. `sudo apt-add-repository ppa:ansible/ansible`
+2. `sudo apt-get update`
+3. `sudo apt-get install git ansible software-properties-common`
+4. `git clone https://github.com/govro/datagovro.git`
+5. `cd datagovro/provisioning`
+6. `ansible-playbook -i "localhost," -c local playbook.yml`
 
 ## Folder hierarchy
 
