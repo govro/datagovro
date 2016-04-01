@@ -8,7 +8,7 @@
     - db_name: ckan_default
     - db_test_name: ckan_test
     - db_user: ckan_default
-    - db_password: ckan_default
+    - db_password: pass
     - ckan_path: '/usr/lib/ckan/default'
     - ckan_config_file: '/etc/ckan/default/development.ini'
     - ckan_config_test_file: "{{ ckan_path }}/src/ckan/test-core.ini"
