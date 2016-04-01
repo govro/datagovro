@@ -1,6 +1,8 @@
 language: generic
 sudo: required
 dist: trusty
+notifications:
+  email: alex.palcuie@gmail.com
 
 install: sudo ./install-dependencies.sh
 script:
