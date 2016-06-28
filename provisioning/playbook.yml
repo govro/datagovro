@@ -23,7 +23,6 @@
     - name: Install necessities and nice-to-haves
       apt: pkg={{ item }} state=installed
       with_items:
-        - ansible
         - git-core
         - libpq-dev
         - openjdk-6-jdk
@@ -70,25 +69,25 @@
 
     # Postgres
     # TODO @palcu: wait for Ansible to fix this
-    # - name: Ensure CKAN database is created
-    #   postgresql_db: 'name={{ db_name }}'
-    #   become_user: postgres
+    - name: Ensure CKAN database is created
+      postgresql_db: 'name={{ db_name }}'
+      become_user: postgres
 
-    # - name: Ensure CKAN test database is created
-    #   postgresql_db: 'name={{ db_test_name }}'
-    #   become_user: postgres
+    - name: Ensure CKAN test database is created
+      postgresql_db: 'name={{ db_test_name }}'
+      become_user: postgres
 
-    # - name: Ensure CKAN database user can access CKAN database
-    #   postgresql_user: 'db={{ db_name }} name={{ db_user }} password={{ db_password }} priv=ALL'
-    #   become_user: postgres
+    - name: Ensure CKAN database user can access CKAN database
+      postgresql_user: 'db={{ db_name }} name={{ db_user }} password={{ db_password }} priv=ALL'
+      become_user: postgres
 
-    # - name: Ensure CKAN database user can access CKAN test database
-    #   postgresql_user: 'db={{ db_test_name }} name={{ db_user }} password={{ db_password }} priv=ALL'
-    #   become_user: postgres
+    - name: Ensure CKAN database user can access CKAN test database
+      postgresql_user: 'db={{ db_test_name }} name={{ db_user }} password={{ db_password }} priv=ALL'
+      become_user: postgres
 
-    # - name: Minimise CKAN database user priveliges
-    #   postgresql_user: 'name={{ db_user }} role_attr_flags=NOSUPERUSER,NOCREATEROLE,NOCREATEDB'
-    #   become_user: postgres
+    - name: Minimise CKAN database user priveliges
+      postgresql_user: 'name={{ db_user }} role_attr_flags=NOSUPERUSER,NOCREATEROLE,NOCREATEDB'
+      become_user: postgres
 
     # Jetty
     - name: Configure Jetty settings
