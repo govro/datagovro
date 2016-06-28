@@ -128,7 +128,7 @@
 
     # Configure supervisord
     - name: Copy supervisor settings
-      template: src=files/ckan.conf dest=/etc/supervisor/conf.d/ckan.conf
+      template: src=files/supervisor.conf dest=/etc/supervisor/conf.d/ckan.conf
 
     - name: Load CKAN process settings
       supervisorctl: name=ckan state=present
