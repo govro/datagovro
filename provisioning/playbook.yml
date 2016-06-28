@@ -91,24 +91,18 @@
       become_user: postgres
       vars:
         ansible_ssh_pipelining: true
-      postgresql_user:
-        name: user
 
     - name: Ensure CKAN database user can access CKAN test database
       postgresql_user: 'db={{ db_test_name }} name={{ db_user }} password={{ db_password }} priv=ALL'
       become_user: postgres
       vars:
         ansible_ssh_pipelining: true
-      postgresql_user:
-        name: user
 
     - name: Minimise CKAN database user priveliges
       postgresql_user: 'name={{ db_user }} role_attr_flags=NOSUPERUSER,NOCREATEROLE,NOCREATEDB'
       become_user: postgres
       vars:
         ansible_ssh_pipelining: true
-      postgresql_user:
-        name: user
 
     # Jetty
     - name: Configure Jetty settings
