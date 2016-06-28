@@ -123,8 +123,8 @@
             dest=/usr/lib/ckan/default/src/ckan/ckan/public/base/css/main.debug.css
             state=link
 
-    - name: Add custom bash_aliases
-      template: src=files/.bash_aliases dest=~/.bash_aliases
+    - name: Add custom zsh_aliases
+      template: src=files/.bash_aliases dest=~/.zsh_aliases
 
     # Configure supervisord
     - name: Copy supervisor settings
