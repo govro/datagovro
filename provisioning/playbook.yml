@@ -69,26 +69,46 @@
       command: "{{python_virtualenv}} setup.py develop chdir={{ ckan_path }}/src/ckanext-romania_theme"
 
     # Postgres
-    # TODO @palcu: wait for Ansible to fix this
-    # - name: Ensure CKAN database is created
-    #   postgresql_db: 'name={{ db_name }}'
-    #   become_user: postgres
+    # TODO @palcu: do try to check if those guys from Ansible fixed their shit
+    - name: Ensure CKAN database is created
+      postgresql_db: 'name={{ db_name }}'
+      become_user: postgres
+      vars:
+        ansible_ssh_pipelining: true
+      postgresql_user:
+        name: user
 
-    # - name: Ensure CKAN test database is created
-    #   postgresql_db: 'name={{ db_test_name }}'
-    #   become_user: postgres
+    - name: Ensure CKAN test database is created
+      postgresql_db: 'name={{ db_test_name }}'
+      become_user: postgres
+      vars:
+        ansible_ssh_pipelining: true
+      postgresql_user:
+        name: user
 
-    # - name: Ensure CKAN database user can access CKAN database
-    #   postgresql_user: 'db={{ db_name }} name={{ db_user }} password={{ db_password }} priv=ALL'
-    #   become_user: postgres
+    - name: Ensure CKAN database user can access CKAN database
+      postgresql_user: 'db={{ db_name }} name={{ db_user }} password={{ db_password }} priv=ALL'
+      become_user: postgres
+      vars:
+        ansible_ssh_pipelining: true
+      postgresql_user:
+        name: user
 
-    # - name: Ensure CKAN database user can access CKAN test database
-    #   postgresql_user: 'db={{ db_test_name }} name={{ db_user }} password={{ db_password }} priv=ALL'
-    #   become_user: postgres
+    - name: Ensure CKAN database user can access CKAN test database
+      postgresql_user: 'db={{ db_test_name }} name={{ db_user }} password={{ db_password }} priv=ALL'
+      become_user: postgres
+      vars:
+        ansible_ssh_pipelining: true
+      postgresql_user:
+        name: user
 
-    # - name: Minimise CKAN database user priveliges
-    #   postgresql_user: 'name={{ db_user }} role_attr_flags=NOSUPERUSER,NOCREATEROLE,NOCREATEDB'
-    #   become_user: postgres
+    - name: Minimise CKAN database user priveliges
+      postgresql_user: 'name={{ db_user }} role_attr_flags=NOSUPERUSER,NOCREATEROLE,NOCREATEDB'
+      become_user: postgres
+      vars:
+        ansible_ssh_pipelining: true
+      postgresql_user:
+        name: user
 
     # Jetty
     - name: Configure Jetty settings
