@@ -4,7 +4,7 @@ dist: trusty
 notifications:
   email: alex.palcuie@gmail.com
 
-install: sudo ./install-dependencies.sh
+install: sudo ./provisioning/install-dependencies.sh
 script:
   - ansible-playbook -i "localhost," -c local provisioning/playbook.yml --syntax-check
   - ansible-playbook -i "localhost," -c local provisioning/playbook.yml

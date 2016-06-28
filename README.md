@@ -22,13 +22,14 @@ from source.
 ### Dev Server
 
 1. `sudo apt-get install git`
-2. `git clone https://github.com/govro/datagovro.git`
-3. `sudo ./datagovro/install-dependencies.sh`
-4. `ansible-playbook -i "localhost," -c local datagovro/provisioning/playbook.yml`
+2. `git clone https://github.com/govro/datagovro.git && cd datagovro`
+3. `sudo ./install-dependencies.sh`
+4. `ansible-playbook -i "localhost," -c local provisioning/playbook.yml`
 
 ## Folder hierarchy
 
 - `docs/`
+- `provisioning/install-dependencies.sh` - bootstraping for Ansible
 - `provisioning/playbook.yml` - provisioning Ansible script
 - `provisioning/files` - configs
 
