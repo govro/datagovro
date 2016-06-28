@@ -115,6 +115,9 @@
     - name: Load fixtures in production
       command: "{{ paster }} create-test-data gov -c {{ ckan_config_file }} chdir={{ ckan_path }}/src/ckan"
 
+    - name: Create admin account
+      command: "{{ paster }} create_initial_data -c {{ ckan_config_file }} chdir={{ ckan_path }}/src/ckanext-romania_theme"
+
     - name: Fix debug.css error
       file: src=/usr/lib/ckan/default/src/ckan/ckan/public/base/css/main.css
             dest=/usr/lib/ckan/default/src/ckan/ckan/public/base/css/main.debug.css
