@@ -8,4 +8,4 @@ install: sudo ./install-dependencies.sh
 script:
   - ansible-playbook -i "localhost," -c local provisioning/playbook.yml --syntax-check
   - ansible-playbook -i "localhost," -c local provisioning/playbook.yml
-  - sleep 10 && curl -sSf http://localhost:5000 > /dev/null
+  - sleep 10 && curl -sSf http://localhost > /dev/null
