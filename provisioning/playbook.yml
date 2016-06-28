@@ -23,7 +23,6 @@
     - name: Install necessities and nice-to-haves
       apt: pkg={{ item }} state=installed
       with_items:
-        - ansible
         - git-core
         - libpq-dev
         - openjdk-6-jdk
