@@ -5,6 +5,7 @@
   become_method: sudo
 
   vars:
+    - branch: ckanext-inventory-v2.5.3
     - db_name: ckan_default
     - db_test_name: ckan_test
     - db_user: ckan_default
@@ -56,7 +57,7 @@
       command: "virtualenv --no-site-packages /usr/lib/ckan/default"
 
     - name: Install CKAN PIP package
-      command: "{{ ckan_path }}/bin/pip install -e git+https://github.com/govro/ckan.git@ckanext-inventory#egg=ckan"
+      command: "{{ ckan_path }}/bin/pip install -e git+https://github.com/govro/ckan.git@{{branch}}#egg=ckan"
 
     - name: Install CKAN dependencies
       pip: requirements={{ ckan_path }}/src/ckan/requirements.txt virtualenv={{ ckan_path }}
