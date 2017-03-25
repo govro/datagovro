@@ -61,7 +61,7 @@
 
     # CKAN 2.5.3 doesn't correct this, although stated in the documentation
     - name: Correct CKAN dependencies(bleach)
-      command: 'sed -i "s/bleach==1.4.2/bleach==1.4.3/g" {{ckan_path}}/src/ckan/requirements.txt'
+      lineinfile: 'dest={{ckan_path}}/src/ckan/requirements.txt regexp="bleach==1.4.2" line="bleach==1.4.3" state=present'
 
     - name: Install CKAN dependencies
       pip: requirements={{ ckan_path }}/src/ckan/requirements.txt virtualenv={{ ckan_path }}
