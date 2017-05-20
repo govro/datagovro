@@ -131,6 +131,9 @@
             dest=/usr/lib/ckan/default/src/ckan/ckan/public/base/css/main.debug.css
             state=link
 
+    - name: Replace file for mimetype mapping with custom one
+      template: src=files/mime.types dest=/etc/mime.types
+
     - name: Add custom zsh_aliases
       template: src=files/.bash_aliases dest=~/.zsh_aliases
 
